@@ -4,41 +4,27 @@
 //
 //  Created by Anthony Nash on 1/22/17.
 //  Copyright © 2017 CIS.279. All rights reserved.
-//
+//  IDE type: Apple Xcode ( Version 8.2.1 (8C1002) )
 
-// In this exercise you will demonstrate a multiple file program compilation:...
+// Homework Guidelines:
 /*
  
- In this exercise you will demonstrate a multiple file program compilation:
+ Homework Guidelines:
  
- 1) Declare a main.cpp and a square.cpp file...
- 2) Provide the sqr( int) function declaration in main...
- 3) Provide the function definition in another file...
- 4) Pass in the int value comprised of the rightmost two digits of your GID for the int value to be
-    squared...
- 
- For example:
- 
- Student:  Anne San Mateo
- 
- GID:  G00123456
- 
- Pass in the value 56 to be squared.
- 
- Before getting started on this assignment become familiar with the topics discussed in our week 1 modules.
- 
- Objectives:
- 
- The following are the primary objectives of this exercise session:
- 
- * Get up and running with your C++ compiler.
- * Perform a multiple file compilation.
+ + Be sure your name is included in an initial comment of EACH file submitted.
+ * Name your program files and included methods according to specification given.
+ + Indicate the environment in which your program was developed (i.e. Visual Studio, Gnu C++, ...)
+ + ONLY upload the files required, not an entire development environment.
+ + Please DO NOT use packages, or create new namespaces, unless specifically requested in the assignment specification;
+   If your IDE creates them, remove the package directive prior to submission.
+ + Do NOT use names which include spaces for files or folders.
+ + No zip files.
  
  **/
 
 
-#include <iostream>
 
+#include <iostream>
 using namespace std;
 
 
@@ -57,12 +43,13 @@ int sqr( const int passed_by_value );
 int main (){
     
     int student_ID_data =0;
-    const int array_size=50;
-    char student_name_data[ array_size ];
+    int squared_results =0;
+    const int ARRAY_SIZE =50;
+    char student_name_data[ ARRAY_SIZE  ];
     
     cout
     << "*INPUT DATA: Enter your name: ";
-    cin.getline(student_name_data, array_size);
+    cin.getline(student_name_data, ARRAY_SIZE );
 
     cout
     << "*INPUT DATA: Enter your student ID (excluding the \"G\"): ";
@@ -72,9 +59,17 @@ int main (){
     << endl
     << student_name_data << " entered student ID: " << student_ID_data
     << endl
+    << endl;
+    
+    squared_results = sqr(student_ID_data);
+    
+    cout
+    << "Passing in the value of " << squared_results
+    << " to be squared..."
     << endl
-    << "Passing in the value of " << sqr( student_ID_data )
-    << " to be squared...";
+    << endl
+    << "Squared results of " << squared_results
+    << " is : " << ( squared_results*squared_results);
     
     
 
