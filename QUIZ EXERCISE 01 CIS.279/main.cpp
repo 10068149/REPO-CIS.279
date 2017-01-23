@@ -38,7 +38,7 @@
 
 
 #include <iostream>
-//#include "square.cpp"
+#include "square.cpp"
 
 using namespace std;
 
@@ -62,7 +62,6 @@ int main (){
     
     cout
     << "*INPUT DATA: Enter your name: ";
-//    cin >> student_name_data;
     cin.getline(student_name_data, 99);
 
     cout
@@ -71,7 +70,12 @@ int main (){
 
     cout
     << endl
-    << student_name_data << " entered student ID: " << student_ID_data;
+    << student_name_data << " entered student ID: " << student_ID_data
+    << endl
+    << "*FUNCTION CALL: SQR()"
+    << sqr(1);
+    
+    
     
     
     cout << endl << endl << endl << endl;
