@@ -42,8 +42,8 @@ int sqr( const int passed_by_value );
 
 int main (){
     
-    int student_ID_data =0;
-    int squared_results =0;
+    int GID =0;
+    int pass_by_value_for_sqr =0;
     const int ARRAY_SIZE =50;
     char student_name_data[ ARRAY_SIZE  ];
     
@@ -53,23 +53,24 @@ int main (){
 
     cout
     << "*INPUT DATA: Enter your student ID (excluding the \"G\"): ";
-    cin >> student_ID_data;
+    cin >> GID;
 
     cout
     << endl
-    << student_name_data << " entered student ID: " << student_ID_data
+    << student_name_data << " entered student ID: " << GID
     << endl
     << endl;
     
-    squared_results = sqr(student_ID_data);
+    //value comprised of the rightmost two digits of your GID...
+    pass_by_value_for_sqr = GID % 100;
     
     cout
-    << "Passing in the value of " << squared_results
+    << "Passing in the value of " << pass_by_value_for_sqr
     << " to be squared..."
     << endl
     << endl
-    << "Squared results of " << squared_results
-    << " is : " << ( squared_results*squared_results);
+    << "Squared results of " << pass_by_value_for_sqr
+    << " is : " << sqr( pass_by_value_for_sqr );
     
     
 

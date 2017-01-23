@@ -13,7 +13,7 @@ using namespace std;
 //3) Provide the function definition in another file ...
 int sqr ( const int pass_by_value_data ) {
 
-    int sqr_return_data = ( pass_by_value_data % 100 );
+    int sqr_return_data = ( pass_by_value_data ) * ( pass_by_value_data );
     
     return sqr_return_data;
 }
