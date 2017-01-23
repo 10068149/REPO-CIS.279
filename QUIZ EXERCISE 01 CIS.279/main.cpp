@@ -38,7 +38,7 @@
 
 
 #include <iostream>
-#include "square.hpp"
+//#include "square.cpp"
 
 using namespace std;
 
@@ -57,12 +57,13 @@ int sqr( int );
 
 int main (){
     
-    string student_name_data =" ";
-    int student_ID_data;
+    char student_name_data[0];
+    float student_ID_data;
     
     cout
     << "*INPUT DATA: Enter your name: ";
-    cin >> student_name_data;
+//    cin >> student_name_data;
+    cin.getline(student_name_data, 99);
 
     cout
     << "*INPUT DATA: Enter your student ID (excluding the: \"G\"): ";
