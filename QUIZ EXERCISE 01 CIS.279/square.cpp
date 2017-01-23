@@ -1,20 +1,19 @@
 //
 //  square.cpp
-//  CIS.279
+//  QUIZ EXERCISE 01 CIS.279
 //
-//  Created by CIS on 1/22/17.
-//  Copyright © 2017 Anthony Nash. All rights reserved.
-//
+//  Created by Anthony Nash on 1/22/17.
+//  Copyright © 2017 CIS.279. All rights reserved.
 
-#include <stdio.h>
+#include <iostream>
 
-//using namespace std;
+using namespace std;
 
 
-//Provide the sqr( int) function declaration in main...
-int sqr( int passed_data ) {
+//3) Provide the function definition in another file ...
+int sqr ( const int pass_by_value_data ) {
 
-    int sqr_data = passed_data;
+    int sqr_return_data = pass_by_value_data % 100;
     
-    return sqr_data;
+    return sqr_return_data;
 }

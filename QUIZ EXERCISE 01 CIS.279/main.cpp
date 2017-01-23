@@ -38,7 +38,6 @@
 
 
 #include <iostream>
-#include "square.cpp"
 
 using namespace std;
 
@@ -48,7 +47,7 @@ using namespace std;
 
 
 //Provide the sqr( int) function declaration in main...
-int sqr( int );
+int sqr( const int passed_by_value );
 
 
 
@@ -57,27 +56,33 @@ int sqr( int );
 
 int main (){
     
-    char student_name_data[0];
-    float student_ID_data;
+    int student_ID_data =0;
+    const int array_size=50;
+    char student_name_data[ array_size ];
     
     cout
     << "*INPUT DATA: Enter your name: ";
-    cin.getline(student_name_data, 99);
+    cin.getline(student_name_data, array_size);
 
     cout
-    << "*INPUT DATA: Enter your student ID (excluding the: \"G\"): ";
+    << "*INPUT DATA: Enter your student ID (excluding the \"G\"): ";
     cin >> student_ID_data;
 
     cout
     << endl
     << student_name_data << " entered student ID: " << student_ID_data
     << endl
-    << "*FUNCTION CALL: SQR()"
-    << sqr(1);
+    << endl
+    << "Passing in the value of " << sqr( student_ID_data )
+    << " to be squared...";
+    
+    
+
+    
+    
     
     
     
     
     cout << endl << endl << endl << endl;
-    
 }
