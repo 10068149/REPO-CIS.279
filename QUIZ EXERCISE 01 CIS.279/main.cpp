@@ -88,13 +88,13 @@ int main ()
 
 {
     
-    int GID =0;
-    int value_for_sqr =0;
+    int GID;
+    int value;
     char student_name [ ARRAY_SIZE  ];
     
-    cout
-    << "* INPUT DATA: Enter your name: ";
-    cin.getline(student_name, ARRAY_SIZE );
+    cout << "* INPUT DATA: Enter your name: ";
+    
+    cin.getline( student_name, ARRAY_SIZE );
 
     cout
         << "* INPUT DATA: Enter your student ID (excluding the \"G\"): ";
@@ -107,14 +107,14 @@ int main ()
         << endl;
     
     //value comprised of the rightmost two digits of your GID...
-    value_for_sqr = GID % 100;
+    value = GID % 100;
     
     cout
-        << "* Passing in the value of " << value_for_sqr
+        << "* Passing in the value of " << value
         << " to be squared..."
         << endl
-        << "* Squared results of " << value_for_sqr
-        << " is: " << sqr( value_for_sqr );
+        << "* Squared results of " << value
+        << " is: " << sqr( value );
     
     cout
         << endl << endl << endl << endl << endl << endl << endl;
@@ -125,6 +125,21 @@ int main ()
 
 
 
-
+/* --------- OUTPUT -----------
+ 
+ 
+ * INPUT DATA: Enter your name: Anthony Nash
+ * INPUT DATA: Enter your student ID (excluding the "G"): 00948149
+ 
+ Anthony Nash entered student ID: 948149
+ 
+ * Passing in the value of 49 to be squared...
+ * Squared results of 49 is : 2401
+ 
+ 
+ 
+ Program ended with exit code: 0
+ 
+ ----------------------------  */
 
 
