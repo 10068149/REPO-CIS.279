@@ -6,8 +6,9 @@
 //  Copyright © 2017 Anthony Nash. All rights reserved.
 //
 
-#include <iostream>
-#include <cassert>
+#include <iostream> // for INPUT/OUTPUT
+#include <cassert>  // for ASSERT()
+#include <cstdlib>  // for RAND() & SRAND()
 using namespace std;
 
 int sqr ( int ); //function decloraetion; Squar root: sqr()...
@@ -17,7 +18,7 @@ int sqr ( int ); //function decloraetion; Squar root: sqr()...
 int main ()
 {
     int input_number = 5;
-    int output_number = 25;
+    int exspected_output_number = input_number * input_number;
     
     
     //Range A: negative inputs whose results is too large to fit (error)
@@ -33,18 +34,17 @@ int main ()
         << endl << endl
     
         << "* INPUT: " << input_number << endl
-        << "* EXSPECTED OUTPUT: " << output_number << endl
-        << "* FUNCTION CALL: SQR() " << input_number << endl
-        << endl;
+        << "* EXSPECTED OUTPUT: " << exspected_output_number << endl
+        << "* FUNCTION CALL: SQR( " << input_number << " );"
+    << endl;
     
     int function_call_reslust = sqr( input_number );
+    assert( exspected_output_number == function_call_reslust );
     
-    if ( assert( output_number == function_call_reslust ) )
-    {
-        cout
+    cout
         << "* FUNCTION RETURN: " << function_call_reslust << endl
-        << endl << endl;
-}
+        << endl
+    << endl;
     
     
     //Fucntion call: sqr ( number ) provide test...
