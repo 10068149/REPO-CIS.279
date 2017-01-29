@@ -9,6 +9,8 @@
 #include <iostream> // for INPUT/OUTPUT
 #include <cassert>  // for ASSERT()
 #include <cstdlib>  // for RAND() & SRAND()
+#include <time.h>   // for system time functions ...
+
 using namespace std;
 
 int sqr ( int ); //function decloraetion; Squar root: sqr()...
@@ -17,7 +19,7 @@ int sqr ( int ); //function decloraetion; Squar root: sqr()...
 
 int main ()
 {
-    srand( time(NULL) );
+    srand( time(0) );
     
     int input_number = ( rand() % 1000000 ) + 1;
     int exspected_output_number = input_number * input_number;
