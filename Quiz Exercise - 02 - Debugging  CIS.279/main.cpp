@@ -144,9 +144,15 @@ int main ()
 {
     srand( time(0) );
     
-//    int input_number = ( rand() % 500000000 ) + 2147483647;
-    int input_number = 2147483648;
-    int exspected_output_number = input_number * input_number;
+//    int input = ( rand() % 2147483647 ) + 2147483647;
+    int input = 5;
+//    int exspected_output = input * input;
+//    int exspected_output = 25;
+    
+    
+    //Fucntion call: sqr ( number ) provide test...
+    //Cases for integer input: number...
+
     
     
     //Range A: negative inputs whose results is too large to fit (error)
@@ -158,18 +164,22 @@ int main ()
     //Range D: positive input whose result is too large to fit (error)
     cout
         << "//Range D: positive input whose result is too large to fit (error)..."
+        << endl << endl;
     
-        << endl << endl
+    cout
+        << "* INPUT: " << input << endl;
     
-        << "* INPUT: " << input_number << endl
-        << "* EXSPECTED OUTPUT: " << exspected_output_number << endl
-        << "* FUNCTION CALL: SQR( " << input_number << " );"
-    << endl;
+//    cout
+//        << "* EXSPECTED OUTPUT: " << exspected_output << endl;
+
+    cout
+        << "* FUNCTION CALL: SQR( " << input << " );" << endl;
+
     
-    int function_call_reslust = sqr( input_number );
-    assert( exspected_output_number == function_call_reslust );
+    int function_call_reslust = sqr( input );
+//    assert( exspected_output == function_call_reslust );
     
-    if ( function_call_reslust > 2147483647 )
+    if ( function_call_reslust < 2147483647 )
     {
     
     cout
@@ -187,8 +197,6 @@ int main ()
     }
     
     
-    //Fucntion call: sqr ( number ) provide test...
-    //Cases for integer input: number...
     
     cout
         << endl << endl << endl << endl
