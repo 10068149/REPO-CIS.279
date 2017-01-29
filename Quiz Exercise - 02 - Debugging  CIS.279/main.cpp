@@ -17,7 +17,9 @@ int sqr ( int ); //function decloraetion; Squar root: sqr()...
 
 int main ()
 {
-    int input_number = 5;
+    srand( time(NULL) );
+    
+    int input_number = ( rand() % 1000000 ) + 1;
     int exspected_output_number = input_number * input_number;
     
     
