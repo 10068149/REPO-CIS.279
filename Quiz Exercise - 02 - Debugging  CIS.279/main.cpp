@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <cassert>
 using namespace std;
 
 int sqr ( int ); //function decloraetion; Squar root: sqr()...
@@ -15,14 +16,44 @@ int sqr ( int ); //function decloraetion; Squar root: sqr()...
 
 int main ()
 {
+    int input_number = 5;
+    int output_number = 25;
+    
     
     //Range A: negative inputs whose results is too large to fit (error)
+    
     //Range B: negative inputs whose result is acceptable (normal)
+    
     //Range C: positive inputs whose result is acceptable (normal)
+    
     //Range D: positive input whose result is too large to fit (error)
+    cout
+        << "//Range D: positive input whose result is too large to fit (error)..."
+    
+        << endl << endl
+    
+        << "* INPUT: " << input_number << endl
+        << "* EXSPECTED OUTPUT: " << output_number << endl
+        << "* FUNCTION CALL: SQR() " << input_number << endl
+        << endl;
+    
+    int function_call_reslust = sqr( input_number );
+    
+    if ( assert( output_number == function_call_reslust ) )
+    {
+        cout
+        << "* FUNCTION RETURN: " << function_call_reslust << endl
+        << endl << endl;
+}
+    
     
     //Fucntion call: sqr ( number ) provide test...
     //Cases for integer input: number...
+    
+    cout
+        << endl << endl << endl << endl
+        << endl << endl << endl << endl
+        << endl;
     
     return 0;
 }
