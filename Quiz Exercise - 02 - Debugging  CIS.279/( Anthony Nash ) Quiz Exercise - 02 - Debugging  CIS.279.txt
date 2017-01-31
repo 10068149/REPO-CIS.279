@@ -25,7 +25,7 @@ using namespace std;
 
 
 
-int sqr ( int ); //function decloraetion; Square root: sqr()...
+int sqr ( int ); //function declaration; Square root: sqr()...
 void printer ( int );//
 
 
@@ -115,7 +115,7 @@ void printer ( int input ) {
         
         cout
         << "- FUNCTION RETURN: " << range << endl
-        << "- RESULTS: This input, " << input << ", when sqaured, is in the"
+        << "- RESULTS: This input, " << input << ", when squared, is in the"
         << " expected" << endl
         << "  range of INT type variables."
         << endl << endl << endl;
@@ -130,7 +130,7 @@ void printer ( int input ) {
         << "  variable!"
         
         << endl
-        << "* NOTE: The maximum allowed value for INT variables respectively is: 2147483647."
+        << "* NOTE: The maximum allowed value for INT variables is: 2147483647."
         
         << endl << endl << endl << endl ;
     }
@@ -140,6 +140,73 @@ void printer ( int input ) {
     
 }
     
+
+
+/* --------- OUTPUT: START ------------------------------------------------------------------------------
+
+
+// This app is designed to test for the following ranges
+// of INT type variables, respectively, for both positive 
+// and negative inputs values...
+
+* NOTE: The maximum allowed value for INT variable types is: 2147483647.
+
+
+
+// Range A: negative inputs whose results is too large to fit (error):
+
+- INPUT: -46341
+- FUNCTION CALL: SQR( -46341 );
+* ERROR: -2147479015
+  This input, -46341, when squared, is out of range 
+  of the maximum value allowed for an INT type 
+  variable!
+* NOTE: The maximum allowed value for INT variables respectively is: 2147483647.
+
+
+
+// Range B: negative inputs whose result is acceptable (normal): 
+
+- INPUT: -5312
+- FUNCTION CALL: SQR( -5312 );
+- FUNCTION RETURN: 28217344
+- RESULTS: This input, -5312, when squared, is in the expected
+  range of INT type variables.
+
+
+// Range C: positive inputs whose result is acceptable (normal): 
+
+- INPUT: 20285
+- FUNCTION CALL: SQR( 20285 );
+- FUNCTION RETURN: 411481225
+- RESULTS: This input, 20285, when squared, is in the expected
+  range of INT type variables.
+
+
+// Range D: positive input whose result is too large to fit (error): 
+
+- INPUT: 46341
+- FUNCTION CALL: SQR( 46341 );
+* ERROR: -2147479015
+  This input, 46341, when squared, is out of range 
+  of the maximum value allowed for an INT type 
+  variable!
+* NOTE: The maximum allowed value for INT variables respectively is: 2147483647.
+
+
+
+
+
+Program ended with exit code: 0
+
+
+ --------- OUTPUT: END ------------------------------------------------------------------------------*/
+
+
+
+
+
+
     
     
     
