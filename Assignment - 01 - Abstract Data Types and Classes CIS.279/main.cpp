@@ -24,9 +24,10 @@
 // Environment:     Compiles under Apple Xcode ( Version 8.2.1 (8C1002) )
 
 
-#include <iostream>
+#include <iostream> // provides: INPUT OUTPUT STREAM DATA... 
+using namespace std;
 
 int main ()
 {
-    //code ...
+    cout << "// code here... ";
 }
