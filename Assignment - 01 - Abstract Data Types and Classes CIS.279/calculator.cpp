@@ -47,7 +47,7 @@ namespace ANTHONY_NASH_ADDSUBMULT {
         // private instance member:
         // int total...
         
-        if ( number < INT64_MAX || number > INT64_MIN ) {
+        if ( number < MAX_INT_VARIABLE_TYPE_SIZE || number > MIN_INT_VARIABLE_TYPE_SIZE ) {
             total += number;
             return true;
         } else { return false; }
@@ -68,7 +68,7 @@ namespace ANTHONY_NASH_ADDSUBMULT {
         // from the private instance member:
         // int total;
         
-        if ( number < INT64_MAX || number > INT64_MIN ) {
+        if ( number < MAX_INT_VARIABLE_TYPE_SIZE || number > MIN_INT_VARIABLE_TYPE_SIZE ) {
             total -= number;
             return true;
         } else { return false; }
@@ -91,10 +91,16 @@ namespace ANTHONY_NASH_ADDSUBMULT {
         // member by the int parameter:
         // int total;
 
-        if ( number < INT64_MAX || number > INT64_MIN ) {
+//        if ( number < INT64_MAX || number > INT64_MIN ) {
+//            total *= number;
+//            return true;
+//        } else { return false; }
+
+        if ( number < MAX_INT_VARIABLE_TYPE_SIZE || number > MIN_INT_VARIABLE_TYPE_SIZE ) {
             total *= number;
             return true;
         } else { return false; }
+
         
     }
 

@@ -41,13 +41,21 @@
 #include <climits>  // provides: SPECIFIC MAXIMUM SYSTEM AND...
                     // INTEGRAL TYPES COMPILER IMPLEMENTATION USED:
                     // INT is: INT_MAX
+
+#include "calculator.hpp"
+
+
+
 using namespace std;
+using namespace ANTHONY_NASH_ADDSUBMULT;
 
 
 
 
 
-//int const MAX_INT_VARIABLE_TYPE_SIZE = 2147483647;
+// define static constants...
+const int AddSubMult :: MIN_INT_VARIABLE_TYPE_SIZE = -2147483647;
+const int AddSubMult :: MAX_INT_VARIABLE_TYPE_SIZE = 2147483647;
 
 
 
@@ -55,10 +63,43 @@ using namespace std;
 
 int main ()
 {
-    cout
-        << "// code here... "
-        << endl << endl << endl;
+
+    AddSubMult test_number;
     
+    cout
+    << "* Test Number; INITIALIZED: " << test_number.getTotal()
+    << " ( Initial Value )."
+    << endl
+    << "* Test Number; PASSING: 1"
+    << endl;
+    
+    test_number.addNum(1);
+    
+    cout
+    << "* Test Number; TOTAL: " << test_number.getTotal()
+    << endl << endl << endl;
+    
+    
+    cout
+    << "* Test Number; TOTAL: " << test_number.getTotal()
+    << " ( Initial Value )."
+    << endl
+    << "* Test Number; PASSING: -1"
+    << endl;
+    
+    test_number.addNum(-1);
+    
+    cout
+    << "* Test Number; TOTAL: " << test_number.getTotal()
+    << endl << endl << endl;
+    
+    
+    
+    
+    
+    
+    
+    cout << endl << endl << endl << endl;
     return 0;
 }
 

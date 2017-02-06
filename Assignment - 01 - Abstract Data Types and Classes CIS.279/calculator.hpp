@@ -20,7 +20,10 @@ namespace ANTHONY_NASH_ADDSUBMULT
     {
     public:
 
+        // CONSTANT VARIABLES ...
         
+        static const int MIN_INT_VARIABLE_TYPE_SIZE;
+        static const int MAX_INT_VARIABLE_TYPE_SIZE;
     
         // MODIFICATION MEMBER FUNCTIONS...
         
