@@ -37,14 +37,17 @@
 
 
 
-#include <iostream> // provides: INPUT OUTPUT STREAM DATA... 
+#include <iostream> // provides: INPUT OUTPUT STREAM DATA.
+#include <climits>  // provides: SPECIFIC MAXIMUM SYSTEM AND...
+                    // INTEGRAL TYPES COMPILER IMPLEMENTATION USED:
+                    // INT is: INT_MAX
 using namespace std;
 
 
 
 
 
-
+//int const MAX_INT_VARIABLE_TYPE_SIZE = 2147483647;
 
 
 
@@ -56,7 +59,7 @@ int main ()
         << "// code here... "
         << endl << endl << endl;
     
-    
+    return 0;
 }
 
 
