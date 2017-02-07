@@ -30,7 +30,7 @@ using namespace ANTHONY_NASH_ADDSUBMULT;
 
 
 
-// define static constants...
+// define constants...
 const int AddSubMult :: MIN_INT_VARIABLE_TYPE_SIZE = -2147483647;
 const int AddSubMult :: MAX_INT_VARIABLE_TYPE_SIZE = 2147483647;
 
@@ -74,11 +74,16 @@ int main ()
 
         //1. Initializes a ‘new customer balance’ total to 0: AddSubMult()
         
-//        AddSubMult();       //? Precondition: Default Constructor; takes no parameters...
+        int test_AddSubMult( int );       //? Precondition: Default Constructor; takes no parameters...
         //? Postcondition: initialize an AddSubMult object;
         //  a ‘new customer balance’ total to 0: int total = 0;
         // it has no return value of any type...
-        
+
+
+
+
+
+
         //2. Adds an integer input to the running total: addNum()
         
         //? why the "bools" and not void or int or something like that ??
@@ -92,7 +97,12 @@ int main ()
         // private instance member:
         // int total...
 
-        
+
+
+
+
+
+
         //3. Subtracts an integer input to the running total: subNum()
         
         int test_subNum( int );
@@ -104,7 +114,12 @@ int main ()
         // from the private instance member:
         // int total;
         
-        
+
+
+
+
+
+
         //4. Multiplies the current total by an integer input: multNum()
         
         int test_multNum( int );
@@ -116,7 +131,11 @@ int main ()
         // member by the int parameter:
         // int total;
         
-        
+
+
+
+
+
         // CONSTANT MEMBER FUNCTIONS...
         
         //5. Obtains current total: getTotal()
