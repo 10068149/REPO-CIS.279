@@ -6,33 +6,72 @@
 // Date:            February 1, 2017 (Wed)
 
 
+//  Created by CIS on 1/31/17.
+//  Copyright © 2017 Anthony Nash. All rights reserved.
+//
+
+
+
+
+
+
+
 #include <iostream> // provides: INPUT OUTPUT STREAM DATA.
+#include <climits>  // provides: SPECIFIC MAXIMUM SYSTEM AND...
+                    // INTEGRAL TYPES COMPILER IMPLEMENTATION USED:
+                    // INT is: INT_MAX & INT_MIN
+
 #include "calculator.hpp"
 
-#ifndef calculator_hpp
-#define calculator_hpp
+
+
+using namespace std;
+using namespace ANTHONY_NASH_ADDSUBMULT;
+
+
+
+// define static constants...
+const int AddSubMult :: MIN_INT_VARIABLE_TYPE_SIZE = -2147483647;
+const int AddSubMult :: MAX_INT_VARIABLE_TYPE_SIZE = 2147483647;
 
 
 
 
-namespace ANTHONY_NASH_TEST_DRIVER
+
+int main ()
 {
     
-    class Test_Driver
-    {
-        
-        public:
-        
-        
-        private:
-        
-        
-        // MODIFICATION MEMBER FUNCTIONS...
-        
-        
-        
-        // Functional requirements per instructor...
-        
+    //    * Main function can only create objects and call
+    //    functions.
+    
+    //    * All functional requirements for this
+    //    program must be met in one or more functions
+    //    (member or no-member) and not in main.
+    
+    //    * Use main as the driver for your program only.
+    
+    AddSubMult test_number;
+    
+    
+    
+    
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //1. Initializes a ‘new customer balance’ total to 0: AddSubMult()
         
 //        AddSubMult();       //? Precondition: Default Constructor; takes no parameters...
@@ -82,7 +121,7 @@ namespace ANTHONY_NASH_TEST_DRIVER
         
         //5. Obtains current total: getTotal()
         
-        test_getTotal() const;
+        int test_getTotal( int );
         
         // Accessor / Mutator Method of type CONST
         //? Precondition:
@@ -93,10 +132,6 @@ namespace ANTHONY_NASH_TEST_DRIVER
         
 
         
-    };// END: CLASS: Test_Driver()
-    
-}// END: NAMESPACE: ANTHONY_NASH_ADDSUBMULT()
-
 
 
 
@@ -106,7 +141,3 @@ int test_addNum( int ) {
     
 }
 
-
-
-
-#endif /* AddSubMult_hpp */
