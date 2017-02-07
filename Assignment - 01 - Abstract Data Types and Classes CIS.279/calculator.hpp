@@ -4,13 +4,10 @@
 // Date:            February 1, 2017 (Wed)
 
 
-//? what is the following here ...
+
 #ifndef calculator_hpp
 #define calculator_hpp
 
-
-
-//#include <stdio.h> //! NOT NEEDED
 
 
 namespace ANTHONY_NASH_ADDSUBMULT

@@ -46,8 +46,10 @@
 
 
 
+
 using namespace std;
 using namespace ANTHONY_NASH_ADDSUBMULT;
+using namespace ANTHONY_NASH_TEST_DRIVER;
 
 
 
@@ -64,42 +66,21 @@ const int AddSubMult :: MAX_INT_VARIABLE_TYPE_SIZE = 2147483647;
 int main ()
 {
 
+//    * Main function can only create objects and call
+//    functions.
+    
+//    * All functional requirements for this
+//    program must be met in one or more functions
+//    (member or no-member) and not in main.
+    
+//    * Use main as the driver for your program only.
+    
     AddSubMult test_number;
     
-    cout
-    << "* Test Number; INITIALIZED: " << test_number.getTotal()
-    << " ( Initial Value )."
-    << endl
-    << "* Test Number; PASSING: 1"
-    << endl;
-    
-    test_number.addNum(1);
-    
-    cout
-    << "* Test Number; TOTAL: " << test_number.getTotal()
-    << endl << endl << endl;
+
+
     
     
-    cout
-    << "* Test Number; TOTAL: " << test_number.getTotal()
-    << " ( Initial Value )."
-    << endl
-    << "* Test Number; PASSING: -1"
-    << endl;
-    
-    test_number.addNum(-1);
-    
-    cout
-    << "* Test Number; TOTAL: " << test_number.getTotal()
-    << endl << endl << endl;
-    
-    
-    
-    
-    
-    
-    
-    cout << endl << endl << endl << endl;
     return 0;
 }
 
