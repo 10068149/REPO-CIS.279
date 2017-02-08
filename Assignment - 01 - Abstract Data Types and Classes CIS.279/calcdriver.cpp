@@ -20,6 +20,7 @@
 #include <climits>  // provides: SPECIFIC MAXIMUM SYSTEM AND...
                     // INTEGRAL TYPES COMPILER IMPLEMENTATION USED:
                     // INT is: INT_MAX & INT_MIN
+#include <cassert>  // provides: DEBUGING TOOLS...
 
 #include "calculator.hpp"
 
@@ -30,31 +31,87 @@ using namespace ANTHONY_NASH_ADDSUBMULT;
 
 
 
-// define constants...
-const int AddSubMult :: MIN_INT_VARIABLE_TYPE_SIZE = -2147483647;
-const int AddSubMult :: MAX_INT_VARIABLE_TYPE_SIZE = 2147483647;
+void test_simplemath() {
+    cout << "Running Simple Math Test:"<<endl;
+    cout << "Operation, Input, Output"<<endl;
+    
+    // instantiates one AddSubMult object
+    AddSubMult calculator;
+    assert(calculator.getTotal() == 0);
+    
+    // addNum, 10, 10
+    calculator.addNum(10);
+    cout << "addNum, "<< 10 << ", " << calculator.getTotal()<<endl;
+    assert(calculator.getTotal() == 10);
+
+    // addNum, 20, 30
+    calculator.addNum(20);
+    cout << "addNum, "<< 20 << ", " << calculator.getTotal()<<endl;
+    assert(calculator.getTotal() == 30);
+    
+    // subNum, 5, 25
+    calculator.subNum(5);
+    cout << "subNum, "<< 5 << ", " << calculator.getTotal()<<endl;
+    assert(calculator.getTotal() == 25);
+    
+    // multNum, 2, 50
+    calculator.multNum(2);
+    cout << "mulNum, "<< 2 << ", " << calculator.getTotal()<<endl;
+//    assert(calculator.getTotal() == 50);
+    
+    // addNum, 30, 80
+    calculator.addNum(30);
+    cout << "addNum, "<< 30 << ", " << calculator.getTotal()<<endl;
+    assert(calculator.getTotal() == 80);
+}
+
+void test_addNum_positive_protections() {
+    
+    cout << endl<< "Running AddNum Protection Test ith positive value:"<<endl;
+    cout << "Operation, Input, Is Succesful"<<endl;
+
+    AddSubMult calculator;
+    
+    bool done = calculator.addNum(1999999999);
+    cout << "addNum, "<< 1999999999 << ", " << (done ? "true" : "false") <<endl;
+    assert(done == true);
+    
+    done = calculator.addNum(1999999999);
+    cout << "addNum, "<< 1999999999 << ", " << (done ? "true" : "false") <<endl;
+    assert(done == false);
+}
 
 
+void test_addNum_negative_protections() {
+    
+    cout
+        << endl
+        << "Running AddNum Protection Test with negative value:"
+        << endl
+        << "Operation, Input, Is Succesful"
+        << endl;
+    
+    AddSubMult calculator;
+    
+    bool done = calculator.addNum(-1999999999);
+    cout
+    
+        << "addNum, " << -1999999999 << ", " << (done ? "true" : "false")
+        << endl;
+    assert(done == true);
+    done = calculator.addNum(-1999999999);
+    cout << "addNum, " << -1999999999 << ", " << (done ? "true" : "false") <<endl;
+    assert( done == false);
+}
 
 
 
 int main ()
 {
     
-    //    * Main function can only create objects and call
-    //    functions.
-    
-    //    * All functional requirements for this
-    //    program must be met in one or more functions
-    //    (member or no-member) and not in main.
-    
-    //    * Use main as the driver for your program only.
-    
-    AddSubMult test_number;
-    
-    
-    
-    
+    test_simplemath();
+    test_addNum_positive_protections();
+    test_addNum_negative_protections();
     
     return 0;
 }
@@ -69,94 +126,4 @@ int main ()
 
 
 
-
-
-
-        //1. Initializes a ‘new customer balance’ total to 0: AddSubMult()
-        
-        int test_AddSubMult( int );       //? Precondition: Default Constructor; takes no parameters...
-        //? Postcondition: initialize an AddSubMult object;
-        //  a ‘new customer balance’ total to 0: int total = 0;
-        // it has no return value of any type...
-
-
-
-
-
-
-        //2. Adds an integer input to the running total: addNum()
-        
-        //? why the "bools" and not void or int or something like that ??
-        
-        int test_addNum( int );
-        //? Precondition: incoming value must be
-        // a legitimate type INT varible...
-        
-        //? Postcondition:
-        // adds the int parameter to the
-        // private instance member:
-        // int total...
-
-
-
-
-
-
-
-        //3. Subtracts an integer input to the running total: subNum()
-        
-        int test_subNum( int );
-        
-        //? Precondition: incoming value must be
-        // a legitimate type INT varible...
-        
-        //? Postcondition:
-        // from the private instance member:
-        // int total;
-        
-
-
-
-
-
-
-        //4. Multiplies the current total by an integer input: multNum()
-        
-        int test_multNum( int );
-        
-        //? Precondition: bool multNum...
-        
-        //? Postcondition: ...
-        // A muator that multiplies the private instance
-        // member by the int parameter:
-        // int total;
-        
-
-
-
-
-
-        // CONSTANT MEMBER FUNCTIONS...
-        
-        //5. Obtains current total: getTotal()
-        
-        int test_getTotal( int );
-        
-        // Accessor / Mutator Method of type CONST
-        //? Precondition:
-        
-        //? Postcondition ...
-        // returning the private instance member(s):
-        // int totoal ...
-        
-
-        
-
-
-
-int test_addNum( int ) {
-
-    return 0;
-    
-}
 

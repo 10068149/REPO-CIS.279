@@ -11,6 +11,12 @@
 
 namespace ANTHONY_NASH_ADDSUBMULT {
     
+    
+    
+    // define constants...
+    const int AddSubMult :: MIN_INT_VARIABLE_TYPE_SIZE = -2147483647;
+    const int AddSubMult :: MAX_INT_VARIABLE_TYPE_SIZE = 2147483647;
+    
     // Functional requirements per instructor...
     
     //1. Initializes a ‘new customer balance’ total to 0: AddSubMult()
@@ -18,7 +24,7 @@ namespace ANTHONY_NASH_ADDSUBMULT {
     AddSubMult :: AddSubMult()
     
     {
-    
+        
         //? Precondition: Default Constructor; takes no parameters...
         //? Postcondition: initialize an AddSubMult object;
         //  a ‘new customer balance’ total to 0: int total = 0;
@@ -28,7 +34,7 @@ namespace ANTHONY_NASH_ADDSUBMULT {
         
         
     }
-
+    
     
     
     
@@ -39,81 +45,125 @@ namespace ANTHONY_NASH_ADDSUBMULT {
     //? why the "bools" and not void or int or something like that ??
     
     bool AddSubMult :: addNum( int number ) {
-    
-        //" Precondition: incoming value must be
-        // a legitimate type INT varible...
-        //? Postcondition:
-        // adds the int parameter to the
-        // private instance member:
-        // int total...
         
-        if ( number < MAX_INT_VARIABLE_TYPE_SIZE || number > MIN_INT_VARIABLE_TYPE_SIZE ) {
-            total += number;
-            return true;
-        } else { return false; }
+        if( number > 0 ) {
+            // total + number < MAX
+            // number < MAX - total
+            if( number > MAX_INT_VARIABLE_TYPE_SIZE - total ) {
+                return false;
+            }
+            
+        } else if (number < 0 ) {
+            
+            // total + number > MIN
+            // total - (- number) > MIN
+            // -number > MIN - total
+            // number < total - MIN
+            if(number > total - MIN_INT_VARIABLE_TYPE_SIZE ) {
+                return false;
+                
+            }
+        }
         
+        total += number;
+        
+        return true;
     }
-        
-        
-        
-        
+    
+    
+    
+    
+    
+    
     //3. Subtracts an integer input to the running total: subNum()
     
     bool AddSubMult :: subNum( int number ) {
         
         //? Precondition: incoming value must be
         // a legitimate type INT varible...
-
+        
         //? Postcondition:
         // from the private instance member:
         // int total;
         
-        if ( number < MAX_INT_VARIABLE_TYPE_SIZE || number > MIN_INT_VARIABLE_TYPE_SIZE ) {
-            total -= number;
-            return true;
-        } else { return false; }
+//        if ( number < MAX_INT_VARIABLE_TYPE_SIZE || number > MIN_INT_VARIABLE_TYPE_SIZE ) {
+//            total -= number;
+//            return true;
+//        } else { return false; }
+        
+        if( number > 0 ) {
+            // total + number < MAX
+            // number < MAX - total
+            if( number > MAX_INT_VARIABLE_TYPE_SIZE - total ) {
+                return false;
+            }
+            
+        } else if (number < 0 ) {
+            
+            // total + number > MIN
+            // total - (- number) > MIN
+            // -number > MIN - total
+            // number < total - MIN
+            if( number < total - MIN_INT_VARIABLE_TYPE_SIZE ) {
+                return false;
+                
+            }
+        }
+        
+        total -= number;
+        
+        return true;
         
     }
-
     
-        
-        
-        
+    
+    
+    
+    
     
     //4. Multiplies the current total by an integer input: multNum()
     
     bool AddSubMult :: multNum( int number ) {
-            
+        
         //? Precondition: bool multNum...
-
+        
         //? Postcondition: ...
         // A muator that multiplies the private instance
         // member by the int parameter:
         // int total;
-
-//        if ( number < INT64_MAX || number > INT64_MIN ) {
-//            total *= number;
-//            return true;
-//        } else { return false; }
-
-        if ( number < MAX_INT_VARIABLE_TYPE_SIZE || number > MIN_INT_VARIABLE_TYPE_SIZE ) {
-            total *= number;
-            return true;
-        } else { return false; }
-
+        
+        //        if ( number < INT64_MAX || number > INT64_MIN ) {
+        //            total *= number;
+        //            return true;
+        //        } else { return false; }
+        
+            // total + number < MAX
+            // number < MAX - total
+            if ( number > MAX_INT_VARIABLE_TYPE_SIZE - total ) {
+                
+                return false;
+                
+            }
+        
+            else {
+                
+                total *= number;
+                
+                return true; }
+        
         
     }
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     // CONSTANT MEMBER FUNCTIONS...
     
@@ -125,11 +175,11 @@ namespace ANTHONY_NASH_ADDSUBMULT {
         
         // Accessor / Mutator Method of type CONST
         //? Precondition:
-
+        
         //? Postcondition ...
         // returning the private instance member(s):
         // int totoal ...
-     
+        
         return total;
     }
     
