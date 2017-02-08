@@ -45,26 +45,18 @@ namespace ANTHONY_NASH_ADDSUBMULT {
     //? why the "bools" and not void or int or something like that ??
     
     bool AddSubMult :: addNum( int number ) {
+
+    if ( total > 0 && number > 0) {
         
-        if( number > 0 ) {
-            // total + number < MAX
-            // number < MAX - total
-            if( number > MAX_INT_VARIABLE_TYPE_SIZE - total ) {
-                return false;
-            }
-            
-        } else if (number < 0 ) {
-            
-            // total + number > MIN
-            // total - (- number) > MIN
-            // -number > MIN - total
-            // number < total - MIN
-            if(number > total - MIN_INT_VARIABLE_TYPE_SIZE ) {
-                return false;
-                
-            }
-        }
+      if( total + number  < 0) { return false; }
         
+    }
+
+    else if ( total < 0 && number < 0) {
+        
+       if ( total + number  > 0) { return false; }
+    }
+
         total += number;
         
         return true;
@@ -86,29 +78,17 @@ namespace ANTHONY_NASH_ADDSUBMULT {
         // from the private instance member:
         // int total;
         
-//        if ( number < MAX_INT_VARIABLE_TYPE_SIZE || number > MIN_INT_VARIABLE_TYPE_SIZE ) {
-//            total -= number;
-//            return true;
-//        } else { return false; }
         
-        if( number > 0 ) {
-            // total + number < MAX
-            // number < MAX - total
-            if( number > MAX_INT_VARIABLE_TYPE_SIZE - total ) {
-                return false;
-            }
-            
-        } else if (number < 0 ) {
-            
-            // total + number > MIN
-            // total - (- number) > MIN
-            // -number > MIN - total
-            // number < total - MIN
-            if( number < total - MIN_INT_VARIABLE_TYPE_SIZE ) {
-                return false;
+            if ( total > 0 && -(number) > 0) {
+                
+                  if( total + -(number)  < 0) { return false; }
                 
             }
-        }
+            
+            else if ( total < 0 && -(number) < 0) {
+                
+                   if ( total + -(number)  > 0) { return false; }
+            }
         
         total -= number;
         
@@ -132,10 +112,6 @@ namespace ANTHONY_NASH_ADDSUBMULT {
         // member by the int parameter:
         // int total;
         
-        //        if ( number < INT64_MAX || number > INT64_MIN ) {
-        //            total *= number;
-        //            return true;
-        //        } else { return false; }
         
             // total + number < MAX
             // number < MAX - total
