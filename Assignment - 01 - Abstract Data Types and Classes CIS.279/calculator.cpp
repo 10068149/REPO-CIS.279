@@ -115,23 +115,16 @@ namespace ANTHONY_NASH_ADDSUBMULT {
         
             // total + number < MAX
             // number < MAX - total
-            if ( number > MAX_INT_VARIABLE_TYPE_SIZE - total ) {
-                
-                return false;
-                
-            }
+        if ( abs(number) > MAX_INT_VARIABLE_TYPE_SIZE / abs(total) )
+        { return false; } else {
+            
+            total *= number;
+            return true;
         
-            else {
-                
-                total *= number;
-                
-                return true; }
+        }//if ( abs(number) > MAX_INT_VARIABLE_TYPE_SIZE / abs(total) )...
         
         
-    }
-    
-    
-    
+    }//bool AddSubMult :: multNum( int number ) {....
     
     
     

@@ -115,14 +115,29 @@ void test_subNum_positive_protections() {
     cout << "SubNum, "<< 1999999999 << ", " << (done ? "true" : "false") <<endl;
     assert(done == false);
 }
+void test_subNum_negative_protections() {
+    
+    cout << endl<< "Running SubNum Protection Test ith negative value:"<<endl;
+    cout << "Operation, Input, Is Succesful"<<endl;
+    
+    AddSubMult calculator;
+    
+    bool done = calculator.subNum(-1999999999);
+    cout << "SubNum, "<< -1999999999 << ", " << (done ? "true" : "false") <<endl;
+    assert(done == true);
+    
+    done = calculator.subNum(-1999999999);
+    cout << "SubNum, "<< -1999999999 << ", " << (done ? "true" : "false") <<endl;
+    assert(done == false);
+}
 
 
 
-void test_multNum_negative_protections() {
+void test_multNum_protections() {
     
     cout
     << endl
-    << "Running AddMul Protection Test with negative value:"
+    << "Running multNum Protection Test with positive value:"
     << endl
     << "Operation, Input, Is Succesful"
     << endl;
@@ -132,13 +147,13 @@ void test_multNum_negative_protections() {
     bool done = calculator.multNum(1999999999);
     cout
     
-    << "addNum, " << 1999999999 << ", " << (done ? "true" : "false")
+    << "multNum, " << 1999999999 << ", " << (done ? "true" : "false")
     << endl;
     
     assert(done == true);
     
     done = calculator.multNum(1999999999);
-    cout << "addNum, " << 1999999999 << ", " << (done ? "true" : "false") <<endl;
+    cout << "multNum, " << 1999999999 << ", " << (done ? "true" : "false") <<endl;
     
     assert( done == false);
 }
@@ -157,10 +172,9 @@ int main ()
     test_addNum_negative_protections();
     
     test_subNum_positive_protections();
+    test_subNum_negative_protections();
     
-    
-    
-//    test_multNum_negative_protections();
+//    test_multNum_protections();
     
     return 0;
 }
