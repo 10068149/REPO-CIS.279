@@ -27,19 +27,23 @@ class bag
         //Constructors: bag();...
         bag();
 
-        //Inserts an item in the bag...
-    
+        //Inserts an item in the bag: VOID()
+        void put_in( const value_type& item );
 
-        //Determines if an item is in the bag...
-    
+        //Determines if an item is in the bag: BOOL()
+        bool is_this_in();
 
-        //Determines the number of copies of an item in the bag...
+        //Determines the number of copies of an item in the bag: VOID()
+        void how_many_of_these( const value_type& item);
 
-        //Determines the total number of items in the bag...
+        //Determines the total number of items in the bag: VOID()
+        void total_in();
 
-        //Removes (one) items from the bag...
+        //Removes (one) items from the bag: VOID()
+        void remove_from( value_type& item );
 
-        //Removes all items from the bag...
+        //Removes all items from the bag: VOID()
+        void remove_all();
     
     private:
     
