@@ -6,11 +6,19 @@
 //  Copyright © 2017 Anthony Nash. All rights reserved.
 //
 
-#include <iostream>
+
+// FILE: bag_demo.cxx
+// This is a small demonstration program showing how the bag class is used.
+#include <iostream> // Provides: COUT / CIN ...
+#include <cstdlib> // Provides: EXIT_SUCCESS
+#include <stdio.h>
+
+#include "bag.hpp"
+#include "bag.cpp"
+
 
 using namespace std;
-
-
+using namespace ANTHONY_NASH_BAG;
 
 
 
@@ -22,12 +30,17 @@ int main()
 // the test cases shown below:
 
 {
+    cout << " bag item;" << end;
+    bag item;
     
     // Insert a “four” into the bag...
     
     // Fill the bag to capacity...
     
     //Show the size of the bag...
+//    cout << "// item.bag_count();"
+//    item.bag_count();
+    
     
     //Display the number of “fours” in the bag...
 
