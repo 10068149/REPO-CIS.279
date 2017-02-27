@@ -32,7 +32,7 @@ void bag_insert( const value_type& item )
 //Determines if an item is in the bag: BOOL()
 bool bag_find()
 {
-    
+    return true;
 }
 
 
@@ -43,7 +43,7 @@ bool bag_find()
 //Determines the number of copies of an item in the bag: VOID()
 void bag_find_coppies( const value_type& item)
 {
-    
+    //code...
 }
 
 
@@ -63,6 +63,8 @@ size_type bag_count()
             << "Bag_DATA [ " << index
             << " ]:" << bag_data [ index ];
     }
+    
+    return 0;
 }
 
 
@@ -79,7 +81,7 @@ bool bag_erase( value_type& item )
 // copy has no effect on the bag, and the function returns false.
 // (Chp.3, Pge6)
 {
-    
+    return true;
 }
 
 
@@ -90,6 +92,6 @@ bool bag_erase( value_type& item )
 //Removes all items from the bag: VOID()
 size_type bag_erase_all()
 {
-    
+    return 0;
 }
 

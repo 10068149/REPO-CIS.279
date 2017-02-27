@@ -38,7 +38,7 @@ int main()
     // Fill the bag to capacity...
     
     //Show the size of the bag...
-//    cout << "// item.bag_count();"
+    cout << "// item.bag_count();"
 //    item.bag_count();
     
     
