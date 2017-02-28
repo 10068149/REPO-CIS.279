@@ -58,11 +58,11 @@ size_type bag_count()
     
     cout << "size_type bag_count() {...}" << endl;
     
-    for (int index =0; index < CAPACITY; index++) {
-        cout
-        << "Bag_DATA [ " << index
-        << " ]:" << bag_data [ index ];
-    }
+//    for (int index =0; index < CAPACITY; index++) {
+//        cout
+//        << "Bag_DATA [ " << index
+//        << " ]:" << bag_data [ index ];
+//    }
     
     return 0;
 }

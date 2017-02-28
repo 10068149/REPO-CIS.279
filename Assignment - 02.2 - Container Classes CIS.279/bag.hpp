@@ -27,6 +27,21 @@
 
 #include <stdio.h>
 
+
+
+
+
+
+typedef int value_type;//as a synonym for a data type: int (Chp. 3, Pg.5)
+typedef size_t size_type;//"can hold only non-negative numbers" (Chp. 3, Pg.5)
+static const size_type CAPACITY = 20;
+
+
+
+
+
+
+
 namespace ANTHONY_NASH_BAG {
     //Container: BAG { ...
     class bag
@@ -38,9 +53,8 @@ namespace ANTHONY_NASH_BAG {
         
     public:
         
-        typedef int value_type;//as a synonym for a data type: int (Chp. 3, Pg.5)
-        typedef size_t size_type;//"can hold only non-negative numbers" (Chp. 3, Pg.5)
-        static const size_type CAPACITY = 20;
+//        typedef int value_type;//as a synonym for a data type: int (Chp. 3, Pg.5)
+//        typedef size_t size_type;//"can hold only non-negative numbers" (Chp. 3, Pg.5)
         
         // PROTOTYPES for functions used by this demonstration program:
         
