@@ -10,7 +10,7 @@
 
 // TYPEDEFS and MEMBER CONSTANTS for the bag class:
 // typedef ____ value_type
-// bag::value_type is the data type of the items in the bag.
+// bag::value_type is the data type of the objects in the bag.
 // It may be any of the C++ built-in types (int, char, etc.),
 // or a class with a default constructor, an assignment operator,
 // and operators to test for equality (x == y) and non-equality (x != y).
@@ -47,15 +47,14 @@ namespace ANTHONY_NASH_BAG {
     //Container: BAG { ...
     class bag
     //a Bag container class that holds a collection of bag_type data
-    //items supporting the operations as specified above in the functional
+    //objects supporting the operations as specified above in the functional
     // requirements:
     {
         
     public:
         
-        typedef int value_type;//as a synonym for a data type: int (Chp. 3, Pg.5)
+            typedef int bag_type;//as a synonym for a data type: int (Chp. 3, Pg.5)
         typedef size_t size_type;//"can hold only non-negative numbers" (Chp. 3, Pg.5)
-        static const size_type CAPACITY = 20;
         
         // PROTOTYPES for functions used by this demonstration program:
         
@@ -65,39 +64,49 @@ namespace ANTHONY_NASH_BAG {
             used_data =0;// set the member: used_data to zero
             
             for (int index =0; index < CAPACITY; index++)
-            { data [ index] = 0; }
+            {
+                data [ index] = 0;
+            }
             
         }
         
         
-        //Inserts an item in the bag: VOID()
-        void insert( const value_type& item );
-        //Pre: item + item.count() <= CAPACITY
+        //Inserts an object in the bag: VOID()
+        void insert( const bag_type& object );
+        //Pre: object + object.count() <= CAPACITY
         //Pro:
+
         
-        //Determines if an item is in the bag: BOOL()
-        bool find();
+        //Inserts an object in the bag: VOID()
+        void insert_full();
+        //Pre: object + object.count() <= CAPACITY
+        //Pro:
+
         
-        //Determines the number of copies of an item in the bag: VOID()
-        void find_coppies( const value_type& item);
+        //Determines if an object is in the bag: BOOL()
+        bool find( const bag_type& object );
         
-        //Determines the total number of items in the bag: VOID()
+        //Determines the number of copies of an object in the bag: VOID()
+        void find_coppies( const bag_type& object);
+        
+        //Determines the total number of objects in the bag: VOID()
         size_type count();
         
-        //Removes (one) items from the bag: VOID()
-        bool erase( value_type& item );
-        // Pre: The target (item) is actually in the bag;
+        //Removes (one) objects from the bag: VOID()
+        bool erase( bag_type& object );
+        // Pre: The target (object) is actually in the bag;
         // function removes one copy of target and returns true.
         // Pro: If target is not in the bag, attempting to erase one
         // copy has no effect on the bag, and the function returns false.
         // (Chp.3, Pge6)
         
-        //Removes all items from the bag: VOID()
+        //Removes all objects from the bag: VOID()
         size_type erase_all();
         
     private:
         
-        value_type data [ CAPACITY];
+        static const size_type CAPACITY = 20;
+        bag_type data [ CAPACITY];
         size_type used_data;
         
         

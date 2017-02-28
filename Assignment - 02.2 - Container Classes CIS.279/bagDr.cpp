@@ -35,38 +35,122 @@ int main()
 
 {
     cout
-        << "// bag item;"
+        << "// Instance object created ..."
+        << endl
+        << "** [OBJECT]: bag object; "
         << endl << endl;
     
-    bag item;
-    
-    // Insert a “four” into the bag...
-    
-    // Fill the bag to capacity...
+    bag object;
     
     
-    //Show the size of the bag...
+    
+    
+    
     cout
-        << "// item.bag_count();"
+        << "// Insert a “four” into the bag..."
+        << endl
+        << "** [FUNCTION CALL]: object.insert(4); "
         << endl << endl;
     
-    item.count();
+    object.insert(4);
+    
+
+
+    
+    cout
+        << "// Fill the bag to capacity..."
+        << endl
+        << "** [FUNCTION CALL]: object.insert_full(); "
+        << endl << endl;
+    
+    object.insert_full();
     
     
-    //Display the number of “fours” in the bag...
     
-    //Remove a four from the bag...
+    cout
+        << "//Show the size of the bag..."
+        << endl
+        << "** [FUNCTION CALL]: object.count(); "
+        << endl << endl;
     
-    //Show the size of the bag...
+    object.count();
     
-    //Display the number of fours in the bag...
+
     
-    //Display the number of fives in the bag...
     
-    //Remove all fives in the bag...
+    cout
+        << endl << endl
+        << "// Display the number of “fours” in the bag..."
+        << endl
+        << "** [FUNCTION CALL]: find_coppies(); "
+        << endl;
     
-    //Display the number of fives in the bag...
+    object.find_coppies(4);
+    
+    
+    
+    
+    
+    cout
+        << "//Remove a four from the bag..."
+        << endl
+        << "** [FUNCTION CALL]: erase( object );"
+        << endl << endl;
+    
+    
+    
+    
+    
+    
+    
+    //Show the size of the bag
+    //...
+    
+    
+    
+    
+    
+    
+    
+    //Display the number of fours in the bag
+    //...
+    
+    
+    
+    
+    
+    
+    
+    //Display the number of fives in the bag
+    //...
+    
+    
+    
+    
+    
+    
+    
+    //Remove all fives in the bag
+    //...
+    
+    
+    
+    
+    
+    
+    
+    //Display the number of fives in the bag
+    //...
+    
+
+    
+    
+    
+    
+    
+    
     
     cout << endl << endl << endl; 
     return 0;
+    
 }

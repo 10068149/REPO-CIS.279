@@ -17,21 +17,53 @@ using namespace ANTHONY_NASH_BAG;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // EMPLEMENTATION: for functions used by this demonstration program:
 
 
-//Inserts an item in the bag: VOID()
-void bag::insert( const value_type& item )
-//Pre: item + item.count() <= CAPACITY
+//Inserts an object in the bag: VOID()
+void bag::insert( const bag_type& object )
+//Pre: object + object.count() <= CAPACITY
 //Pro:
 {
-    for (int index =0; index < CAPACITY; index++)
+    int counter =0;
+    int index =0;
+    
+    while ( (used_data < CAPACITY) && (counter < 1) )
     {
-    
-        if ( data[ index ] == 0 ) {
-            data [ index ] = item;
+        for (int index =0; index < CAPACITY; index++)
+        {
+        
+                if ( (data[ index ] == 0) && (counter == 0) )
+                {
+                    data [ index ] = object;
+                    used_data++;
+                    counter++;
+                }
+            
         }
-    
     }
 
 }
@@ -41,10 +73,69 @@ void bag::insert( const value_type& item )
 
 
 
-//Determines if an item is in the bag: BOOL()
-bool bag::find()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Inserts an object in the bag: VOID()
+void bag::insert_full()
+//Pre: object + object.count() <= CAPACITY
+//Pro:
 {
-    return true;
+
+    for (int index = used_data; index < CAPACITY; index++)
+    {
+            
+            if ( data[ index ] == 0 && (index != 0) )
+            {
+                data [ index ] = index;
+                
+            }
+            
+    }
+    
 }
 
 
@@ -52,10 +143,33 @@ bool bag::find()
 
 
 
-//Determines the number of copies of an item in the bag: VOID()
-void bag::find_coppies( const value_type& item)
+
+
+
+
+
+//Determines if an object is in the bag: BOOL()
+bool bag::find( const bag_type& object )
 {
-    //code...
+    for (int index =0; index < CAPACITY; index++)
+    {
+        if ( data[ index ] == object )
+        {
+            cout
+                << "** [RETURN]: located a " << object
+                << " object in this Bag..."
+                << endl;
+
+            return true;
+        }
+    }
+    
+    cout
+        << "** [RETURN]: " << object
+        << " object not located..."
+        << endl;
+
+    return false;
 }
 
 
@@ -64,27 +178,91 @@ void bag::find_coppies( const value_type& item)
 
 
 
-//Determines the total number of items in the bag: size_type()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Determines the number of copies of an object in the bag: VOID()
+void bag::find_coppies( const bag_type& object)
+{
+    int counter =0;
+    
+    for (int index =0; index < CAPACITY; index++)
+    {
+        if ( data[ index ] == object )
+        {
+            counter++;
+        }
+    }
+
+    cout
+        << "** [RETURN]: There are " << counter
+        << " copies of " << object
+        << " in this Bag Object."
+        << endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Determines the total number of objects in the bag: size_type()
 bag::size_type bag::count()
 {
     
-    cout << "// size_type count() {...}" << endl <<endl;
-
-    //reading the array for totoal itmes counted: none "0"  / "empty" iteams
-    for (int index =0; index < CAPACITY; index++) {
+    //reading the array for total itmes counted: none "0"  / "empty" iteams
+    int counter =0;
+    
+    for (int index =0; index < CAPACITY; index++)
+    {
         
-        if ( data [index] > 0 ) { used_data++; }
+        if ( data [index] > 0 ) { counter++; }
         
         cout
             << "DATA [ " << index
             << " ]:" << data [ index ]
             << endl;
         
-        }
+    }
     
     cout
-        << endl << endl
-        << "Total items in Bag: " << used_data
+        << endl
+        << "** [RETURN] Total objects in Bag: " << counter
         << endl << endl;
     
     return 0;
@@ -96,9 +274,22 @@ bag::size_type bag::count()
 
 
 
-//Removes (one) items from the bag: VOID()
-bool bag::erase( value_type& item )
-// Pre: The target (item) is actually in the bag;
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Removes (one) objects from the bag: VOID()
+bool bag::erase( bag_type& object )
+// Pre: The target (object) is actually in the bag;
 // function removes one copy of target and returns true.
 // Pro: If target is not in the bag, attempting to erase one
 // copy has no effect on the bag, and the function returns false.
@@ -112,7 +303,7 @@ bool bag::erase( value_type& item )
 
 
 
-//Removes all items from the bag: VOID()
+//Removes all objects from the bag: VOID()
 bag::size_type bag::erase_all()
 {
     return 0;
