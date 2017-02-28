@@ -39,7 +39,7 @@ int main()
     
     //Show the size of the bag...
     cout << "// item.bag_count();" << endl;
-    item.bag_count();
+    item.count();
     
     
     //Display the number of “fours” in the bag...

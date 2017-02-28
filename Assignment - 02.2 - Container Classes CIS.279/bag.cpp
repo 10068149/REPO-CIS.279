@@ -17,8 +17,8 @@ using namespace ANTHONY_NASH_BAG;
 
 
 //Inserts an item in the bag: VOID()
-void bag::bag_insert( const value_type& item )
-//Pre: item + item.bag_count() <= CAPACITY
+void bag::insert( const value_type& item )
+//Pre: item + item.count() <= CAPACITY
 //Pro:
 {
     //code....
@@ -30,7 +30,7 @@ void bag::bag_insert( const value_type& item )
 
 
 //Determines if an item is in the bag: BOOL()
-bool bag::bag_find()
+bool bag::find()
 {
     return true;
 }
@@ -41,7 +41,7 @@ bool bag::bag_find()
 
 
 //Determines the number of copies of an item in the bag: VOID()
-void bag::bag_find_coppies( const value_type& item)
+void bag::find_coppies( const value_type& item)
 {
     //code...
 }
@@ -53,15 +53,15 @@ void bag::bag_find_coppies( const value_type& item)
 
 
 //Determines the total number of items in the bag: VOID()
-bag::size_type bag::bag_count()
+bag::size_type bag::count()
 {
     
-    cout << "size_type bag_count() {...}" << endl;
+    cout << "size_type count() {...}" << endl;
     
 //    for (int index =0; index < CAPACITY; index++) {
 //        cout
-//        << "Bag_DATA [ " << index
-//        << " ]:" << bag_data [ index ];
+//        << "DATA [ " << index
+//        << " ]:" << data [ index ];
 //    }
     
     return 0;
@@ -74,7 +74,7 @@ bag::size_type bag::bag_count()
 
 
 //Removes (one) items from the bag: VOID()
-bool bag::bag_erase( value_type& item )
+bool bag::erase( value_type& item )
 // Pre: The target (item) is actually in the bag;
 // function removes one copy of target and returns true.
 // Pro: If target is not in the bag, attempting to erase one
@@ -90,7 +90,7 @@ bool bag::bag_erase( value_type& item )
 
 
 //Removes all items from the bag: VOID()
-bag::size_type bag::bag_erase_all()
+bag::size_type bag::erase_all()
 {
     return 0;
 }
