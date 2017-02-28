@@ -53,7 +53,7 @@ void bag_find_coppies( const value_type& item)
 
 
 //Determines the total number of items in the bag: VOID()
-size_type bag_count()
+bag::size_type bag_count()
 {
     
     cout << "size_type bag_count() {...}" << endl;

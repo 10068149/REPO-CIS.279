@@ -32,9 +32,9 @@
 
 
 
-typedef int value_type;//as a synonym for a data type: int (Chp. 3, Pg.5)
-typedef size_t size_type;//"can hold only non-negative numbers" (Chp. 3, Pg.5)
-static const size_type CAPACITY = 20;
+//typedef int value_type;//as a synonym for a data type: int (Chp. 3, Pg.5)
+//typedef size_t size_type;//"can hold only non-negative numbers" (Chp. 3, Pg.5)
+//static const size_type CAPACITY = 20;
 
 
 
@@ -43,22 +43,22 @@ static const size_type CAPACITY = 20;
 
 
 namespace ANTHONY_NASH_BAG {
+    
     //Container: BAG { ...
     class bag
     //a Bag container class that holds a collection of bag_type data
     //items supporting the operations as specified above in the functional
     // requirements:
-    
     {
         
     public:
         
-//        typedef int value_type;//as a synonym for a data type: int (Chp. 3, Pg.5)
-//        typedef size_t size_type;//"can hold only non-negative numbers" (Chp. 3, Pg.5)
+        typedef int value_type;//as a synonym for a data type: int (Chp. 3, Pg.5)
+        typedef size_t size_type;//"can hold only non-negative numbers" (Chp. 3, Pg.5)
+        static const size_type CAPACITY = 20;
         
         // PROTOTYPES for functions used by this demonstration program:
         
-        //Constructors: bag();...
         //Constructors: bag();...
         bag() { used_data =0; }// set the member: used_data to zero
         
