@@ -53,7 +53,7 @@ void bag::bag_find_coppies( const value_type& item)
 
 
 //Determines the total number of items in the bag: VOID()
-bag::size_type bag_count()
+bag::size_type bag::bag_count()
 {
     
     cout << "size_type bag_count() {...}" << endl;
@@ -90,7 +90,7 @@ bool bag::bag_erase( value_type& item )
 
 
 //Removes all items from the bag: VOID()
-bag::size_type bag_erase_all()
+bag::size_type bag::bag_erase_all()
 {
     return 0;
 }
