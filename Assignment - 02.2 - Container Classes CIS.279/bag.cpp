@@ -17,11 +17,11 @@ using namespace ANTHONY_NASH_BAG;
 
 
 //Inserts an item in the bag: VOID()
-void bag_insert( const value_type& item )
+void bag::bag_insert( const value_type& item )
 //Pre: item + item.bag_count() <= CAPACITY
 //Pro:
 {
-    
+    //code....
 }
 
 
@@ -30,7 +30,7 @@ void bag_insert( const value_type& item )
 
 
 //Determines if an item is in the bag: BOOL()
-bool bag_find()
+bool bag::bag_find()
 {
     return true;
 }
@@ -41,7 +41,7 @@ bool bag_find()
 
 
 //Determines the number of copies of an item in the bag: VOID()
-void bag_find_coppies( const value_type& item)
+void bag::bag_find_coppies( const value_type& item)
 {
     //code...
 }
@@ -74,7 +74,7 @@ bag::size_type bag_count()
 
 
 //Removes (one) items from the bag: VOID()
-bool bag_erase( value_type& item )
+bool bag::bag_erase( value_type& item )
 // Pre: The target (item) is actually in the bag;
 // function removes one copy of target and returns true.
 // Pro: If target is not in the bag, attempting to erase one
@@ -90,7 +90,7 @@ bool bag_erase( value_type& item )
 
 
 //Removes all items from the bag: VOID()
-size_type bag_erase_all()
+bag::size_type bag_erase_all()
 {
     return 0;
 }
