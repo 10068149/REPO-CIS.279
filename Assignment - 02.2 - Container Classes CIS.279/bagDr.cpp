@@ -34,6 +34,7 @@ int main()
 // the test cases shown below:
 
 {
+    // Instance object created ...
     cout
         << "// Instance object created ..."
         << endl
@@ -46,8 +47,12 @@ int main()
     
     
     
+    
+    
+    // Insert a \"four\" into the bag...
+    
     cout
-        << "// Insert a “four” into the bag..."
+        << "// Insert a \"four\" into the bag..."
         << endl
         << "** [FUNCTION CALL]: object.insert(4); "
         << endl << endl;
@@ -57,6 +62,10 @@ int main()
 
 
     
+    
+    
+    
+    // Fill the bag to capacity...
     cout
         << "// Fill the bag to capacity..."
         << endl
@@ -65,22 +74,26 @@ int main()
     
     object.insert_full();
     
+   
     
     
+    
+    
+    //Show the size of the bag...
     cout
         << "//Show the size of the bag..."
         << endl
-        << "** [FUNCTION CALL]: object.count(); "
+        << "** [FUNCTION CALL]: object.size(); "
         << endl << endl;
     
-    object.count();
+    object.size();
     
 
     
-    
+    // Display the number of \"fours\" in the bag...
     cout
         << endl << endl
-        << "// Display the number of “fours” in the bag..."
+        << "// Display the number of \"fours\" in the bag..."
         << endl
         << "** [FUNCTION CALL]: find_coppies(); "
         << endl;
@@ -90,13 +103,15 @@ int main()
     
     
     
-    
+    //Remove a \"four\" from the bag...
     cout
-        << "//Remove a four from the bag..."
+        << endl << endl
+        << "//Remove a \"four\" from the bag..."
         << endl
         << "** [FUNCTION CALL]: erase( object );"
-        << endl << endl;
+        << endl;
     
+        object.erase(4);
     
     
     
@@ -104,7 +119,15 @@ int main()
     
     
     //Show the size of the bag
-    //...
+    cout
+        << endl << endl
+        << "//Show the size of the bag..."
+        << endl
+        << "** [FUNCTION CALL]: object.size(); "
+        << endl << endl;
+    
+    object.size();
+
     
     
     
@@ -113,7 +136,15 @@ int main()
     
     
     //Display the number of fours in the bag
-    //...
+    cout
+    << endl << endl
+    << "// Display the number of \"fours\" in the bag..."
+    << endl
+    << "** [FUNCTION CALL]: find_coppies(); "
+    << endl;
+    
+    object.find_coppies(4);
+
     
     
     
@@ -122,7 +153,15 @@ int main()
     
     
     //Display the number of fives in the bag
-    //...
+    cout
+    << endl << endl
+    << "// Display the number of \"fives\" in the bag..."
+    << endl
+    << "** [FUNCTION CALL]: find_coppies(); "
+    << endl;
+    
+    object.find_coppies(5);
+
     
     
     
@@ -131,7 +170,15 @@ int main()
     
     
     //Remove all fives in the bag
-    //...
+    cout
+        << endl << endl
+        << "//Remove all \"fives\" in the bag..."
+        << endl
+        << "** [FUNCTION CALL]: erase( object );"
+        << endl;
+    
+    object.erase(5);
+
     
     
     
@@ -140,7 +187,16 @@ int main()
     
     
     //Display the number of fives in the bag
-    //...
+    cout
+    << endl << endl
+    << "// Display the number of \"fives\" in the bag..."
+    << endl
+    << "** [FUNCTION CALL]: find_coppies(); "
+    << endl;
+    
+    object.find_coppies(5);
+    cout << endl;
+    object.size();
     
 
     

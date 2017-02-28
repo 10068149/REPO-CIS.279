@@ -53,22 +53,13 @@ namespace ANTHONY_NASH_BAG {
         
     public:
         
-            typedef int bag_type;//as a synonym for a data type: int (Chp. 3, Pg.5)
+        typedef int bag_type;//as a synonym for a data type: int (Chp. 3, Pg.5)
         typedef size_t size_type;//"can hold only non-negative numbers" (Chp. 3, Pg.5)
         
         // PROTOTYPES for functions used by this demonstration program:
         
         //Constructors: bag();...
-        bag()
-        {
-            used_data =0;// set the member: used_data to zero
-            
-            for (int index =0; index < CAPACITY; index++)
-            {
-                data [ index] = 0;
-            }
-            
-        }
+        bag();
         
         
         //Inserts an object in the bag: VOID()
@@ -84,16 +75,16 @@ namespace ANTHONY_NASH_BAG {
 
         
         //Determines if an object is in the bag: BOOL()
-        bool find( const bag_type& object );
+        bool find( const bag_type& object ) const;
         
         //Determines the number of copies of an object in the bag: VOID()
-        void find_coppies( const bag_type& object);
+        void find_coppies( const bag_type& object) const;
         
         //Determines the total number of objects in the bag: VOID()
-        size_type count();
+        size_type size();
         
         //Removes (one) objects from the bag: VOID()
-        bool erase( bag_type& object );
+        bool erase( const bag_type& object );
         // Pre: The target (object) is actually in the bag;
         // function removes one copy of target and returns true.
         // Pro: If target is not in the bag, attempting to erase one
@@ -101,7 +92,7 @@ namespace ANTHONY_NASH_BAG {
         // (Chp.3, Pge6)
         
         //Removes all objects from the bag: VOID()
-        size_type erase_all();
+        void clear( const bag_type& object );
         
     private:
         
