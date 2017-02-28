@@ -30,7 +30,10 @@ int main()
 // the test cases shown below:
 
 {
-    cout << "// bag item;" << endl;
+    cout
+        << "// bag item;"
+        << endl << endl;
+    
     bag item;
     
     // Insert a “four” into the bag...
@@ -38,7 +41,10 @@ int main()
     // Fill the bag to capacity...
     
     //Show the size of the bag...
-    cout << "// item.bag_count();" << endl;
+    cout
+        << "// item.bag_count();"
+        << endl << endl;
+    
     item.count();
     
     
@@ -56,5 +62,6 @@ int main()
     
     //Display the number of fives in the bag...
     
+    cout << endl << endl << endl; 
     return 0;
 }

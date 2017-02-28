@@ -56,13 +56,14 @@ void bag::find_coppies( const value_type& item)
 bag::size_type bag::count()
 {
     
-    cout << "size_type count() {...}" << endl;
+    cout << "// size_type count() {...}" << endl <<endl;
     
-//    for (int index =0; index < CAPACITY; index++) {
-//        cout
-//        << "DATA [ " << index
-//        << " ]:" << data [ index ];
-//    }
+    for (int index =0; index < CAPACITY; index++) {
+        cout
+            << "DATA [ " << index
+            << " ]:" << data [ index ]
+            << endl;
+    }
     
     return 0;
 }

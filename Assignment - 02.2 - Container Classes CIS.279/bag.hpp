@@ -60,7 +60,16 @@ namespace ANTHONY_NASH_BAG {
         // PROTOTYPES for functions used by this demonstration program:
         
         //Constructors: bag();...
-        bag() { used_data =0; }// set the member: used_data to zero
+        bag()
+        {
+            used_data =0;// set the member: used_data to zero
+            
+            for (int index =0; index < CAPACITY; index++) {
+            
+                data [ index] = 0;
+            
+            }
+        }
         
         
         //Inserts an item in the bag: VOID()
