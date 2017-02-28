@@ -64,11 +64,9 @@ namespace ANTHONY_NASH_BAG {
         {
             used_data =0;// set the member: used_data to zero
             
-            for (int index =0; index < CAPACITY; index++) {
+            for (int index =0; index < CAPACITY; index++)
+            { data [ index] = 0; }
             
-                data [ index] = 0;
-            
-            }
         }
         
         

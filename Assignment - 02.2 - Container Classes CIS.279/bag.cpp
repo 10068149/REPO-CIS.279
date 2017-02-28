@@ -13,6 +13,10 @@
 using namespace std;
 using namespace ANTHONY_NASH_BAG;
 
+
+
+
+
 // EMPLEMENTATION: for functions used by this demonstration program:
 
 
@@ -21,7 +25,15 @@ void bag::insert( const value_type& item )
 //Pre: item + item.count() <= CAPACITY
 //Pro:
 {
-    //code....
+    for (int index =0; index < CAPACITY; index++)
+    {
+    
+        if ( data[ index ] == 0 ) {
+            data [ index ] = item;
+        }
+    
+    }
+
 }
 
 
@@ -52,18 +64,28 @@ void bag::find_coppies( const value_type& item)
 
 
 
-//Determines the total number of items in the bag: VOID()
+//Determines the total number of items in the bag: size_type()
 bag::size_type bag::count()
 {
     
     cout << "// size_type count() {...}" << endl <<endl;
-    
+
+    //reading the array for totoal itmes counted: none "0"  / "empty" iteams
     for (int index =0; index < CAPACITY; index++) {
+        
+        if ( data [index] > 0 ) { used_data++; }
+        
         cout
             << "DATA [ " << index
             << " ]:" << data [ index ]
             << endl;
-    }
+        
+        }
+    
+    cout
+        << endl << endl
+        << "Total items in Bag: " << used_data
+        << endl << endl;
     
     return 0;
 }
@@ -95,4 +117,8 @@ bag::size_type bag::erase_all()
 {
     return 0;
 }
+
+
+
+
 
