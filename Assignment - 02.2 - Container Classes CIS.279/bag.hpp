@@ -78,7 +78,7 @@ namespace ANTHONY_NASH_BAG {
         bool find( const bag_type& object ) const;
         
         //Determines the number of copies of an object in the bag: VOID()
-        void find_coppies( const bag_type& object) const;
+        int find_coppies( const bag_type& object) const;
         
         //Determines the total number of objects in the bag: VOID()
         size_type size();

@@ -96,9 +96,11 @@ int main()
         << "// Display the number of \"fours\" in the bag..."
         << endl
         << "** [FUNCTION CALL]: find_coppies(); "
+        << endl
+        << endl
+        << "count is: " << object.find_coppies(4)
         << endl;
     
-    object.find_coppies(4);
     
     
     
@@ -111,7 +113,9 @@ int main()
         << "** [FUNCTION CALL]: erase( object );"
         << endl;
     
-        object.erase(4);
+    if ( object.erase(4) ) {
+        cout << "[RETURN: TURE]: item was deleted ...";
+    } else { cout << "[RETURN: FALSE]: item was not deleted ..."; }
     
     
     
@@ -143,7 +147,13 @@ int main()
     << "** [FUNCTION CALL]: find_coppies(); "
     << endl;
     
-    object.find_coppies(4);
+    int counter = object.find_coppies(4);
+    
+    cout
+    << "** [ RETURN ] There are " << counter
+    << " coppies of \"four\" items in the bag!"
+    << endl << endl;
+
 
     
     
@@ -160,7 +170,13 @@ int main()
     << "** [FUNCTION CALL]: find_coppies(); "
     << endl;
     
-    object.find_coppies(5);
+    counter = object.find_coppies(5);
+    
+    cout
+    << "** [ RETURN ] There are " << counter
+    << " coppies of \"five\" items in the bag!"
+    << endl << endl;
+
 
     
     

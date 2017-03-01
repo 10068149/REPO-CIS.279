@@ -140,7 +140,7 @@ void bag::insert_full()
             if ( data[ index ] == 0 && (index != 0) )
             {
                 data [ index ] = index;
-                
+                used_data++;
             }
             
     }
@@ -181,20 +181,10 @@ bool bag::find( const bag_type& object ) const
     {
         if ( data[ index ] == object )
         {
-            cout
-                << "** [RETURN]: located a " << object
-                << " object in this Bag..."
-                << endl;
-
             return true;
         }
     }
     
-    cout
-        << "** [RETURN]: " << object
-        << " object not located..."
-        << endl;
-
     return false;
 }
 
@@ -219,7 +209,7 @@ bool bag::find( const bag_type& object ) const
 
 
 //Determines the number of copies of an object in the bag: VOID()
-void bag::find_coppies( const bag_type& object) const
+int bag::find_coppies( const bag_type& object) const
 {
     int counter =0;
     
@@ -227,20 +217,11 @@ void bag::find_coppies( const bag_type& object) const
     {
         if ( data[ index ] == object )
         {
-            cout
-                << "** DATA [ " << index
-                << " ]: " << data[ index ]
-                << endl;
-            
             counter++;
         }
     }
 
-    cout
-        << "** [RETURN]: " << counter
-        << " \"" << object
-        << " object(s)\" located!"
-        << endl;
+    return counter;
 }
 
 
@@ -332,18 +313,8 @@ bool bag::erase( const bag_type& object )
             
             if ( data[ index ] == object )
             {
-                cout
-                << "** [RETURN]: located a " << object
-                << " object in this Bag," << endl
-                << "   at location: DATA [" << index
-                << "]" << endl;
-                
                 data [ index ] = 0;
-
-                cout
-                    << "** [ACNTION]: Deleted!"
-                    << endl;
-                
+                used_data--;
                 return true;
             }
             
