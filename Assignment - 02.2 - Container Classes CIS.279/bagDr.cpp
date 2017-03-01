@@ -12,18 +12,13 @@
 #include <iostream> // Provides: COUT / CIN ...
 #include <cstdlib> // Provides: EXIT_SUCCESS
 #include <stdio.h>
-
+#include <cassert>
 #include "bag.hpp"
 
 
 
 using namespace std;
 using namespace ANTHONY_NASH_BAG;
-
-
-
-
-
 
 
 
@@ -36,193 +31,179 @@ int main()
 {
     // Instance object created ...
     cout
-        << "// Instance object created ..."
+        << "// 1, Instance of bag object created ..."
         << endl
-        << "** [OBJECT]: bag object; "
-        << endl << endl;
+        << "** [ OBJECT ]: bag bag; "
+        << endl << endl << endl;
     
-    bag object;
-    
-    
-    
-    
-    
+    bag bag;
+
     
     
     // Insert a \"four\" into the bag...
     
     cout
-        << "// Insert a \"four\" into the bag..."
+        << "// 2, Insert a \"four\" into the bag..."
         << endl
-        << "** [FUNCTION CALL]: object.insert(4); "
-        << endl << endl;
+        << "** [ FUNCTION CALL ]: object.insert(4); "
+        << endl << endl << endl;
     
-    object.insert(4);
-    
+    bag.insert(4);
 
-
-    
-    
     
     
     // Fill the bag to capacity...
     cout
-        << "// Fill the bag to capacity..."
+        << "// 3, Fill the bag to capacity..."
         << endl
-        << "** [FUNCTION CALL]: object.insert_full(); "
-        << endl << endl;
+        << "** [ FUNCTION CALL ]: bag.insert( INDEX ); "
+        << endl << endl << endl;
     
-    object.insert_full();
-    
-   
-    
+    for (int index = bag.size(); index < 20; index++)
+    {
+        bag.insert(index);
+    }
+
     
     
     
     //Show the size of the bag...
     cout
-        << "//Show the size of the bag..."
+        << "// 4, Show the size of the bag..."
         << endl
-        << "** [FUNCTION CALL]: object.size(); "
+        << "** [ FUNCTION CALL ]: bag.size(); "
+        << endl
+        << "** [ RETURN ]: Size of bag is: " << bag.size()
         << endl << endl;
-    
-    object.size();
     
 
     
     // Display the number of \"fours\" in the bag...
     cout
         << endl << endl
-        << "// Display the number of \"fours\" in the bag..."
+        << "// 5, Display the number of \"fours\" in the bag..."
         << endl
-        << "** [FUNCTION CALL]: find_coppies(); "
+        << "** [ FUNCTION CALL ]: find_coppies(4); "
         << endl
-        << endl
-        << "count is: " << object.find_coppies(4)
+        << "** [ RETURN ]: The count is: " << bag.find_coppies(4)
         << endl;
-    
-    
-    
+
     
     
     //Remove a \"four\" from the bag...
     cout
         << endl << endl
-        << "//Remove a \"four\" from the bag..."
+        << "// 6, Remove a \"four\" from the bag..."
         << endl
-        << "** [FUNCTION CALL]: erase( object );"
+        << "** [ FUNCTION CALL ]: erase( object );"
         << endl;
     
-    if ( object.erase(4) ) {
-        cout << "[RETURN: TURE]: item was deleted ...";
-    } else { cout << "[RETURN: FALSE]: item was not deleted ..."; }
-    
-    
-    
-    
-    
-    
-    //Show the size of the bag
-    cout
-        << endl << endl
-        << "//Show the size of the bag..."
-        << endl
-        << "** [FUNCTION CALL]: object.size(); "
-        << endl << endl;
-    
-    object.size();
+    if ( bag.erase(4) )
+    {
+        cout
+            << "** [ RETURN: TRUE ]: item was deleted ..."
+            << endl << endl << endl;
+    }
+    else
+    {
+        cout
+            << "** [RETURN: FALSE]: item was not deleted ..."
+            << endl << endl << endl;
+    }
 
     
     
-    
-    
-    
+    //Show the size of the bag...
+    cout
+        << "// 7, Show the size of the bag..."
+        << endl
+        << "** [ FUNCTION CALL ]: bag.size(); "
+        << endl
+        << "** [ RETURN ]: Size of bag is: " << bag.size()
+        << endl << endl;
+
     
     
     //Display the number of fours in the bag
     cout
-    << endl << endl
-    << "// Display the number of \"fours\" in the bag..."
-    << endl
-    << "** [FUNCTION CALL]: find_coppies(); "
-    << endl;
+        << endl
+        << "// 8, Display the number of \"fours\" in the bag..."
+        << endl
+        << "** [ FUNCTION CALL ]: find_coppies(); "
+        << endl;
     
-    int counter = object.find_coppies(4);
+    int counter = bag.find_coppies(4);
     
     cout
-    << "** [ RETURN ] There are " << counter
-    << " coppies of \"four\" items in the bag!"
-    << endl << endl;
+        << "** [ RETURN ] There is/are " << counter
+        << " coppies of \"four\" " << endl
+        << "              objects in the bag!"
+        << endl << endl;
 
-
-    
-    
-    
-    
-    
     
     
     //Display the number of fives in the bag
     cout
-    << endl << endl
-    << "// Display the number of \"fives\" in the bag..."
     << endl
-    << "** [FUNCTION CALL]: find_coppies(); "
+    << "// 9, Display the number of \"five\" in the bag..."
+    << endl
+    << "** [ FUNCTION CALL ]: find_coppies(); "
     << endl;
     
-    counter = object.find_coppies(5);
+    counter = bag.find_coppies(5);
     
     cout
-    << "** [ RETURN ] There are " << counter
-    << " coppies of \"five\" items in the bag!"
+    << "** [ RETURN ] There is/are " << counter
+    << " coppies of \"five\" " << endl
+    << "              objects in the bag!"
     << endl << endl;
 
-
-    
-    
-    
-    
-    
     
     
     //Remove all fives in the bag
     cout
-        << endl << endl
-        << "//Remove all \"fives\" in the bag..."
         << endl
-        << "** [FUNCTION CALL]: erase( object );"
+        << "// 10, Remove all \"fives\" in the bag..."
+        << endl
+        << "** [ FUNCTION CALL ]: erase( object );"
         << endl;
     
-    object.erase(5);
+    bag.erase(5);
 
-    
-    
-    
-    
-    
     
     
     //Display the number of fives in the bag
     cout
     << endl << endl
-    << "// Display the number of \"fives\" in the bag..."
+    << "// 11, Display the number of \"five\" in the bag..."
     << endl
-    << "** [FUNCTION CALL]: find_coppies(); "
+    << "** [ FUNCTION CALL ]: find_coppies(); "
     << endl;
     
-    object.find_coppies(5);
-    cout << endl;
-    object.size();
+    counter = bag.find_coppies(5);
     
+    cout
+    << "** [ RETURN ] There is/are " << counter
+    << " coppies of \"five\" " << endl
+    << "              objects in the bag!"
+    << endl << endl <<endl;
+    
+    //Show the size of the bag...
+    cout
+    << "// 12, Show the size of the bag..."
+    << endl
+    << "** [ FUNCTION CALL ]: bag.size(); "
+    << endl
+    << "** [ RETURN ]: Size of bag is: " << bag.size()
+    << endl << endl;
+
 
     
     
     
     
     
-    
-    
-    cout << endl << endl << endl; 
+    cout << endl << endl << endl;
     return 0;
     
 }

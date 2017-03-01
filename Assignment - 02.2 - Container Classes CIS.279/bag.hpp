@@ -9,7 +9,7 @@
 //CLASS PROVIDED: bag (part of the namespace main_savitch_3)
 
 // TYPEDEFS and MEMBER CONSTANTS for the bag class:
-// typedef ____ value_type
+// typedef ____ bag_type
 // bag::value_type is the data type of the objects in the bag.
 // It may be any of the C++ built-in types (int, char, etc.),
 // or a class with a default constructor, an assignment operator,
@@ -26,16 +26,6 @@
 #define bag_hpp
 
 #include <stdio.h>
-
-
-
-
-
-
-//typedef int value_type;//as a synonym for a data type: int (Chp. 3, Pg.5)
-//typedef size_t size_type;//"can hold only non-negative numbers" (Chp. 3, Pg.5)
-//static const size_type CAPACITY = 20;
-
 
 
 
@@ -68,20 +58,19 @@ namespace ANTHONY_NASH_BAG {
         //Pro:
 
         
-        //Inserts an object in the bag: VOID()
-        void insert_full();
-        //Pre: object + object.count() <= CAPACITY
-        //Pro:
-
         
         //Determines if an object is in the bag: BOOL()
         bool find( const bag_type& object ) const;
         
-        //Determines the number of copies of an object in the bag: VOID()
+        
+        
+        //Determines the number of copies of an object in the bag: int()
         int find_coppies( const bag_type& object) const;
         
-        //Determines the total number of objects in the bag: VOID()
+        
+        //Determines the total number of objects in the bag: size_type()
         size_type size();
+
         
         //Removes (one) objects from the bag: VOID()
         bool erase( const bag_type& object );
@@ -92,14 +81,13 @@ namespace ANTHONY_NASH_BAG {
         // (Chp.3, Pge6)
         
         //Removes all objects from the bag: VOID()
-        void clear( const bag_type& object );
+        void clear();
         
     private:
         
         static const size_type CAPACITY = 20;
-        bag_type data [ CAPACITY];
-        size_type used_data;
-        
+        bag_type _data [ CAPACITY];
+        size_type _size;
         
     }; //END OF: CONTAINER BAG
 
@@ -107,10 +95,8 @@ namespace ANTHONY_NASH_BAG {
 
 
 
+
 #endif /* bag_hpp */
-
-
-
 
 
 

@@ -6,8 +6,6 @@
 //  Copyright © 2017 Anthony Nash. All rights reserved.
 //
 
-#include <iostream>
-#include <stdio.h>
 #include "bag.hpp"
 
 using namespace std;
@@ -15,42 +13,21 @@ using namespace ANTHONY_NASH_BAG;
 
 
 
-
-
-
-
-
-
-
 bag :: bag()
 {
-    used_data =0;// set the member: used_data to zero
+    _size =0;// set the member: _size to zero
     
     for (int index =0; index < CAPACITY; index++)
     {
-        data [ index] = 0;
+        _data [ index] = 0;
     }
     
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // EMPLEMENTATION: for functions used by this demonstration program:
+
 
 
 //Inserts an object in the bag: VOID()
@@ -58,128 +35,20 @@ void bag::insert( const bag_type& object )
 //Pre: object + object.count() <= CAPACITY
 //Pro:
 {
-    int counter =0;
-    
-    while ( (used_data < CAPACITY) && (counter < 1) )
-    {
-        for (int index =0; index < CAPACITY; index++)
-        {
-        
-                if ( (data[ index ] == 0) && (counter == 0) )
-                {
-                    data [ index ] = object;
-                    used_data++;
-                    counter++;
-                }
-            
-        }
-    }
-
+    // index: [0, 1, 2, 3, 4]
+    // value: [1, 2, 3, *, 0] => size = 3
+    _data[_size] = object;
+    _size++;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Inserts an object in the bag: VOID()
-void bag::insert_full()
-//Pre: object + object.count() <= CAPACITY
-//Pro:
-{
-
-    for (int index = used_data; index < CAPACITY; index++)
-    {
-            
-            if ( data[ index ] == 0 && (index != 0) )
-            {
-                data [ index ] = index;
-                used_data++;
-            }
-            
-    }
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 //Determines if an object is in the bag: BOOL()
 bool bag::find( const bag_type& object ) const
 {
-    for (int index =0; index < CAPACITY; index++)
+    for (int index =0; index < _size; index++)
     {
-        if ( data[ index ] == object )
+        if ( _data[ index ] == object )
         {
             return true;
         }
@@ -191,31 +60,14 @@ bool bag::find( const bag_type& object ) const
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Determines the number of copies of an object in the bag: VOID()
 int bag::find_coppies( const bag_type& object) const
 {
     int counter =0;
     
-    for (int index =0; index < CAPACITY; index++)
+    for (int index =0; index < _size; index++)
     {
-        if ( data[ index ] == object )
+        if ( _data[ index ] == object )
         {
             counter++;
         }
@@ -227,75 +79,11 @@ int bag::find_coppies( const bag_type& object) const
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Determines the total number of objects in the bag: size_type()
 bag::size_type bag::size()
 {
-    
-    //reading the array for total itmes counted: none "0"  / "empty" iteams
-    int counter =0;
-    
-    for (int index =0; index < CAPACITY; index++)
-    {
-        
-        if ( data [index] > 0 ) { counter++; }
-        
-        cout
-            << "** DATA [ " << index
-            << " ]: " << data [ index ]
-            << endl;
-        
-    }
-    
-    cout
-        << endl
-        << "** [RETURN] Total objects in Bag: " << counter
-        << endl << endl;
-    
-    return 0;
+    return _size;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -307,53 +95,32 @@ bool bag::erase( const bag_type& object )
 // copy has no effect on the bag, and the function returns false.
 // (Chp.3, Pge6)
 {
+    for (int index =0; index < _size; index++)
+    {
+        if (_data[index] == object) {
 
-    for (int index =0; index < CAPACITY; index++)
-        {
-            
-            if ( data[ index ] == object )
-            {
-                data [ index ] = 0;
-                used_data--;
-                return true;
+            for(int j = index + 1; j < _size; j++) {
+
+                _data[j - 1] = _data[j];
             }
-            
+            _size--;
+            return true;
         }
-        
-    
+
+    }
     return false;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Removes all objects from the bag: VOID()
-void bag::clear( const bag_type& object )
+void bag::clear( )
 {
+    _size=0;
     
-//    erase( find_coppies( object ) )
-
 }
+    
+
 
 
 
