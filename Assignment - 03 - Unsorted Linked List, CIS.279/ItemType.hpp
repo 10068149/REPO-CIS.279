@@ -16,7 +16,7 @@ class ItemType {
 
 public:
     
-    RelationType ComparedTo (ItemType Item);
+    RelationType ComparedTo(ItemType Item);
     
     // F(): Determines the ordering of two ItemType objects
     //      based on their keys...

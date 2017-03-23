@@ -16,8 +16,7 @@ class unsorted {
     
 public:
     
-    <WHAT GOES HERE> make_empty();
-    <IS THIS A CONSTRCUTOR ??>
+    unsorted();
     
     // Initializes list to empty state...
     // PRE: NONE
@@ -41,7 +40,7 @@ public:
 
     
     
-    ItemType GetItem(Item Typeitem, Boolean& found);
+    ItemType GetItem( ItemType Item, Boolean& found);
     
     // PRE:     List has been initialized;
     //          Key member of item is initialized...
@@ -52,7 +51,7 @@ public:
 
     
     
-    <WHAT GOES HERE> PutItem(ItemType item);
+    void PutItem(ItemType item);
     
     // WHAT:    Puts item into list...
     // PRE:     1) List has been initialized; 2) List is not full;
@@ -61,7 +60,7 @@ public:
 
     
     
-    <WHAT GOES HERE> DeleteItem(ItemType item);
+    void DeleteItem(ItemType item);
     
     // WHAT:    Deletes the element whose key matches item’s key...
     // PRE:     List has been initialized...
@@ -69,7 +68,7 @@ public:
 
     
     
-    <WHAT GOES HERE> ResetList();
+    void ResetList();
     // WHAT:    current position for an iteration through the list...
     // PRE:     List has been initialized...
     // POST:    Current  position is prior to list..
