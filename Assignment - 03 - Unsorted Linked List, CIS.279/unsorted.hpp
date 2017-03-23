@@ -25,7 +25,7 @@ public:
     
 
     
-    bool IsFull();
+    bool IsFull() const;
     
     // Determine whether list is full...
     // PRE: List has been initialaized...
@@ -33,7 +33,7 @@ public:
     
     
 
-    int GetLength();
+    int GetLength() const;
     
     // Determins the number of elements in list...
     // PRE:
@@ -41,8 +41,9 @@ public:
 
     
     
-    ItemType GetItem( ItemType Item, bool& found);
+    ItemType GetItem( ItemType Item, bool& found) const;
     
+    // WHAT:    Get list element whose key matches item’s key (if present)
     // PRE:     List has been initialized;
     //          Key member of item is initialized...
     // POST:    If there is an elemnt someitem whos keymatches item's
@@ -69,14 +70,14 @@ public:
 
     
     
-    void ResetList();
+    void ResetList() const;
     // WHAT:    current position for an iteration through the list...
     // PRE:     List has been initialized...
     // POST:    Current  position is prior to list..
 
     
     
-    ItemType GetNextItem();
+    ItemType GetNextItem() const;
 
     // F(): Gets the next element in list...
     // PRE:  1) List has been initialized..
