@@ -11,4 +11,20 @@
 
 #include <stdio.h>
 
+
+class itemType {
+
+public:
+    
+    //code...
+    
+private:
+    
+    //code...
+    
+
+};
+
+
+
 #endif /* ItemType_hpp */

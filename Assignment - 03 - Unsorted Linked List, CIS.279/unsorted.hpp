@@ -11,4 +11,17 @@
 
 #include <stdio.h>
 
+
+class unsorted {
+    
+public:
+    
+    //code...
+    
+private:
+    
+    //code...
+    
+};
+
 #endif /* unsorted_hpp */
