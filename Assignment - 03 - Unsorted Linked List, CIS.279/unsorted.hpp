@@ -16,29 +16,33 @@ class unsorted {
     
 public:
     
-    // <?> Make_Empty();
+    <WHAT GOES HERE> make_empty();
+    <IS THIS A CONSTRCUTOR ??>
+    
     // Initializes list to empty state...
     // PRE: NONE
     // POST: List is empty...
     
 
     
-    // Bool IsFull();
+    bool IsFull();
+    
     // Determine whether list is full...
     // PRE: List has been initialaized...
     // POST: "F()" value is: list is full...
     
     
 
-    // int GetLength()
+    int GetLength();
+    
     // Determins the number of elements in list...
     // PRE:
     // POST:
 
     
     
-    // ItemType GetItem(Item Typeitem, Boolean& found);
-    //
+    ItemType GetItem(Item Typeitem, Boolean& found);
+    
     // PRE:     List has been initialized;
     //          Key member of item is initialized...
     // POST:    If there is an elemnt someitem whos keymatches item's
@@ -48,7 +52,8 @@ public:
 
     
     
-    // <?> PutItem(ItemType item)
+    <WHAT GOES HERE> PutItem(ItemType item);
+    
     // WHAT:    Puts item into list...
     // PRE:     1) List has been initialized; 2) List is not full;
     //          3) ITEM IS NOT IN LIST...
@@ -56,27 +61,29 @@ public:
 
     
     
-    // <?> DeleteItem(ItemType item);
+    <WHAT GOES HERE> DeleteItem(ItemType item);
+    
     // WHAT:    Deletes the element whose key matches item’s key...
     // PRE:     List has been initialized...
     // POST:    One and only one element in list has a key matching item’s key...
 
     
     
-    // <?> ResetList();
+    <WHAT GOES HERE> ResetList();
     // WHAT:    current position for an iteration through the list...
     // PRE:     List has been initialized...
     // POST:    Current  position is prior to list..
 
     
     
-    // ItemType GetNextItem();
+    ItemType GetNextItem();
+    <WHY DOES "ItemType" NOT WORK ON THIS LINE AS IT DOES WITH: "GetItem()">
     // F(): Gets the next element in list...
-    // PRE: 1) List has been initialized..
-    //      2) Current position is defined..
-    //      3) Element at current position is not last in list..
+    // PRE:  1) List has been initialized..
+    //       2) Current position is defined..
+    //       3) Element at current position is not last in list..
     
-    // POST: 1) Current position is updated to next position;
+    // POST: Current position is updated to next position;
     //       returns a copy of element at current position...
 
     

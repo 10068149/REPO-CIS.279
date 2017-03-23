@@ -12,16 +12,16 @@
 #include <stdio.h>
 
 
-class itemType {
+class ItemType {
 
 public:
     
-    // RelationType ComparedTo (ItemType Item);
+    RelationType ComparedTo (ItemType Item);
     
-    // FUNCTION: Determines the ordering of two ItemType objects
-    // based on their keys...
-    // PRECONDTION: Self and item have their key members
-    // initialized.
+    // F(): Determines the ordering of two ItemType objects
+    //      based on their keys...
+    // PRO:
+    // PRE: Self and item have their key members initialized.
     
     
     
