@@ -9,7 +9,8 @@
 #ifndef unsorted_hpp
 #define unsorted_hpp
 
-#include <stdio.h>
+//#include <stdio.h>
+#include "ItemType.hpp"
 
 
 class unsorted {
@@ -40,7 +41,7 @@ public:
 
     
     
-    ItemType GetItem( ItemType Item, Boolean& found);
+    ItemType GetItem( ItemType Item, bool& found);
     
     // PRE:     List has been initialized;
     //          Key member of item is initialized...
@@ -76,7 +77,7 @@ public:
     
     
     ItemType GetNextItem();
-    <WHY DOES "ItemType" NOT WORK ON THIS LINE AS IT DOES WITH: "GetItem()">
+
     // F(): Gets the next element in list...
     // PRE:  1) List has been initialized..
     //       2) Current position is defined..
