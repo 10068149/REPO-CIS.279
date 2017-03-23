@@ -20,7 +20,7 @@ using namespace std;
 int main()
 {
     
-    cout    << "listDr.cpp"
+    cout    << "int main() {...}"
             << endl
             << endl
             << endl;

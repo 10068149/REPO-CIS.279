@@ -16,7 +16,16 @@ class itemType {
 
 public:
     
-    //code...
+    // RelationType ComparedTo (ItemType Item);
+    
+    // FUNCTION: Determines the ordering of two ItemType objects
+    // based on their keys...
+    // PRECONDTION: Self and item have their key members
+    // initialized.
+    
+    
+    
+    
     
 private:
     
