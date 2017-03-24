@@ -19,7 +19,7 @@ public:
     RelationType ComparedTo(ItemType Item);
     < SHOULD THIS BE: "ItemType">
     
-        // F(): Determines the ordering of two ItemType objects
+    // F(): Determines the ordering of two ItemType objects
     //      based on their keys...
     // PRO:
     // PRE: Self and item have their key members initialized.

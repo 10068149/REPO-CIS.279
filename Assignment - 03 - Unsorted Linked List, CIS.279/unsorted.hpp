@@ -129,7 +129,7 @@ public:
      **/
     
     
-    ItemType GetNextItem() const;
+    ItemType GetNextItem();
 
     // F(): Gets the next element in list...
     // PRE: 1) List has been initialized..
