@@ -15,21 +15,16 @@
 class ItemType {
 
 public:
-    
-    //<?>
-    //RelationType ComparedTo(ItemType Item);
-    //STILL DON'T KNOW: WHAT THIS IS SUPPOSE TO BE / HOW SETUP
-    //</?>
-    
-    ItemType ComparedTo( ItemType Item );
+   
     
     enum RelationType
-    
     {
         LESS,   // if the key of self is less than the key of item
         GREATER,// if the key of self is greater than the key of item
         EQUAL   // if the keys are equal
     };
+    
+    RelationType ComparedTo( ItemType Item );
     
     // F(): Determines the ordering of two ItemType objects
     //      based on their keys...
