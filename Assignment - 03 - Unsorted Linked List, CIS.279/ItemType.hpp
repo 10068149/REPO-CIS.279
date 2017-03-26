@@ -17,9 +17,11 @@ class ItemType {
 public:
     
     //<?>
-    RelationType ComparedTo(ItemType Item);
+    //RelationType ComparedTo(ItemType Item);
     //STILL DON'T KNOW: WHAT THIS IS SUPPOSE TO BE / HOW SETUP
     //</?>
+    
+    ItemType ComparedTo( ItemType Item );
     
     enum RelationType
     
