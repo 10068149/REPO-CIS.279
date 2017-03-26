@@ -9,9 +9,17 @@
 #include "ItemType.hpp"
 
 
-RelationType ComparedTo( ItemType Item )
+ItemType :: ItemType ()
 {
-    if (this < Item) { return LESS; }
-    if (this > Item) { return GREATER; }
-    if (this < Item) { return EQUAL; }
+    //code...
+}
+
+
+
+
+
+ItemType::RelationType ComparedTo( ItemType Item )
+{
+    //CODE HERE...
+    return ItemType::LESS;
 }
