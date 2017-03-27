@@ -10,6 +10,13 @@
 #define unsorted_hpp
 
 #include "ItemType.hpp"
+/**<!>
+ I had to put this here, becuase my: unsroted class
+ would not read the items related to my: ItemType class
+<!>**/
+
+
+
 
 namespace ANTHONY_NASH_ASSIGNMENT_3 {
 
