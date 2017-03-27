@@ -7,19 +7,11 @@
 //
 
 #include "ItemType.hpp"
+#include "unsorted.hpp"
 
-
-ItemType :: ItemType ()
-{
-    //code...
-}
+ItemType ItemType (){}
 
 
 
 
 
-ItemType::RelationType ComparedTo( ItemType Item )
-{
-    //CODE HERE...
-    return ItemType::LESS;
-}

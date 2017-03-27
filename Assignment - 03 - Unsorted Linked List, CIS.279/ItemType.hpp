@@ -9,15 +9,19 @@
 #ifndef ItemType_hpp
 #define ItemType_hpp
 
-#include <stdio.h>
 
+
+
+namespace ANTHONY_NASH_ASSIGNMENT_3 {
+    
     class ItemType {
         
     public:
         
+        ItemType();
+        
         int MAX_ITEMS =5;
         
-        ItemType();
         
         enum RelationType
         {
@@ -42,7 +46,10 @@
         int value;
         
         
-    };
+    };//class ItemType {...
+
+    
+}//namespace ANTHONY_NASH_ASSIGNMENT_3 {...
 
 
 
