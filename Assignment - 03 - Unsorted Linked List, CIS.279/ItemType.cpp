@@ -9,13 +9,18 @@
 #include "ItemType.hpp"
 #include "unsorted.hpp"
 
+// !!!
 using namespace ANTHONY_NASH_ASSIGNMENT_3;
-/**<!>
- CHANGED NAMESPACE; USING ONLY ONE SPACE INSTEAD OF TWO...
- <!>**/
+//CHANGED NAMESPACE; USING ONLY ONE SPACE INSTEAD OF TWO...
+// !!!
 
-    
+
+// !!!
 class ItemType
+//MY ERROR: I FORGOT TO ADD "CLASS" DESIGNATION IN MY .CPP FILE
+//WHAT PRODUCED THE ERRORS...
+// !!!
+
 
 {
         

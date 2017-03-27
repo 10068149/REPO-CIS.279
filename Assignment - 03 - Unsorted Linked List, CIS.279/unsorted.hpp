@@ -9,25 +9,34 @@
 #ifndef unsorted_hpp
 #define unsorted_hpp
 
+// !!!
 #include "ItemType.hpp"
-/**<!>
- I had to put this here, becuase my: unsroted class
- would not read the items related to my: ItemType class
-<!>**/
+//I HAD TO PUT THIS HERE, BECUASE THE: UNSROTED CLASS{}; 
+//WOULD NOT READ THE ITEMS RELATED TO MY: ITEMTYPE CLASS...
+// !!!
 
 
 
-
+// !!!
 namespace ANTHONY_NASH_ASSIGNMENT_3 {
-/**<!>
- CHANGED NAMESPACE; USING ONLY ONE SPACE INSTEAD OF TWO...
- <!>**/
+//CHANGED NAMESPACE; USING ONLY ONE SPACE INSTEAD OF TWO...
+// !!!
+
+    struct NodeType
+    {
+
+        NodeType listData;
+        NodeType currentPos;
+        
+    };
+    
 
     
     class unsorted {
         
     public:
         
+
         unsorted();
         
         // "Make Empty"
