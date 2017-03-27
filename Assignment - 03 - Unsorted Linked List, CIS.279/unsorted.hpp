@@ -22,11 +22,13 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 //CHANGED NAMESPACE; USING ONLY ONE SPACE INSTEAD OF TWO...
 // !!!
 
+    template <class ItemType>
     struct NodeType
     {
 
-        NodeType listData;
-        NodeType currentPos;
+        ItemType listData;
+        NodeType* currentPos;
+        NodeType* next;
         
     };
     
