@@ -48,19 +48,27 @@ class unsorted {
     // PRE: List has been initialized ...
     // POST: F() = returns of elements in list
     {
+        // ???
+        // return length;
+        // ??? WHY IS THIS NOT WORKING
+        
         return 0;
     }
     
-    ItemType GetItem( ItemType Item, bool& found) const;
+    ItemType GetItem( ItemType Item, bool& found) const
     
     // F():  Get list element whose key matches item’s key (if present)
     // PRE:  List has been initialized;
     //       Key member of item is initialized...
     
-    // POST: If there is an elemnt someitem whos keymatches item's
+    // POST: If there is an elemnt some item whos keymatches item's
     //       key, then found = true and copy of someItem is
     //       returned; otherwise found = false and item is returned
     //       List unchnaged
+    
+    {
+        return Item;
+    }
     
     
     void PutItem(ItemType item)
