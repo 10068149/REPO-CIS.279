@@ -13,6 +13,11 @@
 
 
 namespace ANTHONY_NASH_ASSIGNMENT_3 {
+    /**<!>
+     CHANGED NAMESPACE; USING ONLY ONE SPACE INSTEAD OF TWO...
+     <!>**/
+    
+    
     
     class ItemType {
         
@@ -46,10 +51,10 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         int value;
         
         
-    };//class ItemType {...
+    };//class ItemType ...}
 
     
-}//namespace ANTHONY_NASH_ASSIGNMENT_3 {...
+}//namespace ANTHONY_NASH_ASSIGNMENT_3 ...}
 
 
 
