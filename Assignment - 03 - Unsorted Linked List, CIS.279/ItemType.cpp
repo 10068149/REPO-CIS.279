@@ -9,9 +9,3 @@
 #include "ItemType.hpp"
 #include "unsorted.hpp"
 
-ItemType ItemType (){}
-
-
-
-
-

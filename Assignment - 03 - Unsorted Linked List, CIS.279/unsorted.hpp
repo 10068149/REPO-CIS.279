@@ -19,8 +19,11 @@
 
 
 namespace ANTHONY_NASH_ASSIGNMENT_3 {
+/**<!>
+ changed namepsace to one
+ <!>**/
 
-
+    
     class unsorted {
         
     public:
@@ -88,18 +91,16 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         // POST: Current position is updated to next position;
         //       returns a copy of element at current position...
         
-        
+
         
     private:
         
+//         NodeType* ListData;
+//         NodeType* currentPos;
+        
         /**
          <?>
-         
-         Nodetype* ListData;
-         NodeType* currentPos;
-         
          * THESE TWO ABOVE ITEMS ARE NOT WORKING...
-         
          </?>
          **/
         
