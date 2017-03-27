@@ -6,22 +6,18 @@
 //  Copyright © 2017 Anthony Nash. All rights reserved.
 //
 
+#include <iostream>
 #include "unsorted.hpp"
 #include "ItemType.hpp"
 
+using namespace std;
 //!!!
-using namespace ANTHONY_NASH_ASSIGNMENT_3;
+namespace ANTHONY_NASH_ASSIGNMENT_3 {
 //CHANGED NAMESPACE; USING ONLY ONE SPACE INSTEAD OF TWO...
 // !!!
 
 
-// !!!
-class unsorted {
-//MY ERROR: I FORGOT TO ADD "CLASS" DESIGNATION IN MY .CPP FILE
-//WHAT PRODUCED THE ERRORS...
-// !!!
-
-    unsorted()
+    unsorted :: unsorted()
     
     // "Make Empty"
     // F(): Initializes list to empty state...
@@ -31,7 +27,7 @@ class unsorted {
         //constructor code...
     }
     
-    bool IsFull() const
+    bool unsorted :: IsFull() const
     
     // F(): Determine whether list is full...
     // PRE: List has been initialaized...
@@ -42,7 +38,7 @@ class unsorted {
 
     
     
-    int GetLength() const
+    int unsorted :: GetLength() const
     
     // F(): Determins the number of elements in list...
     // PRE: List has been initialized ...
@@ -55,7 +51,7 @@ class unsorted {
         return 0;
     }
     
-    ItemType GetItem( ItemType Item, bool& found) const
+    ItemType unsorted :: GetItem( ItemType Item, bool& found) const
     
     // F():  Get list element whose key matches item’s key (if present)
     // PRE:  List has been initialized;
@@ -71,7 +67,7 @@ class unsorted {
     }
     
     
-    void PutItem(ItemType item)
+    void unsorted :: PutItem(ItemType item)
     
     // F():  Puts item into list...
     // PRE:  1) List has been initialized; 2) List is not full;
@@ -83,7 +79,7 @@ class unsorted {
     }
     
     
-    void DeleteItem(ItemType item)
+    void unsorted :: DeleteItem(ItemType item)
     
     // F():  Deletes the element whose key matches item’s key...
     // PRE:  List has been initialized...
@@ -92,7 +88,7 @@ class unsorted {
         //code to delet itmes...
     }
     
-    void ResetList()
+    void unsorted :: ResetList()
     // F():  current position for an iteration through the list...
     // PRE:  List has been initialized...
     // POST: Current  position is prior to list..
@@ -100,7 +96,7 @@ class unsorted {
         //code to: reste the list ...
     }
     
-//    ItemType GetNextItem()
+//    ItemType unsorted :: GetNextItem()
 //    
 //    // F(): Gets the next element in list...
 //    // PRE: 1) List has been initialized..
@@ -112,14 +108,17 @@ class unsorted {
 //    
 //    {
     
-// ???
-//      return
-// NOT SURE HOW TO TELL APP TO RETURN A: ITEMTYPE...
-// ???
+        // ???
+        // return this->value;
+        // NOT SURE HOW TO TELL APP TO RETURN A: ITEMTYPE
+        // ABOVE DOES NOT WORK...
+        // ???
     
 //    }
 //    
     
     
 
-};//class unsorted ...}
+
+} // namespace ANTHONY_NASH_ASSIGNMENT_3 ...}
+

@@ -6,31 +6,26 @@
 //  Copyright © 2017 Anthony Nash. All rights reserved.
 //
 
-#include "ItemType.hpp"
+#include <iostream>
 #include "unsorted.hpp"
+#include "ItemType.hpp"
+
+using namespace std;
 
 // !!!
-using namespace ANTHONY_NASH_ASSIGNMENT_3;
+namespace ANTHONY_NASH_ASSIGNMENT_3 {
 //CHANGED NAMESPACE; USING ONLY ONE SPACE INSTEAD OF TWO...
 // !!!
 
 
-// !!!
-class ItemType
-//MY ERROR: I FORGOT TO ADD "CLASS" DESIGNATION IN MY .CPP FILE
-//WHAT PRODUCED THE ERRORS...
-// !!!
 
-
-{
-        
-    ItemType()
+    ItemType :: ItemType()
     {
         //my constructor;
     }
     
     
-//    RelationType ComparedTo( ItemType Item )
+//    ItemType :: RelationType ComparedTo( ItemType Item )
     
     // F(): Determines the ordering of two ItemType objects
     //      based on their keys...
@@ -43,6 +38,6 @@ class ItemType
 //        
 //    }
     
+} //namespace ANTHONY_NASH_ASSIGNMENT_3 ...}
 
 
-};//    class ItemType ...}
