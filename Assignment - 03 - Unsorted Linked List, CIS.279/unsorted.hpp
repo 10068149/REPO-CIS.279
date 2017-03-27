@@ -112,8 +112,8 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         int length;
         
         
-    };//class unsorted {...
+    };//class unsorted ...}
 
-}//namespace ANTHONY_NASH_ASSIGNMENT_3 {...
+}//namespace ANTHONY_NASH_ASSIGNMENT_3 ...}
 
 #endif /* unsorted_hpp */
