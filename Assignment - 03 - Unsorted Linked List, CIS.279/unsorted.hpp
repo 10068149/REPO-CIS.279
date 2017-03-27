@@ -11,8 +11,8 @@
 
 // !!!
 #include "ItemType.hpp"
-//I HAD TO PUT THIS HERE, BECUASE THE: UNSROTED CLASS{}; 
-//WOULD NOT READ THE ITEMS RELATED TO MY: ITEMTYPE CLASS...
+//I HAD TO PUT THIS HERE, BECUASE THE: UNSROTED CLASS{...} ;
+//WOULD NOT READ THE ITEMS RELATED TO MY: ITEMTYPE CLASS{...}...
 // !!!
 
 
@@ -22,7 +22,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 //CHANGED NAMESPACE; USING ONLY ONE SPACE INSTEAD OF TWO...
 // !!!
 
-    template <class ItemType>
+//    template <class ItemType>
     struct NodeType
     {
 
@@ -106,16 +106,8 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         
     private:
         
-//         NodeType* ListData;
-//         NodeType* currentPos;
-        
-        /**
-         <?>
-         * THESE TWO ABOVE ITEMS ARE NOT WORKING...
-         </?>
-         **/
-        
-        
+         NodeType* ListData;
+         NodeType* currentPos;
         
         int length;
         
