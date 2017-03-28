@@ -107,13 +107,9 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 //    //       returns a copy of element at current position...
 //    
 //    {
-    
-        // ???
-        // return this->value;
-        // NOT SURE HOW TO TELL APP TO RETURN A: ITEMTYPE
-        // ABOVE DOES NOT WORK...
-        // ???
-    
+//    
+//         return item.;
+//    
 //    }
 //    
     

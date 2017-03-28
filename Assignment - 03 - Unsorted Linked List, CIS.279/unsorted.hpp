@@ -9,22 +9,12 @@
 #ifndef unsorted_hpp
 #define unsorted_hpp
 
-// !!!
 #include "ItemType.hpp"
-// MY "ITEMTYPE" CODES DO NOT WORK WITHOUT THIS...
-// !!!
 
 
 
-// !!!
 namespace ANTHONY_NASH_ASSIGNMENT_3 {
-//CHANGED NAMESPACE; USING ONLY ONE SPACE INSTEAD OF TWO...
-// !!!
 
-//    template <class ItemType>
-    
-
-    
     class unsorted {
         
     public:
@@ -104,9 +94,8 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
             NodeType* next;
         };
         
-        
-        NodeType* listData;
-        NodeType* currentPos;
+        NodeType* Root;
+        NodeType* tail;
         
         int length;
         
