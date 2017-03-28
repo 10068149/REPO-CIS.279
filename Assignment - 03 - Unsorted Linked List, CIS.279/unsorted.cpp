@@ -27,7 +27,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         head =NULL;     // : points to first node in list...
         tail =NULL;      // : points to last node in list...
         currentPos =NULL;// : point to the curent node in list...
-        temp =NULL;      // : used to temporaryly store a pointers current locaiton...
+//        temp =NULL;      // : used to temporaryly store a pointers current locaiton...
 
     }
 
@@ -77,101 +77,101 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 
     
     
-    void unsorted :: PutItem(ItemType item)
-    
-    // F():  Puts item into list...
-    // PRE:  1) List has been initialized; 2) List is not full;
-    //       3) ITEM IS NOT IN LIST...
-    
-    // POST:  Item is in the list
-    {
+//    void unsorted :: PutItem(ItemType item)
+//    
+//    // F():  Puts item into list...
+//    // PRE:  1) List has been initialized; 2) List is not full;
+//    //       3) ITEM IS NOT IN LIST...
+//    
+//    // POST:  Item is in the list
+//    {
+//
+//        while (!IsFull())
+//        // check: if we have rechead the max number of noeds/list: int MAX_ITEMS =5;
+//        {
+//            
+//            length++;
+//            
+//            NodeType* new_node = new NodeType;   //creats a new node pointer and node: "node"...
+//            
+//            new_node->next = NULL;                  // ->, access the memeber item: next (a pointer);
+//            // makes this item point to nothing; forces it to be
+//            // the last node in list (up to) with a max of: int MAX_ITEMS =5...
+//            
+//            new_node->listData = item;              // ->, allows access to the memeber item: ListaData;
+//            // then adds data to this node data portion: "( ItemType item ) "
+//            
+//            if ( head != NULL )
+//            // returns that a node item / list is present; do this...
+//            {
+//                currentPos = head;
+//                // changes direciton of the head pointer to this newer pointer...
+//                
+//                while ( currentPos->next != NULL)
+//                // check the "next" member of the node to see if at the end of list...
+//                {
+//                    currentPos = currentPos->next;
+//                    // if not at end; changes the current positon from previours to that of
+//                    // of the new node location....
+//                    
+//                }
+//                
+//                currentPos->next = new_node;
+//                
+//            }//: if ( head != NULL ) ...}
+//            
+//                else
+//                // if there is no currenlt list this new node is now at
+//                // the front of the list of nodes...
+//                {
+//                    head = new_node;
+//                }
+//            
+//            
+//        }
+//
+//        
+//        
+//    }//: void unsorted :: PutItem(ItemType item) ...}
 
-        while (!IsFull())
-        // check: if we have rechead the max number of noeds/list: int MAX_ITEMS =5;
-        {
-            
-            length++;
-            
-            node_pointer new_node = new NodeType;   //creats a new node pointer and node: "node"...
-            
-            new_node->next = NULL;                  // ->, access the memeber item: next (a pointer);
-            // makes this item point to nothing; forces it to be
-            // the last node in list (up to) with a max of: int MAX_ITEMS =5...
-            
-            new_node->listData = item;              // ->, allows access to the memeber item: ListaData;
-            // then adds data to this node data portion: "( ItemType item ) "
-            
-            if ( head != NULL )
-            // returns that a node item / list is present; do this...
-            {
-                currentPos = head;
-                // changes direciton of the head pointer to this newer pointer...
-                
-                while ( currentPos->next != NULL)
-                // check the "next" member of the node to see if at the end of list...
-                {
-                    currentPos = currentPos->next;
-                    // if not at end; changes the current positon from previours to that of
-                    // of the new node location....
-                    
-                }
-                
-                currentPos->next = new_node;
-                
-            }//: if ( head != NULL ) ...}
-            
-                else
-                // if there is no currenlt list this new node is now at
-                // the front of the list of nodes...
-                {
-                    head = new_node;
-                }
-            
-            
-        }
-
-        
-        
-    }//: void unsorted :: PutItem(ItemType item) ...}
-
     
     
     
-    void unsorted :: DeleteItem(ItemType item)
-    
-    // F():  Deletes the element whose key matches item’s key...
-    // PRE:  List has been initialized...
-    // POST: One and only one element in list has a key matching item’s key...
-    {
-        node_pointer delete_node = NULL;
-        // * deletion pointer...
-        temp = head;
-        currentPos = head;
-        length--;
-        
-        
-        while ( currentPos != NULL && (currentPos->listData).ComparedTo(item) != item.EQUAL)
-        // checking the inter list of data for: " ( ItemType item )"
-        {
-            temp = currentPos;
-            currentPos = currentPos->next;
-        }
-        
-        if ( currentPos == NULL) {
-            cout << endl << "[ NOTICE ]: DATA WAS NOT LOCATED ..." << endl;
-            delete delete_node;
-            length++;
-        }
-        else
-        {
-            delete_node = currentPos;
-            currentPos = currentPos->next;
-            temp->next = currentPos;
-            
-            delete delete_node;
-        }
-        
-    }
+//    void unsorted :: DeleteItem(ItemType item)
+//    
+//    // F():  Deletes the element whose key matches item’s key...
+//    // PRE:  List has been initialized...
+//    // POST: One and only one element in list has a key matching item’s key...
+//    {
+//        NodeType* delete_node = NULL;
+//        // * deletion pointer...
+//        temp = head;
+//        currentPos = head;
+//        length--;
+//        
+//        
+//        while ( currentPos != NULL && (currentPos->listData).ComparedTo(item) != item.EQUAL)
+//        // checking the inter list of data for: " ( ItemType item )"
+//        {
+//            temp = currentPos;
+//            currentPos = currentPos->next;
+//        }
+//        
+//        if ( currentPos == NULL) {
+//            cout << endl << "[ NOTICE ]: DATA WAS NOT LOCATED ..." << endl;
+//            delete delete_node;
+//            length++;
+//        }
+//        else
+//        {
+//            delete_node = currentPos;
+//            currentPos = currentPos->next;
+//            temp->next = currentPos;
+//            
+//            delete delete_node;
+//        }
+//        
+//    }// void unsorted :: DeleteItem(ItemType item) {}
     
     
     
