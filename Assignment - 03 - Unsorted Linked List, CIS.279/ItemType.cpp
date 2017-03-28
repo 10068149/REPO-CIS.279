@@ -34,7 +34,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     
     {
 
-        //if ( Item < this->value ) { return LESS; }
+        if ( Item.value < this->value ) { return LESS; }
         return LESS;
         
     }
