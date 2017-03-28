@@ -8,7 +8,7 @@
 
 #include <iostream>
 #include <cstdlib>
-
+#include <cassert>  // provides: DEBUGING TOOLS...
 #include "unsorted.hpp"
 #include "ItemType.hpp"
 
@@ -77,15 +77,16 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 
     
     
-//    void unsorted :: PutItem(ItemType item)
-//    
-//    // F():  Puts item into list...
-//    // PRE:  1) List has been initialized; 2) List is not full;
-//    //       3) ITEM IS NOT IN LIST...
-//    
-//    // POST:  Item is in the list
-//    {
-//
+    void unsorted :: PutItem(ItemType item)
+    
+    // F():  Puts item into list...
+    // PRE:  1) List has been initialized; 2) List is not full;
+    //       3) ITEM IS NOT IN LIST...
+    
+    // POST:  Item is in the list
+    {
+
+        
 //        while (!IsFull())
 //        // check: if we have rechead the max number of noeds/list: int MAX_ITEMS =5;
 //        {
@@ -128,11 +129,11 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 //                }
 //            
 //            
-//        }
-//
-//        
-//        
-//    }//: void unsorted :: PutItem(ItemType item) ...}
+//        }// while (!IsFull()) {...}
+
+        
+        
+    }//: void unsorted :: PutItem(ItemType item) ...}
 
     
     
