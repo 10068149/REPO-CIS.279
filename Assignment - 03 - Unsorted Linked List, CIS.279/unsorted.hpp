@@ -11,8 +11,6 @@
 
 #include "ItemType.hpp"
 
-
-
 namespace ANTHONY_NASH_ASSIGNMENT_3 {
 
     class unsorted {
@@ -26,12 +24,15 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         // F(): Initializes list to empty state...
         // PRE: NONE
         // POST: List is empty...
+
+        
         
         bool IsFull() const;
         
         // F(): Determine whether list is full...
         // PRE: List has been initialaized...
         // POST: "F()" value is: list is full...
+
         
         
         int GetLength() const;
@@ -39,6 +40,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         // F(): Determins the number of elements in list...
         // PRE: List has been initialized ...
         // POST: F() = returns of elements in list
+
         
         
         ItemType GetItem( ItemType Item, bool& found) const;
@@ -53,6 +55,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         //       List unchnaged
         
         
+        
         void PutItem(ItemType item);
         
         // F():  Puts item into list...
@@ -62,16 +65,22 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         // POST:  Item is in the list
         
         
+        
         void DeleteItem(ItemType item);
         
         // F():  Deletes the element whose key matches item’s key...
         // PRE:  List has been initialized...
         // POST: One and only one element in list has a key matching item’s key...
         
+        
+        
         void ResetList() ;
+        
         // F():  current position for an iteration through the list...
         // PRE:  List has been initialized...
         // POST: Current  position is prior to list..
+        
+        
         
         ItemType GetNextItem();
         
@@ -82,9 +91,8 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         
         // POST: Current position is updated to next position;
         //       returns a copy of element at current position...
-        
 
-        
+    
     private:
         
         struct NodeType
@@ -98,11 +106,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         NodeType* currentPos;
         
         int length;
-        
-        //xxx
-        
-        
-        
+
     };//class unsorted ...}
 
 }//namespace ANTHONY_NASH_ASSIGNMENT_3 ...}
