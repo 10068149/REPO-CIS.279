@@ -90,12 +90,12 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         struct NodeType
         {
             ItemType listData;
-            NodeType* currentPos;
             NodeType* next;
         };
         
-        NodeType* Root;
+        NodeType* root;
         NodeType* tail;
+        NodeType* currentPos;
         
         int length;
         
