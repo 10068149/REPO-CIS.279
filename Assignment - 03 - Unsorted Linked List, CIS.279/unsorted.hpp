@@ -95,17 +95,22 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     
     private:
         
-        struct NodeType
+        typedef struct NodeType
         {
-            ItemType listData;
-            NodeType* next;
-        };
+            
+            ItemType listData;  // : data (items) stored in each node ...
+            NodeType* next;     // : points to the next node in the list...
+            
+        }* node_pointer;        // {...}* node_pointer: retyped defininaiton
+                                // of my node pointer from "NodeType* to: node_pointer"...
         
-        NodeType* root;
-        NodeType* tail;
-        NodeType* currentPos;
+        node_pointer head;     // : points to first node in list...
+        node_pointer tail;      // : points to last node in list...
+        node_pointer currentPos;// : point to the curent node in list...
+        node_pointer temp;      // : used to temporaryly store a pointers current locaiton...
         
-        int length;
+        int length;             // : stors the current length of node with maxium limt of:
+                                //   int MAX_ITEMS =5;
 
     };//class unsorted ...}
 

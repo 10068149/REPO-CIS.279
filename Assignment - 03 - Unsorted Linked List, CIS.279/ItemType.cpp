@@ -7,6 +7,8 @@
 //
 
 #include <iostream>
+#include <cstdlib>
+
 #include "unsorted.hpp"
 #include "ItemType.hpp"
 
