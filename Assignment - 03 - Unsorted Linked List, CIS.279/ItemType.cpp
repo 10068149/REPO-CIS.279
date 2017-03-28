@@ -25,18 +25,19 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     }
     
     
-//    ItemType :: RelationType ComparedTo( ItemType Item )
+    ItemType :: RelationType ItemType :: ComparedTo( ItemType Item )
     
     // F(): Determines the ordering of two ItemType objects
     //      based on their keys...
     // PRO:
     // PRE: Self and item have their key members initialized.
     
-//    {
-//    
-//        return
-//        
-//    }
+    {
+
+        //if ( Item < this->value ) { return LESS; }
+        return LESS;
+        
+    }
     
 } //namespace ANTHONY_NASH_ASSIGNMENT_3 ...}
 
