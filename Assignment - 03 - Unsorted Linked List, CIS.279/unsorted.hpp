@@ -22,14 +22,6 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 // !!!
 
 //    template <class ItemType>
-    struct NodeType
-    {
-
-        ItemType listData;
-        NodeType* currentPos;
-        NodeType* next;
-        
-    };
     
 
     
@@ -105,8 +97,16 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         
     private:
         
-         NodeType* ListData;
-         NodeType* currentPos;
+        struct NodeType
+        {
+            ItemType listData;
+            NodeType* currentPos;
+            NodeType* next;
+        };
+        
+        
+        NodeType* listData;
+        NodeType* currentPos;
         
         int length;
         
