@@ -85,6 +85,11 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     
     // POST:  Item is in the list
     {
+        // PRE: 1) List has been initialized;
+        // 2) List is not full;
+        assert( !IsFull() );
+        // 3) ITEM IS NOT IN LIST...
+        // assert( /*// 3) ITEM IS NOT IN LIST...*/ );
 
         
 //        while (!IsFull())
