@@ -36,7 +36,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     bool unsorted :: IsFull() const
     
     // F(): Determine whether list is full...
-    // PRE: List has been initialaized...
+    // PRE:  - - -List has been initialaized...
     // POST: "F()" value is: list is full...
     {
         return !( length < MAX_ITEMS );
@@ -49,7 +49,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     int unsorted :: GetLength() const
     
     // F(): Determins the number of elements in list...
-    // PRE: List has been initialized ...
+    // PRE: - - - List has been initialized ...
     // POST: F() = returns of elements in list
     {
          return length;
@@ -62,7 +62,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 //    ItemType unsorted :: GetItem( ItemType Item, bool& found) const
 //    
 //    // F():  Get list element whose key matches item’s key (if present)
-//    // PRE:  List has been initialized;
+//    // PRE:  - - - List has been initialized;
 //    //       Key member of item is initialized...
 //    
 //    // POST: If there is an elemnt some item whos keymatches item's
@@ -80,61 +80,60 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     void unsorted :: PutItem(ItemType item)
     
     // F():  Puts item into list...
-    // PRE:  1) List has been initialized; 2) List is not full;
+    // PRE:  1) - - - List has been initialized;
+    //       2) List is not full;
     //       3) ITEM IS NOT IN LIST...
-    
     // POST:  Item is in the list
+    
     {
-        // PRE: 1) List has been initialized;
         // 2) List is not full;
         assert( !IsFull() );
-        // 3) ITEM IS NOT IN LIST...
-        // assert( /*// 3) ITEM IS NOT IN LIST...*/ );
-
         
-//        while (!IsFull())
-//        // check: if we have rechead the max number of noeds/list: int MAX_ITEMS =5;
-//        {
-//            
-//            length++;
-//            
-//            NodeType* new_node = new NodeType;   //creats a new node pointer and node: "node"...
-//            
-//            new_node->next = NULL;                  // ->, access the memeber item: next (a pointer);
-//            // makes this item point to nothing; forces it to be
-//            // the last node in list (up to) with a max of: int MAX_ITEMS =5...
-//            
-//            new_node->listData = item;              // ->, allows access to the memeber item: ListaData;
-//            // then adds data to this node data portion: "( ItemType item ) "
-//            
-//            if ( head != NULL )
-//            // returns that a node item / list is present; do this...
-//            {
-//                currentPos = head;
-//                // changes direciton of the head pointer to this newer pointer...
-//                
-//                while ( currentPos->next != NULL)
-//                // check the "next" member of the node to see if at the end of list...
+        // 3) ITEM IS NOT IN LIST...
+        // !!!
+        // assert( GetItem( ItemType Item, bool& found) const );
+        // !!!
+
+        NodeType* current_position;
+        length++;
+
+            NodeType* new_node = new NodeType;
+            //* CREATED: new node: new_node: NodeType...
+            
+            new_node->next = NULL;
+            // ->, ACCESS to the memeber item: next (a pointer);
+            // makes this item point to nothing; forces it to be
+            // the last node in list (up to) with a max of: int MAX_ITEMS =5...
+            
+            new_node->listData = item;
+            // ->, allows access to the memeber item: ListaData;
+            // then adds data to this node data portion:
+            // "( ItemType item ) "
+            
+            if ( tail != NULL )
+            // *CHECKS: if a node/list exsist; CONTINUE if so...
+            {
+                current_position = tail;
+                // POINTS: the new pointer to the end of list
+                
+//                while ( current_position->next != NULL)
+//                // * CHECKS: iterreates to find the last node...
 //                {
-//                    currentPos = currentPos->next;
-//                    // if not at end; changes the current positon from previours to that of
-//                    // of the new node location....
-//                    
+//                    current_position = current_position->next;
+//                    // if not at end; changes the current positon from previours
+//                    // to that of the new node location....
 //                }
-//                
-//                currentPos->next = new_node;
-//                
-//            }//: if ( head != NULL ) ...}
-//            
-//                else
-//                // if there is no currenlt list this new node is now at
-//                // the front of the list of nodes...
-//                {
-//                    head = new_node;
-//                }
-//            
-//            
-//        }// while (!IsFull()) {...}
+                
+                current_position->next = new_node;
+                
+            }//: if ( head != NULL ) ...}
+            
+            else
+            // if there is no currenlt list this new node is now at
+            // the END of the list of nodes...
+            {
+                tail = new_node;
+            }
 
         
         
