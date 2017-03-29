@@ -116,14 +116,6 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
                 current_position = tail;
                 // POINTS: the new pointer to the end of list
                 
-//                while ( current_position->next != NULL)
-//                // * CHECKS: iterreates to find the last node...
-//                {
-//                    current_position = current_position->next;
-//                    // if not at end; changes the current positon from previours
-//                    // to that of the new node location....
-//                }
-                
                 current_position->next = new_node;
                 
             }//: if ( head != NULL ) ...}
@@ -132,7 +124,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
             // if there is no currenlt list this new node is now at
             // the END of the list of nodes...
             {
-                tail = new_node;
+                new_node = tail;
             }
 
         
