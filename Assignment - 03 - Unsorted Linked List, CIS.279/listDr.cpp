@@ -7,6 +7,9 @@
 //
 
 #include <iostream>
+#include <cstdlib>
+#include <cassert>  // provides: DEBUGING TOOLS...
+
 #include "unsorted.hpp"
 #include "ItemType.hpp"
 
@@ -18,6 +21,10 @@ using namespace ANTHONY_NASH_ASSIGNMENT_3;
 
 int main()
 {
+    
+
+    bool node_test = true;
+    assert( ("hell wold", node_test) );
     
     cout    << "int main() {...}"
             << endl

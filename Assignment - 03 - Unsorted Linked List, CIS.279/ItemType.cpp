@@ -6,7 +6,6 @@
 //  Copyright © 2017 Anthony Nash. All rights reserved.
 //
 
-#include <iostream>
 #include <cstdlib>
 #include <cassert>  // provides: DEBUGING TOOLS...
 
@@ -26,12 +25,10 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     
     
     ItemType :: RelationType ItemType :: ComparedTo( ItemType Item )
-    
     // F(): Determines the ordering of two ItemType objects
     //      based on their keys...
     // PRO:
     // PRE: Self and item have their key members initialized.
-    
     {
 
         if ( Item.value < this->value ) { return GREATER; }
