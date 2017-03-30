@@ -44,11 +44,11 @@ void test12();
 int main()
 {
 
-//    test1(); // TEST1(): bool IsFull() const;
+    test1(); //: TEST1(): bool IsFull() const;
 //    test2(); //: TEST2(): int GetLength() const;
 //    test3(); //: TEST3(): ItemType GetItem( ItemType Item, bool& found) const;
 //    test4(); //: TEST4(): void PutItem(ItemType item);
-//    test5(); //: TEST5(): void DeleteItem(ItemType item);
+    test5(); //: TEST5(): void DeleteItem(ItemType item);
 //    test6(); //: TEST6(): void ResetList();
 //    test7(); //: ItemType GetNextItem();
     
@@ -59,8 +59,8 @@ int main()
 
 
 //    test11();
-//    // put 1 item into the list;
-//    // verify that getitem it returns: true
+//    // *PUT: item into the list...
+//    // *VERFIY: that getitem() returns: "true"
     
     test12();
     // *ADD: item...
@@ -68,18 +68,6 @@ int main()
     // *VERIFY: getitem() does NOT find item after deltion...
     
 
-    
-    
-    
-    
-    
-//    bool node_test = true;
-//    assert( ("How you doooonnnn... ", node_test) );
-    
-//    cout    << "int main() {...}"
-//            << endl
-//            << endl
-//            << endl;
     
     
     return 0;
@@ -96,7 +84,7 @@ void test1()
 
     unsorted list;
     assert( !list.IsFull() );
-    assert( list.IsFull() );
+//    assert( list.IsFull() );
     
 }
 
@@ -156,6 +144,7 @@ void test3()
     unsorted list;
     ItemType item_is;
     list.DeleteItem(item_is);
+    assert( list.GetLength() == 0 );
 }
 
 
@@ -178,8 +167,9 @@ void test3()
 
 
 
-void test10() //TEST10(): void PutItem(ItemType item); int GetLength() const; test1();
-              //: TEST1(): bool IsFull() const; ...
+void test10()
+//TEST10(): void PutItem(ItemType item); int GetLength() const; test1();
+//: TEST1(): bool IsFull() const; ...
 {
 
     {
@@ -276,7 +266,7 @@ void test12()
     bool true_or_false = false;
     cout
         << "// bool true_or_false: FALSE; CREATED ..."
-        << endl;
+        << endl << endl;
 
     
     list.PutItem( item );
@@ -285,7 +275,7 @@ void test12()
         << endl
         << "// TEST4(): void PutItem(ItemType item);"
         << endl
-        << "// PASSED!"
+        << "// COMPLETED!"
         << endl << endl;
     
     list.DeleteItem( item );
@@ -294,16 +284,17 @@ void test12()
         << endl
         << "// TEST5(): void DeleteItem(ItemType item);"
         << endl
-        << "// PASSED!"
+        << "// COMPLETED!"
         << endl << endl;
 
     list.GetItem( item, true_or_false);
+    assert( true_or_false == false );
     cout
         << "// *VERIFY: getitem() does NOT find item after deltion..."
         << endl
         << "// TEST3(): ItemType GetItem( ItemType Item, bool& found) const;"
         << endl
-        << "// PASSED!!"
+        << "// ALL TEST PASSED!!"
         << endl << endl;
 
 }
