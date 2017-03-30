@@ -99,13 +99,13 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         {
             ItemType listData;
             // : data (items) stored in each node ...
-            NodeType* next_node;
+            NodeType* next_pointer;
             // : points to the next node in the list...
         };
         
-        NodeType* head;
+        NodeType* head_pointer;
         // * points to first node in list...
-        NodeType* tail;
+        NodeType* tail_pointer;
         // * points to last node in list...
         NodeType* currentPos;
         // * point to the curent node in list...

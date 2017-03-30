@@ -218,21 +218,21 @@ void test11()
     list.PutItem( item );
     
     cout
-            <<  "// Verify that getitem it returns: true"
+            << "// Verify that getitem it returns: true"
             << endl << endl
-            << "    GetItem( ItemType Item, bool& found) const;..."
+            << "// GetItem( ItemType Item, bool& found) const;..."
             << endl << endl;
 
     bool tell_the_truth =false;
-    cout    << "bool tell_the_truth =false..."
+    cout    << "// bool tell_the_truth =false..."
             << endl << endl;
     
     list.GetItem( item, tell_the_truth );
-    cout    << "list.GetItem( item, tell_the_truth: FALSE )..."
+    cout    << "// list.GetItem( item, tell_the_truth: FALSE )..."
             << endl << endl;
     
     assert( tell_the_truth == true);
-    cout    << "PASSED: assert( tell_the_truth == TRUE )..."
+    cout    << "// PASSED: assert( tell_the_truth == TRUE )..."
             << endl << endl;
 
 }

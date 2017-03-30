@@ -24,8 +24,8 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     // PRE: NONE
     // POST: List is empty...
     {
-        head =NULL;     // : points to first node in list...
-        tail =NULL;      // : points to last node in list...
+        head_pointer =NULL;     // : points to first node in list...
+        tail_pointer =NULL;      // : points to last node in list...
         currentPos =NULL;// : point to the curent node in list...
     }
 
@@ -69,14 +69,14 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 //    //       List unchnaged
 //    
     {
-        NodeType* current_pointer = head;
+        NodeType* current_pointer = head_pointer;
         
         while ( current_pointer != NULL &&
                current_pointer->listData.ComparedTo(item) != item.EQUAL )
             // checking the inter list of data for: " ( ItemType item )"
             
         {
-            current_pointer = current_pointer->next_node;
+            current_pointer = current_pointer->next_pointer;
         }
         
         if ( current_pointer == NULL)
@@ -112,40 +112,31 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         // assert( GetItem( ItemType Item, bool& found) const );
         // !!!
 
-        NodeType* current_position;
-        length++;
 
-            NodeType* new_node = new NodeType;
-            //* CREATED: new node: new_node: NodeType...
-            
-            new_node->next_node = NULL;
-            // ->, ACCESS to the memeber item: next (a pointer);
-            // makes this item point to nothing; forces it to be
-            // the last node in list (up to) with a max of: int MAX_ITEMS =5...
-            
-            new_node->listData = item;
-            // ->, allows access to the memeber item: ListaData;
-            // then adds data to this node data portion:
-            // "( ItemType item ) "
-            
-            if ( tail != NULL )
-            // *CHECKS: if a node/list exsist; CONTINUE if so...
-            {
-                current_position = tail;
-                // POINTS: the new pointer to the end of list
-                
-                current_position->next_node = new_node;
-                
-            }//: if ( head != NULL ) ...}
-            
-            else
-            // if there is no currenlt list this new node is now at
-            // the END of the list of nodes...
-            {
-                new_node = tail;
-            }
-
+        NodeType* new_node = new NodeType;
+        //* CREATED: new node: new_node: NodeType...
         
+        if ( tail_pointer != NULL ) {
+            tail_pointer->next_pointer = new_node;
+        }
+        tail_pointer = new_node;
+        
+        if ( head_pointer == NULL) {
+            head_pointer = new_node;
+        }
+        
+        new_node->next_pointer = NULL ;
+        // ->, ACCESS to the memeber item: next (a pointer);
+        // makes this item point to nothing; forces it to be
+        // the last node in list (up to) with a max of: int MAX_ITEMS =5...
+        
+        new_node->listData = item;
+        // ->, allows access to the memeber item: ListaData;
+        // then adds data to this node data portion:
+        // "( ItemType item ) "
+        
+
+        length++;
         
     }//: void unsorted :: PutItem(ItemType item) ...}
 
@@ -158,8 +149,8 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     // PRE:  XXX List has been initialized...
     // POST: One and only one element in list has a key matching item’s key...
     {
-        NodeType* current_pointer = head;
-        NodeType* temporary_pointer = head;
+        NodeType* current_pointer = head_pointer;
+        NodeType* temporary_pointer = head_pointer;
         NodeType* delete_pointer = NULL;
         
         while ( current_pointer != NULL &&
@@ -168,16 +159,11 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
             
         {
             temporary_pointer = current_pointer;
-            current_pointer = current_pointer->next_node;
+            current_pointer = current_pointer->next_pointer;
         }
         
         if ( current_pointer == NULL) {
             delete delete_pointer;
-        /*  cout
-                << endl
-                << "![ NOTICE ]: DATA WAS NOT LOCATED ..."
-                << endl; 
-         **/
         }// if()
         
         else
@@ -186,10 +172,10 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
             delete_pointer = current_pointer;
             // *SETS: node for deletion...
             
-            current_pointer = current_pointer->next_node;
+            current_pointer = current_pointer->next_pointer;
             // *ADVAMCES: sets current pointer to that OF the next node...
             
-            temporary_pointer->next_node = current_pointer;
+            temporary_pointer->next_pointer = current_pointer;
             // *SAVES:  record of current pointer after deletion...
             
             delete delete_pointer;
