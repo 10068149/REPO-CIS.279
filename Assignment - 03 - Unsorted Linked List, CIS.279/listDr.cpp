@@ -81,10 +81,21 @@ int main()
 void test1()
 //: TEST1(): bool IsFull() const;
 {
-
+    cout
+        << "// TEST1(): bool IsFull() const;"
+        << endl << endl;
+    
     unsorted list;
+    cout
+        << "// unsorted list;" << endl
+        << "// CREATED ..." << endl;
+
     assert( !list.IsFull() );
-//    assert( list.IsFull() );
+    cout
+        << "// assert( !list.IsFull() );"
+        << endl
+        << "// TEST1(): PASSED!! "
+        << endl << endl << endl;
     
 }
 
@@ -134,17 +145,39 @@ void test3()
 //: TEST5(): void DeleteItem(ItemType item);
 {
  
-    {
-        cout
-            << endl
-            << "//: TEST5(): void DeleteItem(ItemType item);"
-            << endl << endl;
-    }
+    cout
+        << endl
+        << "//: TEST5(): void DeleteItem(ItemType item);"
+        << endl << endl;
     
     unsorted list;
-    ItemType item_is;
-    list.DeleteItem(item_is);
+    cout
+        << "// unsorted list;"
+        << endl
+        << "// CREATED!!"
+        << endl << endl;
+    
+
+    ItemType item;
+    cout
+        << "// ItemType item;"
+        << endl
+        << "// CREATED!!"
+        << endl << endl;
+
+    list.DeleteItem(item);
+    cout
+        << "// list.DeleteItem(item_is);"
+        << endl
+        << "// CALLED..."
+        << endl << endl;
+    
     assert( list.GetLength() == 0 );
+    cout
+        << "// assert( list.GetLength() == 0 );"
+        << endl
+        << "// PASSED!!!"
+        << endl << endl << endl;
 }
 
 
@@ -245,12 +278,11 @@ void test12()
 // *VERIFY: getitem() does NOT find item after deltion...
 {
 
-    {
-        cout
-        << "// *ADD: item..." << endl
-        << "// *DELETE: item..." << endl
-        << "// *VERIFY: getitem() does NOT find item after deltion..." << endl;
-    }
+    cout
+    << "// void test12():" << endl
+    << "// *ADD: item..." << endl
+    << "// *DELETE: item..." << endl
+    << "// *VERIFY: Getitem(): does NOT find item after deltion..." << endl;
     
     ItemType item;
     cout
