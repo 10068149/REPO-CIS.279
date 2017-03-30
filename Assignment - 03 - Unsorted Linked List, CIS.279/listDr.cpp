@@ -16,21 +16,38 @@
 using namespace std;
 using namespace ANTHONY_NASH_ASSIGNMENT_3;
 
-
-
+void test1();
+void test2();
 
 int main()
 {
+
+    test1();
+    test2();
     
 
-    bool node_test = true;
-    assert( ("hell wold", node_test) );
+//    bool node_test = true;
+//    assert( ("How you doooonnnn... ", node_test) );
     
-    cout    << "int main() {...}"
-            << endl
-            << endl
-            << endl;
+//    cout    << "int main() {...}"
+//            << endl
+//            << endl
+//            << endl;
     
     
     return 0;
+}
+
+void test1() {
+    
+    ItemType b;
+    unsorted a;
+
+}
+
+void test2() {
+    
+    ItemType b;
+    unsorted a;
+    
 }

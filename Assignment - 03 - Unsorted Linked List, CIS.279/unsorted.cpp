@@ -217,7 +217,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         assert( currentPos != NULL );
         // *2) CHECK: Current position is defined..
         
-        currentPos = currentPos->next_node;
+        //currentPos = currentPos->next_node;
         // *ASSIGNS: points to next NODE
         
         return currentPos->listData;
