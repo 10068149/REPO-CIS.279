@@ -27,8 +27,6 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         head =NULL;     // : points to first node in list...
         tail =NULL;      // : points to last node in list...
         currentPos =NULL;// : point to the curent node in list...
-        //temp =NULL;      // : used to temporaryly store a pointers current locaiton...
-
     }
 
     
@@ -59,8 +57,8 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     
     
     
-//    ItemType unsorted :: GetItem( ItemType Item, bool& found) const
-//    
+    ItemType unsorted :: GetItem( ItemType Item, bool& found) const
+//
 //    // F():  Get list element whose key matches item’s key (if present)
 //    // PRE:  XXX List has been initialized;
 //    //       Key member of item is initialized...
@@ -70,9 +68,9 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 //    //       returned; otherwise found = false and item is returned
 //    //       List unchnaged
 //    
-//    {
-//        return Item;
-//    }
+    {
+        return Item;
+    }
     
 
     

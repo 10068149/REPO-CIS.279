@@ -17,27 +17,28 @@ using namespace std;
 using namespace ANTHONY_NASH_ASSIGNMENT_3;
 
 
-void test1(); // TEST1(): bool IsFull() const;
-void test2(); // TEST2(): int GetLength() const;
-void test3(); // TEST3(): int GetLength() const;
-void test4(); //: test4(): ItemType GetItem( ItemType Item, bool& found) const;
-void test5(); //: void PutItem(ItemType item);
-void test6(); //: void DeleteItem(ItemType item);
-void test7(); //: void ResetList() ;
-void test8(); //: ItemType GetNextItem();
+void test1(); //: TEST1(): bool IsFull() const;
+void test2(); //: TEST2(): int GetLength() const;
+void test3(); //: TEST3(): ItemType GetItem( ItemType Item, bool& found) const;
+void test4(); //: TEST4(): void PutItem(ItemType item);
+//void test5(); //: TEST5(): void DeleteItem(ItemType item);
+//void test6(); //: TEST6(): void ResetList();
+//void test7(); //: ItemType GetNextItem();
+
+
+
 
 
 int main()
 {
 
-    test1(); // TEST1(): bool IsFull() const;
-    test2(); // TEST2(): int GetLength() const;
-    test3(); // TEST3(): int GetLength() const;
-    test4(); //: test4(): ItemType GetItem( ItemType Item, bool& found) const;
-    test5(); //: void PutItem(ItemType item);
-    test6(); //: void DeleteItem(ItemType item);
-    test7(); //: void ResetList() ;
-    test8(); //: ItemType GetNextItem();
+//void test1(); // TEST1(): bool IsFull() const;
+//void test2(); //: TEST2(): int GetLength() const;
+//void test3(); //: TEST3(): ItemType GetItem( ItemType Item, bool& found) const;
+void test4(); //: TEST4(): void PutItem(ItemType item);
+//void test5(); //: TEST5(): void DeleteItem(ItemType item);
+//void test6(); //: TEST6(): void ResetList();
+//void test7(); //: ItemType GetNextItem();
 
 //    bool node_test = true;
 //    assert( ("How you doooonnnn... ", node_test) );
@@ -51,23 +52,63 @@ int main()
     return 0;
 }
 
-void test1() {
-    
-    ItemType b;
-    unsorted a;
 
+
+
+
+
+void test1()
+//: TEST1(): bool IsFull() const;
+{
+
+    unsorted list;
+    assert( !list.IsFull() );
+    assert( list.IsFull() );
+    
 }
 
-void test2() {
+
+void test2()
+//: TEST2(): int GetLength() const;
+{
+    unsorted list;
+    assert( list.GetLength() == 0);
+}
+
+void test3()
+//: TEST3(): ItemType GetItem( ItemType Item, bool& found) const;
+{
+    unsorted list;
+    ItemType item_is;
+    bool tell_the_truth;
     
-    ItemType b;
-    unsorted a;
+    list.GetItem( item_is, tell_the_truth );
+    
+    assert( tell_the_truth);
     
 }
 
-void test3(); // TEST3(): int GetLength() const;
-void test4(); //: test4(): ItemType GetItem( ItemType Item, bool& found) const;
-void test5(); //: void PutItem(ItemType item);
-void test6(); //: void DeleteItem(ItemType item);
-void test7(); //: void ResetList() ;
-void test8(); //: ItemType GetNextItem();
+
+ void test4()
+//: TEST4(): void PutItem(ItemType item);
+{
+    unsorted list;
+    
+}
+
+
+// void test5()
+//: TEST5(): void DeleteItem(ItemType item);
+//{
+//}
+
+// void test6()
+//: TEST6(): void ResetList();
+//{
+//}
+
+// void test7()
+//: ItemType GetNextItem();
+//{
+//}
+
