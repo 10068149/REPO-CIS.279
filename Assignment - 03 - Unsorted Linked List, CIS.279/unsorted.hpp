@@ -74,7 +74,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         
         
         
-        void ResetList() ;
+        void ResetList();
         
         // F():  current position for an iteration through the list...
         // PRE:  List has been initialized...
