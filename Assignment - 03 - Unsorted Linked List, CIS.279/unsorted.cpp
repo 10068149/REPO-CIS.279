@@ -57,7 +57,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     
     
     
-    ItemType unsorted :: GetItem( ItemType Item, bool& found) const
+    ItemType unsorted :: GetItem( ItemType item, bool& found) const
 //
 //    // F():  Get list element whose key matches item’s key (if present)
 //    // PRE:  XXX List has been initialized;
@@ -69,7 +69,37 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 //    //       List unchnaged
 //    
     {
-        return Item;
+        NodeType* current_pointer = head;
+        NodeType* temporary_pointer = head;
+        
+        while ( current_pointer != NULL &&
+               current_pointer->listData.ComparedTo(item) != item.EQUAL )
+            // checking the inter list of data for: " ( ItemType item )"
+            
+        {
+            temporary_pointer = current_pointer;
+            current_pointer = current_pointer->next_node;
+        }
+        
+        if ( current_pointer == NULL) {
+            /*  cout
+             << endl
+             << "![ NOTICE ]: DATA WAS NOT LOCATED ..."
+             << endl;
+             **/
+        }// if()
+        
+        else
+            
+        {
+            
+            current_pointer = current_pointer->next_node;
+            // *ADVAMCES: sets current pointer to that OF the next node...
+            
+            temporary_pointer->next_node = current_pointer;
+            // *SAVES:  record of current pointer after deletion...
+            
+        }// else()
     }
     
 
