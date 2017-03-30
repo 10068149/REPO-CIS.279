@@ -81,25 +81,15 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
             current_pointer = current_pointer->next_node;
         }
         
-        if ( current_pointer == NULL) {
-            /*  cout
-             << endl
-             << "![ NOTICE ]: DATA WAS NOT LOCATED ..."
-             << endl;
-             **/
+        if ( current_pointer == NULL)
+        {
+            found = false;
+            return current_pointer->listData;
+            
         }// if()
         
-        else
-            
-        {
-            
-            current_pointer = current_pointer->next_node;
-            // *ADVAMCES: sets current pointer to that OF the next node...
-            
-            temporary_pointer->next_node = current_pointer;
-            // *SAVES:  record of current pointer after deletion...
-            
-        }// else()
+        found = true;
+        return current_pointer->listData;
     }
     
 
