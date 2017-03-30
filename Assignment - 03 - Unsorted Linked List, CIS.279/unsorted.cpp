@@ -193,13 +193,30 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     
     
     
-//    void unsorted :: ResetList()
+    void unsorted :: ResetList()
     // F():  current position for an iteration through the list...
     // PRE:  XXX List has been initialized...
     // POST: Current  position is prior to list..
-//    {
-        //code to: reset the list ...
-//    }
+    {
+        currentPos = tail_pointer;
+        // *SETS: the current pointer at the start of list...
+        
+        while ( currentPos != NULL)
+            // *CHECKING: NOT end of list...
+            
+        {
+            currentPos->next_pointer = NULL;
+            // *SETS: record of current pointer after deletion...
+            
+            length--;
+            // *DEINCREMENT: length of the list...
+
+            currentPos = currentPos->next_pointer;
+            // *ADVAMCES: sets current pointer to that OF the next node...
+
+        }
+        
+    }
 
     
     

@@ -34,6 +34,10 @@ void test11();
 // put 1 item into the list;
 // verify that getitem it returns: true
 
+void test12();
+// *ADD: item...
+// *DELETE: item...
+// *VERIFY: getitem() does NOT find item after deltion...
 
 
 
@@ -49,14 +53,20 @@ int main()
 //    test7(); //: ItemType GetNextItem();
     
 //    test10();
-    //: TEST4(): void PutItem(ItemType item);
-    //: TEST2(): int GetLength() const;
-    //: void test1(); //: TEST1(): bool IsFull() const;
+//    : TEST4(): void PutItem(ItemType item);
+//    : TEST2(): int GetLength() const;
+//    : void test1(); //: TEST1(): bool IsFull() const;
 
 
-test11();
-    // put 1 item into the list;
-    // verify that getitem it returns: true
+//    test11();
+//    // put 1 item into the list;
+//    // verify that getitem it returns: true
+    
+    test12();
+    // *ADD: item...
+    // *DELETE: item...
+    // *VERIFY: getitem() does NOT find item after deltion...
+    
 
     
     
@@ -239,6 +249,63 @@ void test11()
 
 
 
+void test12()
+// *ADD: item...
+// *DELETE: item...
+// *VERIFY: getitem() does NOT find item after deltion...
+{
 
+    {
+        cout
+        << "// *ADD: item..." << endl
+        << "// *DELETE: item..." << endl
+        << "// *VERIFY: getitem() does NOT find item after deltion..." << endl;
+    }
+    
+    ItemType item;
+    cout
+        << endl
+        << "// ItemType item: CREATED ..."
+        << endl;
+    
+    unsorted list;
+    cout
+        << "// unsorted list: CREATED ... "
+        << endl;
+    
+    bool true_or_false = false;
+    cout
+        << "// bool true_or_false: FALSE; CREATED ..."
+        << endl;
+
+    
+    list.PutItem( item );
+    cout
+        << "// *ADD: item..."
+        << endl
+        << "// TEST4(): void PutItem(ItemType item);"
+        << endl
+        << "// PASSED!"
+        << endl << endl;
+    
+    list.DeleteItem( item );
+    cout
+        << "// *DELETE: item..."
+        << endl
+        << "// TEST5(): void DeleteItem(ItemType item);"
+        << endl
+        << "// PASSED!"
+        << endl << endl;
+
+    list.GetItem( item, true_or_false);
+    cout
+        << "// *VERIFY: getitem() does NOT find item after deltion..."
+        << endl
+        << "// TEST3(): ItemType GetItem( ItemType Item, bool& found) const;"
+        << endl
+        << "// PASSED!!"
+        << endl << endl;
+
+}
 
 
