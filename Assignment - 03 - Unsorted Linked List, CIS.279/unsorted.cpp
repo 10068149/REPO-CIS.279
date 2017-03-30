@@ -82,7 +82,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         if ( current_pointer == NULL)
         {
             found = false;
-            return current_pointer->listData;
+            return item;
             
         }// if()
         
@@ -232,9 +232,6 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     {
         assert( currentPos != NULL );
         // *2) CHECK: Current position is defined..
-        
-        //currentPos = currentPos->next_node;
-        // *ASSIGNS: points to next NODE
         
         return currentPos->listData;
 
