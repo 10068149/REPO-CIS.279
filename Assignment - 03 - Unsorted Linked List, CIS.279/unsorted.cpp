@@ -70,14 +70,12 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 //    
     {
         NodeType* current_pointer = head;
-        NodeType* temporary_pointer = head;
         
         while ( current_pointer != NULL &&
                current_pointer->listData.ComparedTo(item) != item.EQUAL )
             // checking the inter list of data for: " ( ItemType item )"
             
         {
-            temporary_pointer = current_pointer;
             current_pointer = current_pointer->next_node;
         }
         
@@ -90,7 +88,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         
         found = true;
         return current_pointer->listData;
-    }
+    }//: ItemType unsorted :: GetItem( ItemType item, bool& found) const {}
     
 
     

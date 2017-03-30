@@ -32,13 +32,13 @@ void test4(); //: TEST4(): void PutItem(ItemType item);
 int main()
 {
 
-//void test1(); // TEST1(): bool IsFull() const;
-//void test2(); //: TEST2(): int GetLength() const;
-//void test3(); //: TEST3(): ItemType GetItem( ItemType Item, bool& found) const;
-void test4(); //: TEST4(): void PutItem(ItemType item);
-//void test5(); //: TEST5(): void DeleteItem(ItemType item);
-//void test6(); //: TEST6(): void ResetList();
-//void test7(); //: ItemType GetNextItem();
+//test1(); // TEST1(): bool IsFull() const;
+//test2(); //: TEST2(): int GetLength() const;
+test3(); //: TEST3(): ItemType GetItem( ItemType Item, bool& found) const;
+//test4(); //: TEST4(): void PutItem(ItemType item);
+//test5(); //: TEST5(): void DeleteItem(ItemType item);
+//test6(); //: TEST6(): void ResetList();
+//test7(); //: ItemType GetNextItem();
 
 //    bool node_test = true;
 //    assert( ("How you doooonnnn... ", node_test) );
@@ -78,13 +78,18 @@ void test2()
 void test3()
 //: TEST3(): ItemType GetItem( ItemType Item, bool& found) const;
 {
+    cout
+        << endl
+        << "//: TEST3(): ItemType GetItem( ItemType Item, bool& found) const;"
+        << endl;
+    
     unsorted list;
     ItemType item_is;
-    bool tell_the_truth;
+    bool tell_the_truth =false;
     
     list.GetItem( item_is, tell_the_truth );
     
-    assert( tell_the_truth);
+    assert( tell_the_truth == false);
     
 }
 
