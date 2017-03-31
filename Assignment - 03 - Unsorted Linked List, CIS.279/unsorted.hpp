@@ -112,7 +112,8 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         //NodeType* temp;
         // : used to temporaryly store a pointers current locaiton...
         
-        int length =0;
+        int length;
+        
         // * stors the current length of node with maxium limt of:
         // int MAX_ITEMS =5;
 

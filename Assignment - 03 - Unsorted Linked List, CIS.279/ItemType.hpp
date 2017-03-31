@@ -22,7 +22,14 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         
         ItemType();
         
+        //HELPER SETTER METHODS():
         
+        void change_value( int& number );
+
+        // F(): changes the value of the private INT member: value...
+        
+        // PRO:
+        // PRE:
         
         enum RelationType
         {
@@ -44,7 +51,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         
     private:
         
-        int value =0;
+        int value;
         
         
     };//class ItemType ...}

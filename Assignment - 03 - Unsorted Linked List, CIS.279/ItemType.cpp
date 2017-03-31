@@ -18,11 +18,14 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 
 
 
-    ItemType :: ItemType()
-    {
-        //my constructor;
-    }
+    ItemType :: ItemType(){}
     
+    void ItemType ::  change_value( int& number )
+    
+    {
+        this->value = number;
+    }
+
     
     ItemType :: RelationType ItemType :: ComparedTo( ItemType Item )
     // F(): Determines the ordering of two ItemType objects

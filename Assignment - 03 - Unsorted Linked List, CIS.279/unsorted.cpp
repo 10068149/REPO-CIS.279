@@ -5,7 +5,7 @@
 //  Created by CIS on 3/22/17.
 //  Copyright © 2017 Anthony Nash. All rights reserved.
 //
-
+#include <iostream> // !!! FOR TESTING ONLY !!!
 #include <cstdlib>
 #include <cassert>  // provides: DEBUGING TOOLS...
 
@@ -27,6 +27,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         head_pointer =NULL;     // : points to first node in list...
         tail_pointer =NULL;      // : points to last node in list...
         currentPos =NULL;// : point to the curent node in list...
+        length =0;
     }
 
     
@@ -162,7 +163,11 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
             current_pointer = current_pointer->next_pointer;
         }
         
-        if ( current_pointer == NULL) {
+        if ( current_pointer == NULL)
+        // WHILE: did not fine the item...
+        {
+            head_pointer = NULL;
+            tail_pointer = NULL;
             delete delete_pointer;
         }// if()
         
@@ -177,7 +182,9 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
             
             temporary_pointer->next_pointer = current_pointer;
             // *SAVES:  record of current pointer after deletion...
-            
+
+            head_pointer = NULL;
+            tail_pointer = NULL;
             delete delete_pointer;
             // *RETURNS: removed the NODE and returnes memory location
             // to heap...
@@ -198,23 +205,23 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     // PRE:  XXX List has been initialized...
     // POST: Current  position is prior to list..
     {
-        currentPos = tail_pointer;
-        // *SETS: the current pointer at the start of list...
-        
-        while ( currentPos != NULL)
-            // *CHECKING: NOT end of list...
-            
-        {
-            currentPos->next_pointer = NULL;
-            // *SETS: record of current pointer after deletion...
-            
-            length--;
-            // *DEINCREMENT: length of the list...
-
-            currentPos = currentPos->next_pointer;
-            // *ADVAMCES: sets current pointer to that OF the next node...
-
-        }
+//        currentPos = tail_pointer;
+//        // *SETS: the current pointer at the start of list...
+//        
+//        while ( currentPos != NULL)
+//            // *CHECKING: NOT end of list...
+//            
+//        {
+//            currentPos->next_pointer = NULL;
+//            // *SETS: record of current pointer after deletion...
+//            
+//            length--;
+//            // *DEINCREMENT: length of the list...
+//
+//            currentPos = currentPos->next_pointer;
+//            // *ADVAMCES: sets current pointer to that OF the next node...
+//
+//        }
         
     }
 
@@ -240,6 +247,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 
     }// ItemType unsorted :: GetNextItem() {}
 
+    
     
     
 
