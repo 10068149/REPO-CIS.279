@@ -50,15 +50,15 @@ void test13();
 int main()
 {
 
-    test1(); //: TEST1(): bool IsFull() const;
-    test2(); //: TEST2(): int GetLength() const;
-    test3(); //: TEST3(): ItemType GetItem( ItemType Item, bool& found) const;
-    test4(); //: TEST4(): void PutItem(ItemType item);
-    test5(); //: TEST5(): void DeleteItem(ItemType item);
+//    test1(); //: TEST1(): bool IsFull() const;
+//    test2(); //: TEST2(): int GetLength() const;
+//    test3(); //: TEST3(): ItemType GetItem( ItemType Item, bool& found) const;
+//    test4(); //: TEST4(): void PutItem(ItemType item);
+//    test5(); //: TEST5(): void DeleteItem(ItemType item);
 //    test6(); //: TEST6(): void ResetList();
 //    test7(); //: ItemType GetNextItem();
     
-    test10();
+//    test10();
 //    : TEST4(): void PutItem(ItemType item);
 //    : TEST2(): int GetLength() const;
 //    : void test1(); //: TEST1(): bool IsFull() const;
@@ -68,7 +68,7 @@ int main()
 //    // *PUT: item into the list...
 //    // *VERFIY: that getitem() returns: "true"
     
-    test12();
+//    test12();
     // *ADD: item...
     // *DELETE: item...
     // *VERIFY: getitem() does NOT find item after deltion...
@@ -451,23 +451,24 @@ void test13()
         << "// #4: try to get the second one from the list" << endl
         << endl << endl;
     
-    ItemType item_A;
-    item_A.change_value( 3 );
-    
+    ItemType item1;
+    item1.change_value( 1 );
+
     cout
     << endl
-    << "    #1: try to get the second one from the list..." << endl
+    << "    #1: create 2 items ( NOT EQUAL )" << endl
     << "    #1: ItemType item1: CREATED: "
     << endl;
     
-    ItemType item_B;
+    ItemType item2;
+    item2.change_value( 0 );
+
     cout
     << endl
-    << "    #1: try to get the second one from the list..." << endl
+    << "    #1: create 2 items ( NOT EQUAL )" << endl
     << "    #1: ItemType item2: CREATED: "
     << endl;
 
-    
     unsorted list;
     cout
     << "    // unsorted list: CREATED ... "
@@ -481,8 +482,8 @@ void test13()
     
     cout
         << "    #2: compare them..." << endl
-        << "    #2: CALL TO: assert( item1.ComparedTo( item2 ) );" << endl;
-    assert( item_A.ComparedTo( item_B ) );
+        << "    #2: CALL TO: assert( item1.ComparedTo( item2 ) != item1.EQUAL );" << endl;
+    assert( item1.ComparedTo( item2 ) != item1.EQUAL );
     cout
     << "    #2: ASSERT(): PASSED!!!"
     << endl << endl;
@@ -492,13 +493,13 @@ void test13()
         << "        put the first one in list..." << endl
         << "    #3: CALL: list.PutItem( item1 );" << endl
         << endl << endl;
-    list.PutItem( item_A );
+    list.PutItem( item1 );
 
     cout
          << "    #3: *VERIFY: *different* was NOT found" << endl
          << "    #3: CALL: list.GetItem( item2, true_or_false );" << endl
          << endl << endl;
-    list.GetItem( item_B, true_or_false );
+    list.GetItem( item2, true_or_false );
     
     cout << "    #3: CALL: assert( true_or_false = false );" << endl;
     assert( true_or_false = false );

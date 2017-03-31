@@ -24,7 +24,11 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         
         //HELPER SETTER METHODS():
         
-        void change_value( int& number );
+        void change_value( int number );
+        // F():
+        // PROL
+        // PRE:
+
 
         // F(): changes the value of the private INT member: value...
         
@@ -51,7 +55,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         
     private:
         
-        int value;
+        int value =0;
         
         
     };//class ItemType ...}

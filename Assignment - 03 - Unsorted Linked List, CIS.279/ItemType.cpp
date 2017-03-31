@@ -20,7 +20,11 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 
     ItemType :: ItemType(){}
     
-    void ItemType ::  change_value( int& number )
+    void ItemType :: change_value( int number )
+    
+    // F():
+    // PROL
+    // PRE:
     
     {
         this->value = number;
