@@ -44,6 +44,33 @@ void test13();
 // *GET: *different* item from the list.
 // *VERIFY: *different* was NOT found
 
+void test14();
+//  #1: add: item1: PUT() ???
+//  #1: add item2: PUT() ???
+//  #1: delete DIFFERENT item2
+
+//  #2: ADD: item1: PUT()
+//  #2: ADD: (different) item2.
+//  #2: delete item1.
+//  #2: verify that item2 is found
+
+//  #3: add item1.
+//  #3: verify GetNextItem() == item1
+
+//  #4: add item1 and item2. :: PT() ??
+//  #4: verify that if you call GetNextItem() 2! times,
+//      the second one returns item2;
+//      <???> why the second one <???>
+//      <!!!> To check that the second element can be
+//      received from getnextitem method. To get the second,
+//      we need to call it twice < !!! >
+
+//  #5: add item1 and item2.
+//  #5: call getnextitem.
+//  #5: call reset.
+//  #5: call getnextitem again;
+//  #5: verify that this second call return item1.
+
 
 
 
@@ -64,7 +91,7 @@ int main()
 //    : void test1(); //: TEST1(): bool IsFull() const;
 
 
-    test11();
+//    test11();
 //    // *PUT: item into the list...
 //    // *VERFIY: that getitem() returns: "true"
     
@@ -73,7 +100,7 @@ int main()
     // *DELETE: item...
     // *VERIFY: getitem() does NOT find item after deltion...
     
-    test13();
+//    test13();
     // *PUT: item into list
     // *GET: *different* item from the list.
     // *VERIFY: *different* was NOT found
@@ -502,7 +529,7 @@ void test13()
     list.GetItem( item2, true_or_false );
     
     cout << "    #3: CALL: assert( true_or_false = false );" << endl;
-    assert( true_or_false = false );
+    assert( true_or_false == false );
     cout
          << "    #3: ASSERT(): PASSED!!!"
          << endl << endl;
