@@ -99,7 +99,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         {
             ItemType listData;
             // : data (items) stored in each node ...
-            NodeType* next_pointer;
+            NodeType* next_location;
             // : points to the next node in the list...
         };
         
@@ -112,7 +112,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         //NodeType* temp;
         // : used to temporaryly store a pointers current locaiton...
         
-        int length =0;
+        int length;
         
         // * stors the current length of node with maxium limt of:
         // int MAX_ITEMS =5;

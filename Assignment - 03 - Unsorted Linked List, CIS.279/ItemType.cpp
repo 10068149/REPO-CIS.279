@@ -18,7 +18,9 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 
 
 
-    ItemType :: ItemType(){}
+    ItemType :: ItemType(){
+        value = 0;
+    }
     
     void ItemType :: change_value( int number )
     

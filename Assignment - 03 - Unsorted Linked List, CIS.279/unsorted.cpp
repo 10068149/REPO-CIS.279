@@ -27,6 +27,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         head_pointer =NULL;     // : points to first node in list...
         tail_pointer =NULL;      // : points to last node in list...
         currentPos =NULL;// : point to the curent node in list...
+        length = 0;
     }
 
     
@@ -76,7 +77,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
             // checking the inter list of data for: " ( ItemType item )"
             
         {
-            current_pointer = current_pointer->next_pointer;
+            current_pointer = current_pointer->next_location;
         }
         
         if ( current_pointer == NULL)
@@ -117,7 +118,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         //* CREATED: new node: new_node: NodeType...
         
         if ( tail_pointer != NULL ) {
-            tail_pointer->next_pointer = new_node;
+            tail_pointer->next_location = new_node;
         }
         tail_pointer = new_node;
         
@@ -125,7 +126,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
             head_pointer = new_node;
         }
         
-        new_node->next_pointer = NULL ;
+        new_node->next_location = NULL ;
         // ->, ACCESS to the memeber item: next (a pointer);
         // makes this item point to nothing; forces it to be
         // the last node in list (up to) with a max of: int MAX_ITEMS =5...
@@ -141,59 +142,174 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
     }//: void unsorted :: PutItem(ItemType item) ...}
 
     
+
     
     
-    void unsorted :: DeleteItem(ItemType item)
     
-    // F():  Deletes the element whose key matches item’s key...
-    // PRE:  XXX List has been initialized...
-    // POST: One and only one element in list has a key matching item’s key...
+    
+void unsorted :: DeleteItem(ItemType item)
+    //    // F():  Deletes the element whose key matches item’s key...
+    //    // PRE:  XXX List has been initialized...
+    //    // POST: One and only one element in list has a key matching item’s key...
+
+{
+    
+    if ( head_pointer == NULL)
+    //IF(): LIST IS EMPTY; RETURN...
     {
-        NodeType* current_pointer = head_pointer;
-        NodeType* temporary_pointer = head_pointer;
-        NodeType* delete_pointer = NULL;
+        cout << "   // TEST CASE:  1: List is empty..." << endl;
+        return;
         
-        while ( current_pointer != NULL &&
-                current_pointer->listData.ComparedTo(item) != item.EQUAL )
-        // checking the inter list of data for: " ( ItemType item )"
+    }//if ( head_pointer == NULL) {...}
+    
+    //5 *DeleteItem(): INTIAITING LIST SEARCH...
+    cout << "   //5 *DeleteItem(): INTIAITING LIST SEARCH..." << endl;
+    
+    NodeType* current_pointer = head_pointer;
+    // staring at / pointing at the beging of the list...
+
+    NodeType* trailing_pointer = head_pointer;
+    // staring at / pointing at the beging of the list...
+
+    do
+    // DO(): SEARCHING LIST...
+    {
+            trailing_pointer = current_pointer;
+            // set to the HEADS current positon;
+            // used to keep track of the original NODES/items  ...
             
-        {
-            temporary_pointer = current_pointer;
-            current_pointer = current_pointer->next_pointer;
-        }
+            current_pointer = current_pointer->next_location;
+            // set to the current pointer to that of of the NEXT NODE locaiton...
         
-        if ( current_pointer == NULL)
-        // WHILE: did not fine the item...
-        {
-            head_pointer = NULL;
-            tail_pointer = NULL;
-            delete delete_pointer;
-        }// if()
+            cout << "   //5. //5 *DeleteItem(): SEARCHING..." << endl;
         
+    } while ( current_pointer != NULL
+              && current_pointer->listData.ComparedTo(item)
+              != item.EQUAL);
+    // WHILE(): not at the END of the list...
+    
+        cout << "   //5 *DeleteItem(): ITEM FOUND..." << endl;
+
+        if ( current_pointer == NULL )
+        //5 *DeleteItem(): IF(): LIST SEAERCHED; NOT FOUND...
+        {
+            cout << "   //5 *DeleteItem(): IF(): LIST SEAERCHED; NOT FOUND..." << endl;
+            return;
+        }// if ( current_pointer == NULL ) {...
         else
-            
+        cout << "   //5 *DeleteItem(): CASE 3: ITEM LOCATED..."<< endl;
         {
-            delete_pointer = current_pointer;
+            cout << "   //5 *DeleteItem(): CASE 3: FIRST NODE ( HEAD ), DELETING..."<< endl;
+            if (head_pointer == current_pointer )
+            {
+                head_pointer = head_pointer->next_location;
+                //REASSIGING HEAD TO THE NEXT KNOWN POINTER IN LIST...
+                
+                delete current_pointer;
+                length--;
+                //POINTER DELETED; MEMORY CLEARED...
+            }// if (head_pointer == current_pointer )...
+
+            else
+            cout << "   //5 *DeleteItem(): CASE 4: ITEM LOCATED; CURRENT > HEAD..." << endl;
+            {
+                //5 *DeleteItem(): CASE 4: ITEM LOCATED; CURRENT > HEAD...
+                trailing_pointer->next_location = current_pointer->next_location;
+                //RECONECTING TRAINLING NODE TO THE NEXT KNOWN NODE IN LIST...
+                
+                delete current_pointer;
+                length--;
+                //POINTER DELETED; MEMORY CLEARED...
+            }// ELSE{} :: if (head_pointer == current_pointer ) ...
+            
+        }// ELSE{} :: if ( current_pointer == NULL ) ...
+
+}//DeleteItem(ItemType item)...
+
+    
+    
+/**
+    void unsorted :: DeleteItem(ItemType item)
+//
+//    // F():  Deletes the element whose key matches item’s key...
+//    // PRE:  XXX List has been initialized...
+//    // POST: One and only one element in list has a key matching item’s key...
+//    {
+//        NodeType* current_pointer = head_pointer;
+//        NodeType* temporary_pointer = head_pointer;
+//        NodeType* delete_pointer = NULL;
+    
+//        while ( current_pointer != NULL &&
+//                current_pointer->listData.ComparedTo(item) != item.EQUAL )
+//        // checking the inter list of data for: " ( ItemType item )"
+//            
+//        {
+//            temporary_pointer = current_pointer;
+//            current_pointer = current_pointer->next_location;
+//        }
+//        
+//        if ( current_pointer == NULL)
+//        // WHILE: did not fine the item...
+//        {
+//            // do nothing and break from if()...
+//        }//if()
+        
+//        if (  current_pointer->listData.ComparedTo(item) == item.EQUAL )
+//        {
+        
+//            delete_pointer = current_pointer;
             // *SETS: node for deletion...
             
-            current_pointer = current_pointer->next_pointer;
+//            current_pointer = head_pointer;
             // *ADVAMCES: sets current pointer to that OF the next node...
+
+//            current_pointer = current_pointer->next_location;
+//            // *ADVAMCES: sets current pointer to that OF the next node...
             
-            temporary_pointer->next_pointer = current_pointer;
+//            temporary_pointer->next_location = current_pointer;
             // *SAVES:  record of current pointer after deletion...
 
-            head_pointer = NULL;
-            tail_pointer = NULL;
-            delete delete_pointer;
+//            head_pointer = current_pointer->next_location;
+//            tail_pointer = current_pointer->next_location;
+
+//            head_pointer = NULL;
+//            tail_pointer = NULL;
+            
+//            delete delete_pointer;
             // *RETURNS: removed the NODE and returnes memory location
             // to heap...
             
-            length--;
+//            length--;
             // *DEINCREMENT: length of the list...
-            
-        }// else()
+
+//        }//IF()
+
+//      `Change #1; removing from ELSE to second IF():
         
-    }// void unsorted :: DeleteItem(ItemType item) {}
+//       else
+//       {
+//            delete_pointer = current_pointer;
+//            // *SETS: node for deletion...
+//            
+//            current_pointer = current_pointer->next_location;
+//            // *ADVAMCES: sets current pointer to that OF the next node...
+//            
+//            temporary_pointer->next_location = current_pointer;
+//            // *SAVES:  record of current pointer after deletion...
+//
+//            head_pointer = NULL;
+//            tail_pointer = NULL;
+//            delete delete_pointer;
+//            // *RETURNS: removed the NODE and returnes memory location
+//            // to heap...
+//            
+//            length--;
+//            // *DEINCREMENT: length of the list...
+//           
+//        }// else()
+        
+//    }// void unsorted :: DeleteItem(ItemType item) {}
+    **/
 
     
     
@@ -211,13 +327,13 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
 //            // *CHECKING: NOT end of list...
 //            
 //        {
-//            currentPos->next_pointer = NULL;
+//            currentPos->next_location = NULL;
 //            // *SETS: record of current pointer after deletion...
 //            
 //            length--;
 //            // *DEINCREMENT: length of the list...
 //
-//            currentPos = currentPos->next_pointer;
+//            currentPos = currentPos->next_location;
 //            // *ADVAMCES: sets current pointer to that OF the next node...
 //
 //        }

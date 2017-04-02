@@ -55,7 +55,7 @@ namespace ANTHONY_NASH_ASSIGNMENT_3 {
         
     private:
         
-        int value =0;
+        int value;
         
         
     };//class ItemType ...}
