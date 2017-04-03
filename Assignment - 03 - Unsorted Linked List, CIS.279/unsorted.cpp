@@ -171,7 +171,9 @@ void unsorted :: DeleteItem(ItemType item)
     NodeType* trailing_pointer = head_pointer;
     // staring at / pointing at the beging of the list...
 
-    do
+    while ( current_pointer != NULL
+           && current_pointer->listData.ComparedTo(item)
+           != item.EQUAL)
     // DO(): SEARCHING LIST...
     {
             trailing_pointer = current_pointer;
@@ -181,48 +183,60 @@ void unsorted :: DeleteItem(ItemType item)
             current_pointer = current_pointer->next_location;
             // set to the current pointer to that of of the NEXT NODE locaiton...
         
-            cout << "   //5. //5 *DeleteItem(): SEARCHING..." << endl;
+            cout << "   //5. *DeleteItem(): SEARCHING..." << endl;
         
-    } while ( current_pointer != NULL
-              && current_pointer->listData.ComparedTo(item)
-              != item.EQUAL);
-    // WHILE(): not at the END of the list...
+    }// WHILE(): not at the END of the list...
     
-        cout << "   //5 *DeleteItem(): ITEM FOUND..." << endl;
+    cout << "   //5 *DeleteItem(): ITEM FOUND..." << endl;
 
-        if ( current_pointer == NULL )
-        //5 *DeleteItem(): IF(): LIST SEAERCHED; NOT FOUND...
-        {
-            cout << "   //5 *DeleteItem(): IF(): LIST SEAERCHED; NOT FOUND..." << endl;
-            return;
-        }// if ( current_pointer == NULL ) {...
-        else
-        cout << "   //5 *DeleteItem(): CASE 3: ITEM LOCATED..."<< endl;
-        {
-            cout << "   //5 *DeleteItem(): CASE 3: FIRST NODE ( HEAD ), DELETING..."<< endl;
-            if (head_pointer == current_pointer )
-            {
-                head_pointer = head_pointer->next_location;
-                //REASSIGING HEAD TO THE NEXT KNOWN POINTER IN LIST...
-                
-                delete current_pointer;
-                length--;
-                //POINTER DELETED; MEMORY CLEARED...
-            }// if (head_pointer == current_pointer )...
+    cout << "   //5 *DeleteItem(): CASE 3: ITEM LOCATED..."<< endl;
 
-            else
-            cout << "   //5 *DeleteItem(): CASE 4: ITEM LOCATED; CURRENT > HEAD..." << endl;
-            {
-                //5 *DeleteItem(): CASE 4: ITEM LOCATED; CURRENT > HEAD...
-                trailing_pointer->next_location = current_pointer->next_location;
-                //RECONECTING TRAINLING NODE TO THE NEXT KNOWN NODE IN LIST...
-                
-                delete current_pointer;
-                length--;
-                //POINTER DELETED; MEMORY CLEARED...
-            }// ELSE{} :: if (head_pointer == current_pointer ) ...
+    if ( current_pointer == tail_pointer
+         && current_pointer->listData.ComparedTo(item)
+         == item.EQUAL)
+    {
+        trailing_pointer->next_location = NULL;
+        //REASSIGING HEAD TO THE NEXT KNOWN POINTER IN LIST...
+        
+        delete tail_pointer;
+        length--;
+        //POINTER DELETED; MEMORY CLEARED...
+
+    }
+    
+    cout << "   //5 *DeleteItem(): CASE 3: ITEM LOCATED..."<< endl;
+        cout << "   //5 *DeleteItem(): CASE 3: FIRST NODE ( HEAD ), DELETING..."<< endl;
+        if (head_pointer == current_pointer )
+        {
+            head_pointer = head_pointer->next_location;
+            //REASSIGING HEAD TO THE NEXT KNOWN POINTER IN LIST...
             
-        }// ELSE{} :: if ( current_pointer == NULL ) ...
+            delete current_pointer;
+            length--;
+            //POINTER DELETED; MEMORY CLEARED...
+        }// if (head_pointer == current_pointer )...
+
+        
+        if ( current_pointer == NULL )
+    //5 *DeleteItem(): IF(): LIST SEAERCHED; NOT FOUND...
+    {
+        cout << "   //5 *DeleteItem(): IF(): LIST SEAERCHED; NOT FOUND..." << endl;
+        return;
+    }// if ( current_pointer == NULL ) {...
+
+    
+//            else
+//            cout << "   //5 *DeleteItem(): CASE 4: ITEM LOCATED; CURRENT > HEAD..." << endl;
+//            {
+//                //5 *DeleteItem(): CASE 4: ITEM LOCATED; CURRENT > HEAD...
+//                trailing_pointer->next_location = current_pointer->next_location;
+//                //RECONECTING TRAINLING NODE TO THE NEXT KNOWN NODE IN LIST...
+//                
+//                delete current_pointer;
+//                length--;
+//                //POINTER DELETED; MEMORY CLEARED...
+//            }// ELSE{} :: if (head_pointer == current_pointer ) ...
+            
 
 }//DeleteItem(ItemType item)...
 
