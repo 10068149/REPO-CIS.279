@@ -140,7 +140,7 @@ void test15() //:
     
     cout << "   //5. DELETE SECOND item: void DeleteItem(ItemType item B);" << endl;
     list.DeleteItem( item_B );
-    cout << "   //5. list.DeleteItem( item_B ); | ADDED!!" << endl << endl;
+    cout << "   //5. list.DeleteItem( item_B ); | DELETED!!" << endl << endl;
     
     cout << "   //6. GET first item: ItemType GetItem( ItemType Item A, bool& found) const;" << endl << endl;
     bool True_or_False = true;
