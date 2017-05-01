@@ -41,8 +41,8 @@ int main()
 
         if ( ispunct(character) )
             {
-                cin.ignore(character, EOF);
-//                cout << character;
+                data.ignore(character);
+                cout << character;
             }
         
         if ( isspace(character) && previous_space ==false )
@@ -51,8 +51,7 @@ int main()
             }
         
         previous_space = isspace(character);
-        
-        cout << character;
+//        cout << character;
         
     }
     
