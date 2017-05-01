@@ -38,20 +38,14 @@ int main()
     {
         
         data.get(character);
-
-        if ( ispunct(character) )
-            {
-                data.ignore(character);
-                cout << character;
-            }
         
-        if ( isspace(character) && previous_space ==false )
+        if ( isspace(character) && previous_space ==false && !ispunct(character) )
             {
                 word_counter++;
             }
         
         previous_space = isspace(character);
-//        cout << character;
+        cout << character;
         
     }
     
