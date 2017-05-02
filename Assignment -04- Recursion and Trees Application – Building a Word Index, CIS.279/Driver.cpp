@@ -31,6 +31,7 @@ int main()
     char character;
     //char letter;
     //string word [ MAXIMUM_WORD_LENGTH ];
+    char word [ MAXIMUM_WORD_LENGTH ];
     
     bool previous_space = false;
     
@@ -39,13 +40,17 @@ int main()
         
         data.get(character);
         
-        if ( isspace(character) && previous_space ==false && !ispunct(character) )
+        if ( isalpha(character) && previous_space ==false )
             {
                 word_counter++;
+                // add letters to array: [ WORD ]
+                //data.getline( word, MAXIMUM_WORD_LENGTH );
+                cout << character;
             }
         
         previous_space = isspace(character);
-        cout << character;
+        
+        //  cout << word[ word_counter ];
         
     }
     
