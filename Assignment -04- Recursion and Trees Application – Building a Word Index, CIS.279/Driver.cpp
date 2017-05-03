@@ -33,27 +33,25 @@ int main()
     //string word [ MAXIMUM_WORD_LENGTH ];
     string buffer;
     
-    bool previous_space = false;
-    
     while ( !data.eof() )
     {
         
         data.get(letter);
         
+        if ( letter == '\'' )
+        {
+            buffer += letter;
+        }
         if ( isalpha(letter) ==true )
             {
                 buffer += letter;
             }
-        if ( (isalpha(letter) == false) && (buffer.empty() == false) )
-        {
-            word_counter++;
-            cout << buffer << " ";
-            buffer ="";
-        }
-        
-        previous_space = isspace(letter);
-        
-        //  cout << word[ word_counter ];
+        if ( (isalpha(letter) ==false) && (letter != '\'') && (buffer.empty() == false) )
+            {
+                word_counter++;
+                cout << buffer << " ";
+                buffer ="";
+            }
         
     }
     
