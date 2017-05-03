@@ -38,7 +38,9 @@ int main()
     while ( !data.eof() )
     {
         
-        data.get(letter);
+        data.get( letter );
+//        static_cast<char>(tolower(letter));
+//        cout << static_cast<char>(tolower(letter)) << " | ";
         
         if ( letter == '\'' )
         {
@@ -46,7 +48,7 @@ int main()
         }
         if ( isalpha(letter) ==true )
         {
-            buffer += letter;
+            buffer += static_cast<char>( tolower(letter) );
         }
         if ( (isalpha(letter) ==false) && (letter != '\'') && (buffer.empty() == false) )
         {
@@ -61,7 +63,7 @@ int main()
 
     for (auto elem : word_map)
     {
-        cout << elem.first << " = " << elem.second << endl;
+        cout << elem.first << " = " << elem.second << " | ";
     }
     
     cout  << endl << endl
