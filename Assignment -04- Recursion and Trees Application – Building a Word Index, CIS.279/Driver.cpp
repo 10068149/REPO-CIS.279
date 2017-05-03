@@ -50,9 +50,9 @@ int main()
         }
         if ( (isalpha(letter) ==false) && (letter != '\'') && (buffer.empty() == false) )
         {
-            word_counter++;
+            //word_counter++;
             //cout << buffer << " ";
-            word_map[buffer] = word_counter;
+            word_map[buffer]++;
             buffer = "";
         }
         
@@ -61,7 +61,7 @@ int main()
 
     for (auto elem : word_map)
     {
-        cout << elem.first << " ";
+        cout << elem.first << " = " << elem.second << endl;
     }
     
     cout  << endl << endl
