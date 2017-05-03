@@ -28,27 +28,30 @@ int main()
     int index =0;
     int word_counter=0;
     
-    char character;
+    char letter;
     //char letter;
     //string word [ MAXIMUM_WORD_LENGTH ];
-    char word [ MAXIMUM_WORD_LENGTH ];
+    string buffer;
     
     bool previous_space = false;
     
     while ( !data.eof() )
     {
         
-        data.get(character);
+        data.get(letter);
         
-        if ( isalpha(character) && previous_space ==false )
+        if ( isalpha(letter) ==true )
             {
-                word_counter++;
-                // add letters to array: [ WORD ]
-                //data.getline( word, MAXIMUM_WORD_LENGTH );
-                cout << character;
+                buffer += letter;
             }
+        if ( (isalpha(letter) == false) && (buffer.empty() == false) )
+        {
+            word_counter++;
+            cout << buffer << " ";
+            buffer ="";
+        }
         
-        previous_space = isspace(character);
+        previous_space = isspace(letter);
         
         //  cout << word[ word_counter ];
         
