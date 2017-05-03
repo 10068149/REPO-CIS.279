@@ -3,6 +3,7 @@
 #include <fstream>
 #include <cctype>
 #include <string>
+#include <map>
 
 using namespace std;
 const int  MAXIMUM_WORD_LENGTH =20;
@@ -27,6 +28,7 @@ int main()
     
     int index =0;
     int word_counter=0;
+    map<string, int> word_map;
     
     char letter;
     //char letter;
@@ -50,7 +52,8 @@ int main()
             {
                 word_counter++;
                 cout << buffer << " ";
-                buffer ="";
+                word_map[buffer] = word_counter;
+                buffer = "";
             }
         
     }
