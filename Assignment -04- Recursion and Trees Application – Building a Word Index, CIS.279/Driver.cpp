@@ -45,17 +45,23 @@ int main()
             buffer += letter;
         }
         if ( isalpha(letter) ==true )
-            {
-                buffer += letter;
-            }
+        {
+            buffer += letter;
+        }
         if ( (isalpha(letter) ==false) && (letter != '\'') && (buffer.empty() == false) )
-            {
-                word_counter++;
-                cout << buffer << " ";
-                word_map[buffer] = word_counter;
-                buffer = "";
-            }
+        {
+            word_counter++;
+            //cout << buffer << " ";
+            word_map[buffer] = word_counter;
+            buffer = "";
+        }
         
+    }
+    
+
+    for (auto elem : word_map)
+    {
+        cout << elem.first << " ";
     }
     
     cout  << endl << endl
