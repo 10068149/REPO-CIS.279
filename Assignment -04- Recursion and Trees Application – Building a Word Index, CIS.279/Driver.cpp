@@ -52,7 +52,7 @@ int main()
         }
         if ( (isalpha(letter) ==false) && (letter != '\'') && (buffer.empty() == false) )
         {
-            //word_counter++;
+            word_counter++;
             //cout << buffer << " ";
             word_map[buffer]++;
             buffer = "";
