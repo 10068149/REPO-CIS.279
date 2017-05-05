@@ -13,7 +13,7 @@
 using namespace std;
 namespace ANTHONY_NASH_ASSIGNMENT_4 {
 
-    class node {
+    struct node {
         
         string word;
         int count;

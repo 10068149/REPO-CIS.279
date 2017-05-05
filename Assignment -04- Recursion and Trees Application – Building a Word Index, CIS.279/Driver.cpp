@@ -3,10 +3,17 @@
 #include <fstream>
 #include <cctype>
 #include <string>
-#include <map>
+//#include <map>
+
+#include "map.HPP"
+#include "node.HPP"
 
 using namespace std;
+using namespace ANTHONY_NASH_ASSIGNMENT_4;
+
 const int  MAXIMUM_WORD_LENGTH =20;
+
+
 
 
 int main()
@@ -26,45 +33,42 @@ int main()
     
     //READING FROM INPUT FILE...
     
-    int index =0;
+    //int index =0;
     int word_counter=0;
-    map<string, int> word_map;
+    //map<string, int> word_map;
     
     char letter;
     //char letter;
     //string word [ MAXIMUM_WORD_LENGTH ];
-    string buffer;
+    string word;
+    map word_object;
     
     while ( !data.eof() )
     {
         
         data.get( letter );
-//        static_cast<char>(tolower(letter));
-//        cout << static_cast<char>(tolower(letter)) << " | ";
         
         if ( letter == '\'' )
         {
-            buffer += letter;
+            word += letter;
         }
         if ( isalpha(letter) ==true )
         {
-            buffer += static_cast<char>( tolower(letter) );
+            word += static_cast<char>( tolower(letter) );
         }
-        if ( (isalpha(letter) ==false) && (letter != '\'') && (buffer.empty() == false) )
+        if ( (isalpha(letter) ==false) && (letter != '\'') && (word.empty() == false) )
         {
             word_counter++;
             //cout << buffer << " ";
-            word_map[buffer]++;
-            buffer = "";
+            int count = word_object.get( &letter );
+            word_object.set( &letter , count + 1);
+            word = "";
         }
         
     }
     
 
-    for (auto elem : word_map)
-    {
-        cout << elem.first << " = " << elem.second << " | ";
-    }
+    word_object.print();
     
     cout  << endl << endl
     // << "* TEST: int index == " << index << endl
@@ -73,15 +77,6 @@ int main()
     << endl << endl << endl;
     
     data.close();
-
-    
-    
-    
-    //OPEN OUTPUT FILE...
-    // GET FILE LABEL...
-    // PRINT FILE LABEL ON OUTPUT FILE...
-    // GET MINIMUM CHARACTER LENGTH...
-    // SET CHARACTERS TO GETSTRING(INPUT FILE)...
 
     
     

@@ -23,25 +23,49 @@ int map::get(string word) {
     
     if( result->word == word ) return result->count;
         else return 0;
-// !!! ERROR: PRIVATE MEMBER ACCESS
     
 }// int map::get(string word) {
 
 
-void map::set(string word, int count) {
+void map::set (string word, int count) {
+
+    string target_word = word;
+
+    if( root == nullptr) {
+        
+        root = new node();
+        root->word = word;
+        root->count = count;
+        
+    }
     
-    // if root null - create new node
-    // else find node using find
-    // if result word equal to this word, replace count value
-    // if result word less then this,
-    // create new node and attach to the left*
-    // else - attach to the right
+    node* result =  find(root, word);
+    node* current = find(root, word);
     
+    if(result->word==word) {
+        
+        result->count = count;
+        
+    } else {
+        
+        if( target_word < current->word ) {
+            current->left = new node();
+            current->left->word = word;
+            current->left->count = count;
+        }
+        else {
+            current->right = new node();
+            current->right->word = word;
+            current->right->count = count;
+        }
+    }
 }
 
 
+
+
 node* map::find(node* current, const string & target_word)
-// !!! PRIVATE MEMEBR ISSUES !!!
+
 {
     if(current->word==target_word)
         return current;
@@ -68,5 +92,25 @@ bool map::less(const string & w1, const string & w2)
     return false;
     
 }
+
+
+void map::print() {
+    
+    print(root);
+    
+}
+
+void print(node* current) {
+    
+    if( current == nullptr) return;
+    
+    print(current->left);
+    cout << current->word << ": "<< current->count <<";";
+    print(current->right);
+}
+
+
+
+
 
 //}//using namespace ANTHONY_NASH_ASSIGNMENT_4 {
