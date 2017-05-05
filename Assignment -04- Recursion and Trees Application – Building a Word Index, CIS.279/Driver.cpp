@@ -68,7 +68,7 @@ int main()
     }
     
 
-    word_object.print();
+//    word_object.print();
     
     cout  << endl << endl
     // << "* TEST: int index == " << index << endl

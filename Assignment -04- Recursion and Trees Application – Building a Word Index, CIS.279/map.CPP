@@ -100,7 +100,7 @@ void map::print() {
     
 }
 
-void print(node* current) {
+void print (node* current) {
     
     if( current == nullptr) return;
     
