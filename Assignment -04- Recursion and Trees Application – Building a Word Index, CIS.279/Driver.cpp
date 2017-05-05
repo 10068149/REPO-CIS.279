@@ -59,10 +59,12 @@ int main()
         if ( (isalpha(letter) ==false) && (letter != '\'') && (word.empty() == false) )
         {
             word_counter++;
-            //cout << buffer << " ";
-            int count = word_object.get( &letter );
-            word_object.set( &letter , count + 1);
+//            int count = word_object.get( &letter );
+            word_object.set(word, word_object.get(word) + 1);
+//            cout << word << endl;
+            word_object.print();
             word = "";
+            
         }
         
     }
