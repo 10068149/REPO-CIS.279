@@ -18,7 +18,7 @@ class heap {
     
     heap();
     
-    void heapSort( string , int );
+    void heapSort( string [], int );
     
         
     //private:

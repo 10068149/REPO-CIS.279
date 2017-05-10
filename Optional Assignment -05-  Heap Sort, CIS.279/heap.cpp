@@ -25,7 +25,7 @@ heap :: heap()
 
 
 
-void heap :: heapSort ( string, int )
+void heap :: heapSort ( string [], int )
 //What:
 //Pre:
 //Post:
