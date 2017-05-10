@@ -7,6 +7,8 @@
 //
 
 #include <iostream>
+#include "heap.hpp"
+#include "heap.cpp"
 using namespace std;
 
 
@@ -15,8 +17,9 @@ int main()
 {
     
     string a[6] = {"D", "B", "A", "C", "F", "E"};
+    int MAX_SIZE = ( sizeof(a) ) / ( sizeof(a[0]) );
     
-    //heapSort(a, 6);
+    heapSort(a, MAX_SIZE);
     
     for (int i = 0; i < 6; i++)
         
@@ -25,8 +28,10 @@ int main()
     cout << " Sorted array" << endl;
     
     string b[6] = {"25", "30", "20", "80", "40", "60"};
+    MAX_SIZE = ( sizeof(a) ) / ( sizeof(a[0]) );
     
-    //heapSort(b, 6);
+    heapSort(b, MAX_SIZE);
+    
     
     for (int i = 0; i < 6; i++)
         

@@ -11,28 +11,21 @@
 using namespace std;
 
 
-heap :: heap()
+heap::heap()
 //Contructor ...
 //Pre:
 //Post:
 {
-
     //code...
-    
 }
 
 
 
-//void heap :: heapSort ( string heap_array [], int )
-////What: heap sort solution that sorts the items in an array into ascending order.
-////Pre:
-////Post:
-//
-//{
-//
-//    for (int index = ; <#condition#>; <#increment#>) {
-//        <#statements#>
-//    }
-//    
-//    
-//}
+void heap::heapSort ( string* data[], int size_of_data )
+//What: heap sort solution that sorts the items in an array into ASCENDING order.
+//Pre:  1) array[] is not empty; there is at least one element in the array.
+//Post: 1) returns sorrted array
+
+{
+    //code...
+}

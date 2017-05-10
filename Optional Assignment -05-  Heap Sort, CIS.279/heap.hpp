@@ -20,7 +20,7 @@ class heap {
     
     //private:
     
-    void heapSort ( string* array[], int data[].size() );
+    void heapSort ( string* data[], int size_of_data );
     
     
 };//class heap {}
