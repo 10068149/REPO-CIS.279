@@ -1,4 +1,4 @@
-//
+// TO REPLACE LABE #04
 //  heap.hpp
 //  CIS.279
 //
@@ -18,11 +18,9 @@ class heap {
     
     heap();
     
-    void heapSort( string [], int );
-    
-        
     //private:
     
+    void heapSort ( string* array[], int data[].size() );
     
     
 };//class heap {}
