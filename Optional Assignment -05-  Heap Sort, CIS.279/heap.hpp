@@ -14,13 +14,13 @@ using namespace std;
 
 class heap {
 
-    //public:
+    public:
     
     heap();
+    void heapSort ( string (*data)[], int size_of_data );
     
     //private:
     
-    void heapSort ( string* data[], int size_of_data );
     
     
 };//class heap {}
