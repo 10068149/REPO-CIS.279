@@ -8,7 +8,6 @@
 
 #include <iostream>
 #include "heap.hpp"
-#include "heap.cpp"
 using namespace std;
 
 
@@ -27,9 +26,9 @@ int main()
 {
     
     string a[6] = {"D", "B", "A", "C", "F", "E"};
+    
     int MAX_SIZE = ( sizeof(a) ) / ( sizeof(a[0]) );
     heap object1;
-    
     object1.heapSort(a, MAX_SIZE);
     
     for (int i = 0; i < 6; i++)

@@ -17,7 +17,7 @@ class heap {
     public:
     
     heap();
-    void heapSort ( string (*data)[], int size_of_data );
+    void heapSort ( string* data, int size_of_data );
     
     //private:
     
