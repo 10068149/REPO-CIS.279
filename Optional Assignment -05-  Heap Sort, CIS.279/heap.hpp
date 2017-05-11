@@ -12,17 +12,8 @@
 #include <iostream>
 using namespace std;
 
-class heap {
-
-    public:
-    
-    heap();
-    void heapSort ( string* data, int size_of_data );
-    
-    //private:
-    
-    
-    
-};//class heap {}
+void heapSort ( string* data, int size_of_data );
+void rebuild( string* data, int size_of_data);
+void print(string* left_data, int size_of_data );
 
 #endif /* heap_hpp */
