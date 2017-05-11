@@ -30,7 +30,7 @@ int main()
     int MAX_SIZE = ( sizeof(a) ) / ( sizeof(a[0]) );
     heap object1;
     
-    object1.heapSort( &a, MAX_SIZE);
+    object1.heapSort(a, MAX_SIZE);
     
     for (int i = 0; i < 6; i++)
         
