@@ -12,20 +12,21 @@ using namespace std;
 
 
 int main()
-
 {
+
+    cout << endl << endl << "// int MAIN(): " << endl << endl;
     
     string a[6] = {"D", "B", "A", "C", "F", "E"};
-    heapSort(a, 6);
-    cout << endl << endl << endl;
+    //...
     
-//    for (int i = 0; i < 6; i++)
-//        
-//        cout << a[i] << " "
-//             << endl;
-//    
-//    cout << " Sorted array"
-//         << endl << endl;
+    scribe( a, 6); //printg out array data: a[]
+    
+    heapSort(a, 6); //calling heapsort()...
+    
+    scribe( a, 6); //printg out array data: a[]
+    
+    cout << " Sorted array"
+         << endl << endl;
     
 //    string b[6] = {"25", "30", "20", "80", "40", "60"};
 //    heapSort(b, 6);
@@ -39,5 +40,6 @@ int main()
 //    
 //        cout << endl << endl
 //             << " Sorted array" << endl;
-    
+
+    cout << endl << endl << "// END: MAIN() " << endl << endl << endl;
 }  // end main

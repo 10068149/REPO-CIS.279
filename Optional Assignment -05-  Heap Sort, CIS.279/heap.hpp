@@ -13,7 +13,7 @@
 using namespace std;
 
 void heapSort ( string* data, int size_of_data );
-void rebuild( string* data, int size_of_data);
-void print(string* left_data, int size_of_data );
+void rebuild( int, string* data, int size_of_data);
+void scribe(string* left_data, int size_of_data );
 
 #endif /* heap_hpp */
