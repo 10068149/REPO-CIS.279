@@ -7,6 +7,9 @@
 //
 
 #include <iostream>
+#include <algorithm>
+#include <iterator>     // distance
+
 #include "heap.hpp"
 using namespace std;
 
@@ -41,5 +44,5 @@ int main()
 //        cout << endl << endl
 //             << " Sorted array" << endl;
 
-    cout << endl << endl << "// END: MAIN() " << endl << endl << endl;
+    cout << endl << endl << "// END: MAIN() " << endl;
 }  // end main

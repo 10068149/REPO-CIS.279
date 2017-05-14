@@ -10,13 +10,9 @@
 #include <iostream>
 #include <algorithm>
 #include <iterator>     // distance
-#include <iostream>
-#include <vector>
-
+//#include <vector>
 
 using namespace std;
-
-
 
 void heapSort ( string* data, int size_of_data )
 //What: heap sort; sorts the items in an array into ASCENDING order.
@@ -43,7 +39,7 @@ void heapSort ( string* data, int size_of_data )
 
 
 
-        cout
+        cout
         << endl
         << "        // HEAPSORT():: SWAP(???)..." << endl
         << "        // ..."
@@ -120,11 +116,13 @@ void rebuild( int index, string* data, int size_of_data)
     // find max value using: std::max_element ...
     
         string largest_value = *max_element( data, data + size_of_data );
+        string temporary[0];
 
         cout
         << endl
-        << "            // find max value using: std::max_element ..." << endl
-        << "            * largest Value IS: " << largest_value << endl
+        << "            // find max value using: std::max_element ..."
+        << endl << endl
+        << "            * LARGEST VALUE: " << largest_value << endl
         << endl;
 
     
@@ -132,21 +130,31 @@ void rebuild( int index, string* data, int size_of_data)
     // find position using: std::distance...
     
         cout
-        << "            // find position using: ..." << endl;
+        << "            // find position using: ..."
+        << endl << endl;
 
-        auto position = find( begin(data), end(data), largest_value);
-        
-        cout << "       * index: " << position-begin(data) << endl;
-        cout << "       * item: " << *position;
+        auto position = find( data + 0, data + size_of_data, largest_value);
+        int located = position - (data + 0);
     
+        cout
+        << "            * LARGEST VALUE: " << *position
+        << "; LOCATED AT INDEX: " << located << endl
+        << endl << endl;
     
 
     
     
     // swap 0 element with: position...
+        temporary [ 0 ] = data[ 0 ]; // MAKING COPY OF MAX VALUE / LOCAITON ...
+        data[ 0 ] = data[ located ]; // ORIGINAL LOCATION SWAPED WITH FOUND MAX-VALUE / LOCAITON ...
+        data[ located] = temporary[ 0 ];// MOVE ORIGINAL TO THE FOUND LOCATION ...
     
         cout
         << "            // swap 0 element with: position..."
+        << endl << endl
+        << "            *  data[ 0 ]: " << temporary[0]
+        << "; SWAPED with data [ located: " << located << " ]: " << temporary [ 0 ] << endl
+        << "            *  data [ 0 ] is NOW: " << data [ 0 ]
         << endl << endl;
     
 }

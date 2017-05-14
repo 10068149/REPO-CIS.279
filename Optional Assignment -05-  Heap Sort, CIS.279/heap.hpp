@@ -10,6 +10,7 @@
 #define heap_hpp
 
 #include <iostream>
+
 using namespace std;
 
 void heapSort ( string* data, int size_of_data );
