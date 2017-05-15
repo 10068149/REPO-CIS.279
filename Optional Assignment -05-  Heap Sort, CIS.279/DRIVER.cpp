@@ -22,27 +22,28 @@ int main()
     string a[6] = {"D", "B", "A", "C", "F", "E"};
     //...
     
-    scribe( a, 6); //printg out array data: a[]
-    
     heapSort(a, 6); //calling heapsort()...
     
     scribe( a, 6); //printg out array data: a[]
+    cout << "// Sorted array" << endl << endl << endl << endl;
     
-    cout << " Sorted array"
-         << endl << endl;
+
     
-//    string b[6] = {"25", "30", "20", "80", "40", "60"};
-//    heapSort(b, 6);
-//    cout << endl << endl << endl;
+    string b[6] = {"25", "30", "20", "80", "40", "60"};
+    heapSort(b, 6);
+    cout << endl << endl;
+    
+/*
+    for (int i = 0; i < 6; i++)
+        
+        cout << b[i] << " "
+             << endl;
+**/
+    
+    scribe(b, 6);
+    cout << "   // Sorted array" << endl;
     
     
-//    for (int i = 0; i < 6; i++)
-//        
-//        cout << b[i] << " "
-//             << endl;
-//    
-//        cout << endl << endl
-//             << " Sorted array" << endl;
 
     cout << endl << endl << "// END: MAIN() " << endl;
 }  // end main
