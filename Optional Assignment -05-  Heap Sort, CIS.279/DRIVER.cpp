@@ -24,14 +24,14 @@ int main()
     
     heapSort(a, 6); //calling heapsort()...
     
-    scribe( a, 6); //printg out array data: a[]
+    printer( a, 6); //printg out array data: a[]
     cout << "// Sorted array" << endl << endl << endl << endl;
     
 
     
-    string b[6] = {"25", "30", "20", "80", "40", "60"};
-    heapSort(b, 6);
-    cout << endl << endl;
+//    string b[6] = {"25", "30", "20", "80", "40", "60"};
+//    heapSort(b, 6);
+//    cout << endl << endl;
     
 /*
     for (int i = 0; i < 6; i++)
@@ -40,9 +40,9 @@ int main()
              << endl;
 **/
     
-    scribe(b, 6);
-    cout << "   // Sorted array" << endl;
-    
+//    printer(b, 6);
+//    cout << "   // Sorted array" << endl;
+//    
     
 
     cout << endl << endl << "// END: MAIN() " << endl;
