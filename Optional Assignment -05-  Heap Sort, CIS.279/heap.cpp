@@ -51,7 +51,7 @@ void heapSort ( string* data, int size_of_data )
         cout << "Swapped:  ";
 
         printer(data, size_of_data);
-        cout << endl << endl << endl;
+        cout << endl << endl;
 
     }//for ( int counter = 0; counter < 1; counter++) {..}
     
@@ -70,13 +70,14 @@ void rebuild( int index, string* data, int size_of_data)
 
 
         auto position = find( data, data + size_of_data, largest_value);
-        int located = position - (data);
+        int located = position-(data);
 
     // swap 0 element with: position...
     
-        temporary [ index ] = data[ index ]; // MAKING COPY OF MAX VALUE / LOCAITON ...
-        data[ index ] = data[ located ]; // ORIGINAL LOCATION SWAPED WITH FOUND MAX-VALUE / LOCAITON ...
-        data[ located] = temporary[ index ];// MOVE ORIGINAL TO THE FOUND LOCATION ...
+//        temporary [ index ] = data[ index ]; // MAKING COPY OF MAX VALUE / LOCAITON ...
+//        data[ index ] = data[ located ]; // ORIGINAL LOCATION SWAPED WITH FOUND MAX-VALUE / LOCAITON ...
+//        data[ located] = temporary[ index ];// MOVE ORIGINAL TO THE FOUND LOCATION ...
+        swap(data[0], data [ located] );
     
 }
 
