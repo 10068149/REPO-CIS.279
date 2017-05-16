@@ -44,7 +44,6 @@ void heapSort ( string* data, int size_of_data )
 
         
         // do swap after this line
-        //swap(counter, data, size_of_data);
         swap(data[0], data [size_of_data - counter-1] );
         
         // do swap before this line
@@ -65,11 +64,13 @@ void rebuild( int index, string* data, int size_of_data)
     
     // find max value using: std::max_element ...
     
-        string largest_value = *max_element( (data+index), data + size_of_data );
-        string temporary[ size_of_data ];
+                                            // DATA[] START, DATA[] END )
+        string largest_value = *max_element( data+index, data + size_of_data );
+//        string largest_value = *max_element( data - size_of_data, data-index  );
 
 
-        auto position = find( data, data + size_of_data, largest_value);
+//        auto position = find( data, data + size_of_data, largest_value);
+        auto position = find( data - size_of_data, data , largest_value);
         int located = position-(data);
 
     // swap 0 element with: position...
@@ -83,6 +84,7 @@ void rebuild( int index, string* data, int size_of_data)
 
 
 //void rebuild( int, string* left_data, int size_of_data )...
+/*
 void swap( int index, string* data, int size_of_data)
 {
     
@@ -102,7 +104,7 @@ void swap( int index, string* data, int size_of_data)
     data[ located] = temporary[ index ];// MOVE ORIGINAL TO THE FOUND LOCATION ...
     
 }
-
+**/
 
 
 
