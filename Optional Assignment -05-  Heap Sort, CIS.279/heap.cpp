@@ -66,11 +66,11 @@ void rebuild( int index, string* data, int size_of_data)
     
                                             // DATA[] START, DATA[] END )
         string largest_value = *max_element( data+index, data + size_of_data );
-//        string largest_value = *max_element( data - size_of_data, data-index  );
+//        string largest_value = *max_element( data - size_of_data, data  );
 
 
-//        auto position = find( data, data + size_of_data, largest_value);
-        auto position = find( data - size_of_data, data , largest_value);
+        auto position = find( data+index, data + size_of_data, largest_value);
+//        auto position = find( data - size_of_data, data , largest_value);
         int located = position-(data);
 
     // swap 0 element with: position...
@@ -78,33 +78,30 @@ void rebuild( int index, string* data, int size_of_data)
 //        temporary [ index ] = data[ index ]; // MAKING COPY OF MAX VALUE / LOCAITON ...
 //        data[ index ] = data[ located ]; // ORIGINAL LOCATION SWAPED WITH FOUND MAX-VALUE / LOCAITON ...
 //        data[ located] = temporary[ index ];// MOVE ORIGINAL TO THE FOUND LOCATION ...
-        swap(data[0], data [ located] );
+        swap(data[0], data [located] );
     
 }
 
 
-//void rebuild( int, string* left_data, int size_of_data )...
-/*
-void swap( int index, string* data, int size_of_data)
-{
-    
-    // find max value using: std::max_element ...
-    
-    string largest_value = *max_element( (data+index), data + size_of_data );
-    string temporary[ size_of_data ];
-    
-    
-    auto position = find( data, data + size_of_data, largest_value);
-    int located = position - (data);
-    
-    // swap 0 element with: position...
-    
-    temporary [ index ] = data[ index ]; // MAKING COPY OF MAX VALUE / LOCAITON ...
-    data[ index ] = data[ located ]; // ORIGINAL LOCATION SWAPED WITH FOUND MAX-VALUE / LOCAITON ...
-    data[ located] = temporary[ index ];// MOVE ORIGINAL TO THE FOUND LOCATION ...
-    
-}
-**/
+//void swap( int index, string* data, int size_of_data)
+//{
+//    
+//    // find max value using: std::max_element ...
+//    
+//    string largest_value = *max_element( (data+index), data + size_of_data );
+//    string temporary[ size_of_data ];
+//    
+//    
+//    auto position = find( data, data + size_of_data, largest_value);
+//    int located = position - (data);
+//    
+//    // swap 0 element with: position...
+//    
+//    temporary [ index ] = data[ index ]; // MAKING COPY OF MAX VALUE / LOCAITON ...
+//    data[ index ] = data[ located ]; // ORIGINAL LOCATION SWAPED WITH FOUND MAX-VALUE / LOCAITON ...
+//    data[ located] = temporary[ index ];// MOVE ORIGINAL TO THE FOUND LOCATION ...
+//    
+//}
 
 
 
