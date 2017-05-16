@@ -38,7 +38,8 @@ void heapSort ( string* data, int size_of_data )
 //        cout << "// FOR() loop pass COUNTER @: " << counter << endl << endl;
 
         
-        rebuild( counter, data, size_of_data);
+        //rebuild( counter, data, size_of_data);
+        rebuild( 0, data, size_of_data - counter);
         cout << "Heap:     ";
         printer(data, size_of_data);
 
@@ -59,51 +60,17 @@ void heapSort ( string* data, int size_of_data )
 
 
 //void rebuild( int, string* left_data, int size_of_data )...
-void rebuild( int index, string* data, int size_of_data)
+
+void rebuild( int ZERO, string* data, int size_of_data)
 {
-    
-    // find max value using: std::max_element ...
-    
+    // find max value using
                                             // DATA[] START, DATA[] END )
-        string largest_value = *max_element( data+index, data + size_of_data );
-//        string largest_value = *max_element( data - size_of_data, data  );
+        string largest_value = *max_element( data, data + size_of_data );
 
-
-        auto position = find( data+index, data + size_of_data, largest_value);
-//        auto position = find( data - size_of_data, data , largest_value);
-        int located = position-(data);
-
-    // swap 0 element with: position...
-    
-//        temporary [ index ] = data[ index ]; // MAKING COPY OF MAX VALUE / LOCAITON ...
-//        data[ index ] = data[ located ]; // ORIGINAL LOCATION SWAPED WITH FOUND MAX-VALUE / LOCAITON ...
-//        data[ located] = temporary[ index ];// MOVE ORIGINAL TO THE FOUND LOCATION ...
+        auto position = find( data, data + size_of_data , largest_value);
+         int located = position-(data);
         swap(data[0], data [located] );
-    
 }
-
-
-//void swap( int index, string* data, int size_of_data)
-//{
-//    
-//    // find max value using: std::max_element ...
-//    
-//    string largest_value = *max_element( (data+index), data + size_of_data );
-//    string temporary[ size_of_data ];
-//    
-//    
-//    auto position = find( data, data + size_of_data, largest_value);
-//    int located = position - (data);
-//    
-//    // swap 0 element with: position...
-//    
-//    temporary [ index ] = data[ index ]; // MAKING COPY OF MAX VALUE / LOCAITON ...
-//    data[ index ] = data[ located ]; // ORIGINAL LOCATION SWAPED WITH FOUND MAX-VALUE / LOCAITON ...
-//    data[ located] = temporary[ index ];// MOVE ORIGINAL TO THE FOUND LOCATION ...
-//    
-//}
-
-
 
 void printer(string* data, int size_of_data )
 {
@@ -113,4 +80,16 @@ void printer(string* data, int size_of_data )
     }
     cout<<endl;
 }//void scribe()
+
+// F E D C B A
+
+//          (F)
+//   (C)            (E)
+// (A) (B)       (D)  (-)
+
+// data[index] is BIG
+// data[index*2] is SMALLER then BIG
+// data[index*2 + 1] is SMALLER the BIG
+
+
 
