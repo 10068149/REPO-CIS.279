@@ -30,30 +30,33 @@ void heapSort ( string* data, int size_of_data )
     printer(data, size_of_data);
     cout<<endl;
     
-    for ( int counter = 0; counter < size_of_data ; counter++)
+    for (int loop = 0; loop < size_of_data; loop++) {
         
-    {
+        rebuild( 0, data, size_of_data - loop);
+        swap(data[0], data [size_of_data - loop-1] );
+    
+        for ( int counter = 1; counter < size_of_data ; counter++)
+        {
 
-        cout << "// FOR() loop pass COUNTER @: " << size_of_data - counter << endl;
-//        cout << "// FOR() loop pass COUNTER @: " << counter << endl << endl;
+            cout << "// FOR() loop pass COUNTER @: " << size_of_data - counter << endl;
 
-        
-        //rebuild( counter, data, size_of_data);
-        rebuild( 0, data, size_of_data - counter);
-        cout << "Heap:     ";
-        printer(data, size_of_data);
+            //rebuild( counter, data, size_of_data);
+            rebuild( 0, data, size_of_data - counter);
+            cout << "Heap:     ";
+            printer(data, size_of_data);
 
-        
-        // do swap after this line
-        swap(data[0], data [size_of_data - counter-1] );
-        
-        // do swap before this line
-        cout << "Swapped:  ";
+            
+            // do swap after this line
+            swap(data[0], data [size_of_data - counter-1] );
+            
+            // do swap before this line
+            cout << "Swapped:  ";
 
-        printer(data, size_of_data);
-        cout << endl << endl;
+            printer(data, size_of_data);
+            cout << endl << endl;
 
-    }//for ( int counter = 0; counter < 1; counter++) {..}
+        }//for(): COUNTER...
+    }//FOR(): LOOP...
     
 }//void heapSort ( string* data, int size_of_data ) {..}
 
@@ -80,16 +83,4 @@ void printer(string* data, int size_of_data )
     }
     cout<<endl;
 }//void scribe()
-
-// F E D C B A
-
-//          (F)
-//   (C)            (E)
-// (A) (B)       (D)  (-)
-
-// data[index] is BIG
-// data[index*2] is SMALLER then BIG
-// data[index*2 + 1] is SMALLER the BIG
-
-
 
