@@ -17,8 +17,6 @@ using namespace std;
 int main()
 {
 
-    cout << endl << endl << "// int MAIN(): " << endl << endl;
-    
     string a[6] = {"D", "B", "A", "C", "F", "E"};
     //...
     
@@ -45,5 +43,4 @@ int main()
 //    
     
 
-    cout << endl << "// END: MAIN() " << endl;
 }  // end main

@@ -38,7 +38,7 @@ void heapSort ( string* anArray, int size_of_data )
     print(anArray, size_of_data);
     swap(anArray[0], anArray [size_of_data -1] );
 
-    cout << "After swapping " << anArray[ 0] << " and " << anArray [ size_of_data ] << endl;
+    cout << "After swapping " << anArray[ 0] << " and " << anArray [ size_of_data -1 ] << endl;
     for ( int counter = 1; counter < size_of_data ; counter++)
     {
 
@@ -49,7 +49,7 @@ void heapSort ( string* anArray, int size_of_data )
         print(anArray, size_of_data);
         
         cout
-        << " rebuild ( 0, anArray, " << size_of_data - counter
+        << "rebuild ( 0, anArray, " << size_of_data - counter
         << " )" << endl;
 
         
@@ -62,7 +62,7 @@ void heapSort ( string* anArray, int size_of_data )
         
         cout
         << "After swaping " << anArray [ 0 ]
-        << " and " << anArray [ size_of_data -1 ] << endl;
+        << " and " << anArray [ size_of_data - counter-1 ] << endl;
     }//for(): COUNTER...
     
 }//void heapSort ( string* data, int size_of_data ) {..}
