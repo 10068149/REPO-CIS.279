@@ -86,17 +86,20 @@ void rebuild( int index, string* data, int size_of_data)
         swap(data[0], data [located] );
     
     // check for nodes ...
-    
+    int left_child_position = (index+1)*2-1;
+    int right_child_position = (index+1)*2;
           // A=ROOT...
     //B= index*2...    //C=index*2+1...
  //D    //E         //F
-    if ( (index+1)*2 +1 > size_of_data-1 ) { return; }
     
-    if( !index*2 ) {
+    
+    if ( right_child_position +1 > size_of_data-1 ) { return; }
+    
+    if( !left_child_position ) {
         // this is a leaf since a BOTH child doesn't exists
         return;
     }
-    else if( !index*2+1 ) {
+    else if( !right_child_position ) {
         // this not has single child since SECOND child does NOT exists
     }
 }
