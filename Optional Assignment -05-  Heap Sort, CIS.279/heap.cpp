@@ -93,16 +93,16 @@ void rebuild( int index, string* data, int size_of_data)
  //D    //E         //F
     
     
-    if ( right_child_position +1 > size_of_data-1 ) { return; }
-    
-    if( !left_child_position ) {
-        // this is a leaf since a BOTH child doesn't exists
+    if(left_child_position > size_of_data-1) {
+        // this is a leaf since position of both children are outside of allowed range
         return;
+    } else if (right_child_position > size_of_data-1) {
+        // this node has single child
+    } else {
+        // this node has 2 children
     }
-    else if( !right_child_position ) {
-        // this not has single child since SECOND child does NOT exists
-    }
-}
+    
+}//VOID REBUILD(): INT INDEX, STRING *DATA, SIZE_OF_DATA
 
 
 
