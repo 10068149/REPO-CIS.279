@@ -101,11 +101,12 @@ void rebuild( int index, string* data, int size_of_data)
     } else if (right_child_position > size_of_data-1) {
         
         // this node has single child...
-        if (right_child_position > size_of_data-1) { swap( data[index], data[right_child_position] ); }
-        if (data[index] < data[right_child_position]) { swap( data[index], data[right_child_position] ) ; }
+        
+        if ( data[index] < data[right_child_position]) { swap( data[index], data[right_child_position] ) ; }
         
     } else {
         // this node has 2 children
+        if ( data[index] > data[right_child_position]) { swap( data[index], data[right_child_position] ) ; }
     }
     
 }//VOID REBUILD(): INT INDEX, STRING *DATA, SIZE_OF_DATA
