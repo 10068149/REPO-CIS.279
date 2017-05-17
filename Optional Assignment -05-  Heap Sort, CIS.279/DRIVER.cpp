@@ -24,7 +24,7 @@ int main()
     
     heapSort(a, 6); //calling heapsort()...
     
-    printer( a, 6); //printg out array data: a[]
+    print( a, 6); //printg out array data: a[]
     cout << "// Sorted array" << endl << endl << endl << endl;
     
 
@@ -40,7 +40,7 @@ int main()
              << endl;
 **/
     
-//    printer(b, 6);
+//    print(b, 6);
 //    cout << "   // Sorted array" << endl;
 //    
     

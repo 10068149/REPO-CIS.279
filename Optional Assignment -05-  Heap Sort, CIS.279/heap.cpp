@@ -20,45 +20,48 @@ using namespace std;
 
 
 
-void heapSort ( string* data, int size_of_data )
+void heapSort ( string* anArray, int size_of_data )
 //What: heap sort; sorts the items in an array into ASCENDING order.
 //Pre:  1) array[] is not empty; there is at least one element in the array.
 //Post: 1) returns sorrted array
 {
     
-    cout << "Original: ";
-    printer(data, size_of_data);
-    cout<<endl;
+    print(anArray, size_of_data);
+    cout << "Origiinal Array" << endl;
     
     for (int index = 0; index < size_of_data; index++) {
         
-        rebuild( index, data, size_of_data);
+        rebuild( index, anArray, size_of_data);
         
     }//FOR(): INDEX...
 
-    swap(data[0], data [size_of_data -1] );
+    print(anArray, size_of_data);
+    swap(anArray[0], anArray [size_of_data -1] );
 
-    
+    cout << "After swapping " << anArray[ 0] << " and " << anArray [ size_of_data ] << endl;
     for ( int counter = 1; counter < size_of_data ; counter++)
     {
 
-        cout << "// FOR() loop pass COUNTER @: " << size_of_data - counter << endl;
 
         //rebuild( counter, data, size_of_data);
-        rebuild( 0, data, size_of_data - counter);
-        cout << "Heap:     ";
-        printer(data, size_of_data);
+        rebuild( 0, anArray, size_of_data - counter);
+        print(anArray, size_of_data);
+        
+        cout
+        << " rebuild( 0, anArray, " << size_of_data - counter
+        << " )" << endl;
 
         
         // do swap after this line
-        swap(data[0], data [size_of_data - counter-1] );
+        swap(anArray[0], anArray [size_of_data - counter-1] );
         
         // do swap before this line
-        cout << "Swapped:  ";
 
-        printer(data, size_of_data);
-        cout << endl << endl;
-
+        print(anArray, size_of_data);
+        
+        cout
+        << "After swaping " << anArray [ 0 ]
+        << " and " << anArray [ size_of_data -1 ] << endl;
     }//for(): COUNTER...
     
 }//void heapSort ( string* data, int size_of_data ) {..}
@@ -78,12 +81,11 @@ void rebuild( int ZERO, string* data, int size_of_data)
         swap(data[0], data [located] );
 }
 
-void printer(string* data, int size_of_data )
+void print(string* data, int size_of_data )
 {
     
     for (int index = 0; index < size_of_data ; index++) {
-        cout << "[" << index << "]\"" << data[ index ] << "\"" << " ";
+        cout << data[ index ] << " ";
     }
-    cout<<endl;
 }//void scribe()
 
