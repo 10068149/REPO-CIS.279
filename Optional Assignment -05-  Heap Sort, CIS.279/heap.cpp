@@ -45,10 +45,11 @@ void heapSort ( string* anArray, int size_of_data )
 
         //rebuild( counter, data, size_of_data);
         rebuild( 0, anArray, size_of_data - counter);
+        
         print(anArray, size_of_data);
         
         cout
-        << " rebuild( 0, anArray, " << size_of_data - counter
+        << " rebuild ( 0, anArray, " << size_of_data - counter
         << " )" << endl;
 
         
