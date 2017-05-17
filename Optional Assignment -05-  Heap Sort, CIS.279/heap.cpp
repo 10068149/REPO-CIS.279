@@ -29,7 +29,8 @@ void heapSort ( string* anArray, int size_of_data )
     print(anArray, size_of_data);
     cout << "Origiinal Array" << endl;
     
-    for (int index = 0; index < size_of_data; index++) {
+    for (int index = size_of_data -1; index >= 0; --index) {
+        // For(int i=n-1; i>=0;--i)
         
         rebuild( index, anArray, size_of_data);
         
@@ -39,6 +40,8 @@ void heapSort ( string* anArray, int size_of_data )
     swap(anArray[0], anArray [size_of_data -1] );
 
     cout << "After swapping " << anArray[ 0] << " and " << anArray [ size_of_data -1 ] << endl;
+    
+    
     for ( int counter = 1; counter < size_of_data ; counter++)
     {
 
@@ -71,8 +74,9 @@ void heapSort ( string* anArray, int size_of_data )
 
 //void rebuild( int, string* left_data, int size_of_data )...
 
-void rebuild( int ZERO, string* data, int size_of_data)
+void rebuild( int index, string* data, int size_of_data)
 {
+
     // find max value using
                                             // DATA[] START, DATA[] END )
         string largest_value = *max_element( data, data + size_of_data );
@@ -80,7 +84,18 @@ void rebuild( int ZERO, string* data, int size_of_data)
         auto position = find( data, data + size_of_data , largest_value);
          int located = position-(data);
         swap(data[0], data [located] );
+    
+    // check for nodes ...
+    
+          // A=ROOT...
+    //B= index*2...    //C=index*2+1...
+ //D    //E         //F
+    if ( index > 6 ) { return; }
+
 }
+
+
+
 
 void print(string* data, int size_of_data )
 {
