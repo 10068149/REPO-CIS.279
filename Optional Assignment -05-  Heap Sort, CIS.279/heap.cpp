@@ -102,6 +102,7 @@ void rebuild( int index, string* data, int size_of_data)
         
         // this node has single child...
         if (right_child_position > size_of_data-1) { swap( data[index], data[right_child_position] ); }
+        if (right_child_position < size_of_data-1) { swap( data[right_child_position], data[index] ); }
         
     } else {
         // this node has 2 children
