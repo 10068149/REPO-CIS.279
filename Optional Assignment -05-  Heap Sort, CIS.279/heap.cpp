@@ -33,30 +33,33 @@ void heapSort ( string* data, int size_of_data )
     for (int loop = 0; loop < size_of_data; loop++) {
         
         rebuild( 0, data, size_of_data - loop);
-        swap(data[0], data [size_of_data - loop-1] );
-    
-        for ( int counter = 1; counter < size_of_data ; counter++)
-        {
-
-            cout << "// FOR() loop pass COUNTER @: " << size_of_data - counter << endl;
-
-            //rebuild( counter, data, size_of_data);
-            rebuild( 0, data, size_of_data - counter);
-            cout << "Heap:     ";
-            printer(data, size_of_data);
-
-            
-            // do swap after this line
-            swap(data[0], data [size_of_data - counter-1] );
-            
-            // do swap before this line
-            cout << "Swapped:  ";
-
-            printer(data, size_of_data);
-            cout << endl << endl;
-
-        }//for(): COUNTER...
+        
     }//FOR(): LOOP...
+
+    swap(data[0], data [size_of_data ] );
+
+    
+    for ( int counter = 1; counter < size_of_data ; counter++)
+    {
+
+        cout << "// FOR() loop pass COUNTER @: " << size_of_data - counter << endl;
+
+        //rebuild( counter, data, size_of_data);
+        rebuild( 0, data, size_of_data - counter);
+        cout << "Heap:     ";
+        printer(data, size_of_data);
+
+        
+        // do swap after this line
+        swap(data[0], data [size_of_data - counter-1] );
+        
+        // do swap before this line
+        cout << "Swapped:  ";
+
+        printer(data, size_of_data);
+        cout << endl << endl;
+
+    }//for(): COUNTER...
     
 }//void heapSort ( string* data, int size_of_data ) {..}
 
