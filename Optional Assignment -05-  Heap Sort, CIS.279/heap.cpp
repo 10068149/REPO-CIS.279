@@ -79,11 +79,11 @@ void rebuild( int index, string* data, int size_of_data)
 
     // find max value using
                                             // DATA[] START, DATA[] END )
-        string largest_value = *max_element( data, data + size_of_data );
-
-        auto position = find( data, data + size_of_data , largest_value);
-         int located = position-(data);
-        swap(data[0], data [located] );
+//        string largest_value = *max_element( data, data + size_of_data );
+//
+//        auto position = find( data, data + size_of_data , largest_value);
+//         int located = position-(data);
+//        swap(data[0], data [located] );
     
     // check for nodes ...
     int left_child_position = (index+1)*2-1;
@@ -106,7 +106,7 @@ void rebuild( int index, string* data, int size_of_data)
         
     } else {
         // this node has 2 children
-        if ( data[index] > data[left_child_position]) { swap( data[index], data[left_child_position] ) ; }
+        if ( data[index] < data[left_child_position]) { swap( data[index], data[left_child_position] ) ; }
         if ( data[index] < data[right_child_position]) { swap( data[index], data[right_child_position] ) ; }
     }
     
