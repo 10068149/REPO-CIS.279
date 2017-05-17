@@ -32,7 +32,7 @@ void heapSort ( string* data, int size_of_data )
     
     for (int index = 0; index < size_of_data; index++) {
         
-        rebuild( 0, data, size_of_data - index);
+        rebuild( index, data, size_of_data);
         
     }//FOR(): INDEX...
 
