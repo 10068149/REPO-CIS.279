@@ -94,10 +94,15 @@ void rebuild( int index, string* data, int size_of_data)
     
     
     if(left_child_position > size_of_data-1) {
+        
         // this is a leaf since position of both children are outside of allowed range
         return;
-    } else if (right_child_position > size_of_data-1) {
+        
+    } else if (right_child_position > size_of_data-1) {
+        
         // this node has single child
+        if (right_child_position > size_of_data-1) { swap(index, right_child_position); }
+        
     } else {
         // this node has 2 children
     }
