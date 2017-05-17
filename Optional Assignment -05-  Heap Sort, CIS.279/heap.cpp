@@ -107,6 +107,7 @@ void rebuild( int index, string* data, int size_of_data)
     } else {
         // this node has 2 children
         if ( data[index] > data[left_child_position]) { swap( data[index], data[left_child_position] ) ; }
+        if ( data[index] < data[right_child_position]) { swap( data[index], data[right_child_position] ) ; }
     }
     
 }//VOID REBUILD(): INT INDEX, STRING *DATA, SIZE_OF_DATA
