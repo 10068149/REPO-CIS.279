@@ -90,8 +90,15 @@ void rebuild( int index, string* data, int size_of_data)
           // A=ROOT...
     //B= index*2...    //C=index*2+1...
  //D    //E         //F
-    if ( index > 6 ) { return; }
-
+    if ( (index+1)*2 +1 > size_of_data ) { return; }
+    
+    if( !index*2 ) {
+        // this is a leaf since a BOTH child doesn't exists
+        return;
+    }
+    else if( !index*2+1 ) {
+        // this not has single child since SECOND child does NOT exists
+    }
 }
 
 
