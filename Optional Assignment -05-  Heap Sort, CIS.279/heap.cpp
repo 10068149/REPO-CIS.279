@@ -30,13 +30,13 @@ void heapSort ( string* data, int size_of_data )
     printer(data, size_of_data);
     cout<<endl;
     
-    for (int loop = 0; loop < size_of_data; loop++) {
+    for (int index = 0; index < size_of_data; index++) {
         
-        rebuild( 0, data, size_of_data - loop);
+        rebuild( 0, data, size_of_data - index);
         
-    }//FOR(): LOOP...
+    }//FOR(): INDEX...
 
-    swap(data[0], data [size_of_data ] );
+    swap(data[0], data [size_of_data -1] );
 
     
     for ( int counter = 1; counter < size_of_data ; counter++)
